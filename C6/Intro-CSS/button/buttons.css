@@ -1,0 +1,116 @@
+.button {
+    display: inline-block;
+    font-family: cursive;
+    background-color: #D56298;
+    text-decoration: none;
+    color:black;
+    border: solid #05D4F0 3px;
+    text-align:center;
+    font-size: 16px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button:hover {
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 16px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button:active{
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 24px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-sm{
+    display: inline-block;
+    font-family: cursive;
+    background-color: #D56298;
+    text-decoration: none;
+    color:black;
+    border: solid #05D4F0 3px;
+    text-align:center;
+    font-size: 9px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-sm:hover{
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 9px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-sm:active{
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 12px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-lg {
+    display: inline-block;
+    font-family: cursive;
+    background-color: #D56298;
+    text-decoration: none;
+    color:black;
+    border: solid #05D4F0 3px;
+    text-align:center;
+    font-size: 22px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-lg:hover {
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 22px;
+    padding; 0px;
+    border-radius: 12px;
+}
+
+.button-lg:active{
+    display: inline-block;
+    font-family: cursive;
+    background-color: #05D4F0;
+    text-decoration: none;
+    color:black;
+    border: solid #D56298 3px;
+    text-align:center;
+    font-size: 30px;
+    padding; 0px;
+    border-radius: 12px;
+}

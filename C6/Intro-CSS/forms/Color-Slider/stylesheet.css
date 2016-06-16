@@ -1,0 +1,113 @@
+html, body{
+    width: 98%;
+    height: 99%;
+}
+
+#wranger{
+    max-width: 50%;
+    width:auto;
+    float:right;
+}
+
+h3{
+    position: relative;
+    top: 0;
+    max-width: 65%;
+    width:auto;
+    height: 10%;
+    font-size: 25px;
+    font-family: "Helvetica",
+    letter-spacing: 3px;
+    color: #967A31;
+}
+
+#sliders img{
+    float:left;
+    width: 65px;
+    clear: left;
+}
+
+#sliders{
+    max-width: 60%;
+    width: auto;
+    display: block;
+    font-size: 65px;
+    font-family: "Helvetica";
+    max-height: 45%;
+    height: auto;
+}
+
+#custom{
+    top: 40%;
+    width:15%;
+    max-height:45%;
+    height:auto;
+}
+
+/*Media Queries*/
+
+/* Wisecreen resolution below 480p */
+@media all and (orientation: landscape) and (max-width: 639px){
+    
+   #wranger{
+    max-width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    }
+
+    #sliders{
+        display: inline-block;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    #sliders img {
+        width: 20px;
+    }
+    
+    #custom {
+        float: left;
+        clear: both;
+    }
+
+}
+
+
+/*Generic CSS for Portrait Modes*/
+@media all and (orientation: portrait){
+    #custom{
+        position: absolute;
+        right: 0;
+        width: 50%;
+    }
+    
+    #sliders{
+        font-size: 40px;
+        width: 50%;
+    }
+    
+    #sliders img{
+        width: 40px;
+    }
+}
+
+/*Small Screen Portrait Devices [Motorola RazR]*/
+@media all and (orientation: portrait) and (max-width: 239px){
+    h3{
+        font-size: 11px;
+    }
+    
+    #sliders{
+        font-size: 20px;
+    }
+    
+    #sliders img{
+        width: 20px;
+    }
+    
+    #custom{
+        float:right;
+        width: 35%
+    }
+}

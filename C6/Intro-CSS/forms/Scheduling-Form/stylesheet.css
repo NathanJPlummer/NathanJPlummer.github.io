@@ -1,0 +1,56 @@
+html, body{
+    background-image: url("images/blacktrim.png");
+    background-position: right center;
+    background-size: 30%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: white;
+}
+
+h3{
+    width: 90%;
+    position:relative fixed;
+    top: 0;
+    display:inline-block;
+    background-color: #FAB148;
+    text-align: center;
+}
+
+.num3{
+    width: 35px;
+}
+
+#num4{
+    width: 55px;
+}
+
+label{
+    font-family: "Helvetica", monospace;
+    background-color: #F8B9F3;
+    font-weight: 900;
+    border: 7px solid #F8B9F3;
+    border-radius: 20px;
+    width:100%;
+    display: block;
+    line-height: 0.5;
+}
+
+form{
+    width: 65%;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+}
+
+input[type=text]{
+    border: 7px solid purple;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+a{
+    color:aliceblue;
+}
+    

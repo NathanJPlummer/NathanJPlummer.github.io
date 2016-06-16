@@ -1,0 +1,1 @@
+alert("This site is currently incomplete and not functional.\nYou can not change the color of the Ranger at this time.");

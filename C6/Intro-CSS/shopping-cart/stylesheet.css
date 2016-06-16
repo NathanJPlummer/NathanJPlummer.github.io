@@ -1,0 +1,199 @@
+html, body{;
+    height: 100%;
+    background-image: url(images/Modern_Gradient.png);
+    background-repeat: repeat-y;
+}
+
+/*Vertical NAVPANE
+/*Use list as vertical navigation pane, and give pane gradient background*/
+.navpane {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/Modern_Gradient_pink.png);
+    background-repeat: repeat-x;
+    width: 7%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Circular", "Helvetica", monospace;
+}
+
+#linkpane{
+    left: 0;
+    float: left;
+}
+
+#linkpane li{
+    width: 100%;
+    line-height: 120px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*If the page was functional we'd use li a since these would be links*/
+.navpane li {
+    display: block;
+    width: 100%;
+}
+
+/* Change faux link color during mouse hover */
+.navpane li:hover {
+    background-color: #FD7A80;
+    color: white;
+    width: 100%;
+}
+/*END NAVPANE*/
+
+#shoppingcart{
+    right:0;
+    float: right;
+}
+
+#shoppingcart img{
+    width: 100%;
+}
+
+/*LOGO at the top of the page*/
+#logo{
+    border: 5px double dimgray;
+    border-radius: 10px;
+    width: 80%;
+    display: inline-block;
+    float:left;
+}
+
+/*Modern Developer PC Logo*/
+#PC {
+    width: 5%;
+    float: left;
+}
+
+/*Prerendered Text*/
+#ModernText{
+    width: 25%;
+    position:absolute;
+    top: 2%;
+    background-color: dimgray;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+/*END LOGO options*/
+
+#storefront{
+    max-width: 80%;
+    position: relative;
+    margin: 0 auto; /*Prevents collapse with navbar*/
+}
+
+/*Options for the PRODUCT Listings/Class*/
+.product{
+    display: block;
+    position: relative; /*For Children*/
+    border: 3px solid #FD7A80;
+    border-radius: 30px;
+    float: left; /*Prevent merging with NAVBAR*/
+    margin: 5px;
+    height: 299px;
+    width: 275px;
+}
+
+.product img{
+    display: block;
+    position: relative;
+    max-width: 275px;
+    width: auto;
+    max-height: 200px;
+    height: auto;
+    margin: 0 auto; /*Center image*/
+}
+
+.product span{
+    color: #F9787D;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Helvetica", monospace;
+    display: block;
+    margin: 0 auto; /*Center Text*/
+}
+
+.product button{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 25px;
+    background-color: #F9787D;
+    color: white;
+    /*Center button to bottom of div*/
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left: 30px;
+}
+
+.product label {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+/*End PRODUCTS Options*/
+
+#CartText{
+    color: white;
+    background-color: dimgray;
+    width: 100%;
+    font-size 22px;
+    text-align: center;
+}
+
+/*Items in the cart, many values modify class=product*/
+.cart{
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid #55C7D9;
+    border-bottom: 3px solid #55C7D9;
+    height: auto;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+.cart span{
+    font-size: 12px;
+}
+
+#total {
+    margin: auto;
+    margin-top: 40%;
+}
+
+#total label {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: dimgray;
+    font-size: 20px;
+}
+
+#total span{
+    font-size: 13px;
+    text-align: center;
+}
+
+#total button{
+    display: inline-block;
+    margin: 0 auto;
+    width: 90%;
+    background-color: #2AD97D;
+    color: white;
+    border-radius: 30px;
+    /*Center button and remove inherinted options from .product button*/
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    left: 0;
+}
+

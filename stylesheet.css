@@ -1,0 +1,98 @@
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/Background_Image_Grey.png);
+    background-attachment: fixed;
+}
+
+/*CSS for Profile Bar*/
+#profile-bar{
+    position: absolute;
+    top: 0;
+    right:0;
+    width:30vh;
+    min-height: 95vh;
+    max-height:200vh;/*Allow overflow without scrollbar*/
+    height: auto;
+    background-image: url("/images/folded_light.jpg");
+    color: #311C2E;
+    border: 8px solid #c5d5cb;
+    font-kerning: auto;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    overflow: visible;
+}
+
+#FvA{
+    width: 90%;
+    border: 5px solid #9fa8a3;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#name{
+    width: 48%;
+    margin-left: 5%;
+}
+
+#profile-bar p {
+    margin-left: 5%;
+    margin-right: 2%;
+    font-family: monospace;
+}
+/*END Profile Bar*/
+
+/*CSS for the Navigation Bar*/
+#navbar{
+    display: block; /*For Centering*/
+    color: whitesmoke;
+    max-width: 719px;
+    width: auto;
+    height: 50px;
+    margin: 0 auto; /*Center*/
+    margin-top: -10px; /*Hug top of page*/
+    background-color: #9fa8a3;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#navbar li{
+    display: inline;
+    font-family: 'Josefin Sans', sans-serif;
+    margin:1vw;
+    font-size: 5vh;
+    font-weight: 800;
+}
+/*END NAVBAR*/
+
+#notsidebar{ /*Prevent merging with sidebar*/
+    width: 69vw;
+}
+
+#background{
+    display: block;
+    width: inherit;
+    margin: 0 auto;
+}
+
+#background img{
+    display: block;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    top: 80px;
+    border: 8px solid #c5d5cb;
+}
+
+#background span{
+    position: relative;
+    display: block;
+    width: 85%;
+    bottom: 15vh;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    background-color: rgba(0, 0, 0, 0.38);
+}
