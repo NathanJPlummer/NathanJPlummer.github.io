@@ -15,8 +15,8 @@ html, body{
     min-height: 95vh;
     max-height: 300vh;/*Allow overflow without scrollbar*/
     height: auto;
-    /*Weird GitHub Error not allowing relative linking for below image.*/
-    background-image: url(images/DarkMetal.jpg)
+    /*Weird GitHub Error not allowing linking for below image.*/
+    background-image: url(http://i.imgur.com/Uyn66sJ.jpg)
     color: #ed94bd;
     border: 8px solid #ed94bd;
     font-kerning: auto;
