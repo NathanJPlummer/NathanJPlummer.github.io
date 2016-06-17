@@ -15,7 +15,7 @@ html, body{
     min-height: 95vh;
     max-height: 300vh;/*Allow overflow without scrollbar*/
     height: auto;
-    background-image: url("/images/DarkMetal.png");
+    background-image: url("/images/DarkMetal.jpg");
     color: #ed94bd;
     border: 8px solid #ed94bd;
     font-kerning: auto;
