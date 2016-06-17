@@ -50,18 +50,30 @@ html, body{
     width: auto;
     height: 50px;
     margin: 0 auto; /*Center*/
-    margin-top: -10px; /*Hug top of page*/
+    margin-top: -7px; /*Hug top of page*/
     background-color: #9fa8a3;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    text-align: center;
 }
 
 #navbar li{
     display: inline;
     font-family: 'Josefin Sans', sans-serif;
-    margin:1vw;
-    font-size: 5vh;
+    margin-right: .5vh;
+    margin-left: .5vh;
+    font-size: 4.6vh;
     font-weight: 800;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar a:hover{
+    background-color: #c5d5cb;
+    color: #9fa8a3;
 }
 /*END NAVBAR*/
 
