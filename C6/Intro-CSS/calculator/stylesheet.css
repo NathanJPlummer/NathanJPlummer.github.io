@@ -1,3 +1,11 @@
+#gohome{
+    position: fixed; 
+    width: 5%;
+    max-height: 50px;
+    height: auto;
+    opacity: .85;
+}
+
 #calculator{
     width: 414px;
     height: 650px;

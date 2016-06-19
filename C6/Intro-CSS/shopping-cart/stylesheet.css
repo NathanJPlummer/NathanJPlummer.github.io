@@ -4,6 +4,14 @@ html, body{;
     background-repeat: repeat-y;
 }
 
+#gohome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5%;
+    opacity: .7;
+}
+
 /*Vertical NAVPANE
 /*Use list as vertical navigation pane, and give pane gradient background*/
 /*Class navpane effects both the left store links and right shopping cart panes*/
