@@ -9,6 +9,31 @@ html, body {
     width: 98%;
 }
 
+/*Image links for HOMEPAGE and FORM HOMEPAGE*/
+#gohome{
+    width: 6%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#goform{
+    width: 6%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+
+}
+/*END IMAGE LINKS*/
+
+h3{ /*Prevents merging with image links*/
+    display: inline;
+    width: 100%;
+    text-align: center; 
+}
+
 #pagetop{
     display: inline-block;
     max-width: 560px;

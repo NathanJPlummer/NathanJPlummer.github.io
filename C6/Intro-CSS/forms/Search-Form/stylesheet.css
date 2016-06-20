@@ -8,6 +8,25 @@ body {
     background-position: center;
 }
 
+/*Image links for HOME PAGE and FORM HOME PAGE*/
+#gohome{
+    width: 6%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#goform{
+    width: 6%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+
+}
+/*END LINKS*/
+
 #logo {
     width: 40%;
     position: absolute;
