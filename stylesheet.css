@@ -58,6 +58,8 @@ html, body{
 }
 
 #navbar li{
+    position:relative;
+    top: 10%;
     display: inline;
     font-family: 'Josefin Sans', sans-serif;
     margin-right: .5vh;
