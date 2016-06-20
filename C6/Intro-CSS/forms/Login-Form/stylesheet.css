@@ -9,6 +9,26 @@ html, body{
     background-attachment: fixed;
 }
 
+/*Links to HOMEPAGE and FROMS Homepage*/
+
+#gohome{
+    width: 6%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#goform{
+    width: 6%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+
+}
+/*END LINKS*/
+
 body > p{
     color: #A2A204;
     width: 70%;

@@ -3,6 +3,26 @@ html, body{
     height: 99%;
 }
 
+/*Links to Homepage and Forms Homepage*/
+
+#gohome{
+    width: 6%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#goform{
+    width: 6%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+}
+
+/*CSS for top left corner links*/
+
 #wranger{
     max-width: 50%;
     width:auto;
@@ -19,6 +39,7 @@ h3{
     font-family: "Helvetica",
     letter-spacing: 3px;
     color: #967A31;
+    text-align: center;
 }
 
 #sliders img{

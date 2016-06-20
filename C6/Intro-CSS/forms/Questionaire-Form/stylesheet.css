@@ -4,6 +4,25 @@ html, body{
     background-color: #080808;
 }
 
+/*Links for HOMEPAGE and FORM HOMEPAGE*/
+#gohome{
+    width: 6%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#goform{
+    width: 6%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+
+}
+/*END LINKS*/
+
 h1 {
     position:relative;
     color: #710155;
