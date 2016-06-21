@@ -12,11 +12,32 @@
             <span id=name>Shopping Cart</span>
             <img id=cartlogo src="images/Cart.png"/>
             <div id="Items">
-                <span>Items (3)</span>
+                <span id="itemsNumber">Items (3)</span>
             </div>
             <div class="incart">
-                
+                <img src="images/Asus.png"/>
+                <label>Asus Linux Desktop 250SSD 8GB RAM</label>
+                <span class="price">$599.99</span>
+                <span class="removeFromCart">Remove From Cart</span>
+                <input class="removeBox" type="checkbox"/>
             </div>
+             <div class="incart">
+                <img src="images/Write_Better.png"/>
+                <label>Write Better than You Ever Have</label>
+                <span class="price">$12.99</span>
+                <span class="removeFromCart">Remove From Cart</span>
+                <input class="removeBox" type="checkbox"/>
+            </div>
+            <div class="incart">
+                <img src="images/WebStorm.png"/>
+                <label>WebStorm Essentials</label>
+                <span class="price">$29.99</span>
+                <span class="removeFromCart">Remove From Cart</span>
+                <input class="removeBox" type="checkbox"/>
+            </div>
+            <span id="Total">Total: $642.97</span>
+            <button id="updateCart" type="submit">Update Cart</button>
+            <button id="Checkout" type="submit">Checkout</button>
         </div>
         <div id="notsidebar">
             <ul id="navbar">
@@ -25,6 +46,7 @@
                 <li>Linux</li>
                 <li>Books</li>
                 <li>Software</li>
+                <li>ALL</li>
             </ul>
             <div id="background">
                 <img id="PCParts" src="images/9845-loyd_column_1.png"/>
