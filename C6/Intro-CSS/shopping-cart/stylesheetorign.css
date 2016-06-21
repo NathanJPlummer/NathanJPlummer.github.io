@@ -1,0 +1,224 @@
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/Modern_Gradient.png);
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+/*Imge Link to Homepage*/
+#gohome{
+    position: fixed;
+    width: 6%;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+/*END Image Home Link*/
+
+/*Options for the background image/LOGO*/
+#background span{
+    position: relative;
+    display: block;
+    bottom: 37vh;
+    width: 83.5%;
+    margin: 0 auto;
+    opacity: .93;
+    border: 3px solid #ED80B3;
+    background-image: url(images/logoback.jpg);
+}
+
+#PCParts{
+    display: block;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    top: 10vh;
+    border: 8px solid #EA7277;
+}
+
+#PC{
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    left: 22vh;
+}
+
+#logotext{
+    position:relative;
+    display: inline-block;
+    width: 50%;
+    background-color: dimgray;
+    border: 4px solid #2FD17C;
+    border-radius: 30px;
+    left: 22.5vh;
+    bottom: 13vh;
+}
+/*END Background/Logo*/
+
+/*CSS for the Navigation Bar*/
+#navbar{
+    display: block; /*For Centering*/
+    color: #E465A5;
+    max-width: 900px;
+    width: auto;
+    height: 50px;
+    margin: 0 auto; /*Center*/
+    margin-top: -7px; /*Hug top of page*/
+    background-color: whitesmoke;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+#navbar li{
+    display: inline;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-right: .5vh;
+    margin-left: .5vh;
+    font-size: 4.0vh;
+    position: relative;
+    top: 1.4vh;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+}
+
+#navbar a:hover{
+    background-color: #E465A5;
+    color: #F6EA40;
+}
+/*END NAVBAR*/
+
+#notsidebar{ /*Prevent merging with shopping-cart*/
+    width: 69vw;
+}
+
+/*CSS for Shopping Cart*/
+#Shopping-Cart{
+    position: fixed;
+    top: 0;
+    right:0;
+    width:30vh;
+    min-height: 100vh;
+    max-height: 120vh;/*Allow overflow without scrollbar*/
+    height: auto;
+    /*Weird GitHub Error not allowing linking for below image.  Using Imgur*/
+    background-image: url(images/gtex.jpg);
+    color: snow;
+    border: 8px solid #ed94bd;
+    font-kerning: auto;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    overflow: visible;
+    z-index: 2;
+}
+
+#name{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    font-size: 4vh;
+}
+
+#cartlogo{
+    display: block;
+    width: 70%;
+    border: 5px solid #ed94bd;
+    margin: 0 auto; /*Center Image*/
+}
+/*END Shopping Cart*/
+
+/*Storefront*/
+
+#changebackground{ /*Slight hack to change background image at the bottom of the page*/
+    position: absolute;
+    background-image: url(images/Modern_Gradient_pink.png);
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 170vh;
+    height: 4000px;
+    z-index: -1;
+}
+
+#storefront{
+    display: inline-block;
+    position: relative;
+    top: 20vh; /*Keeps from leaving 2nd background*/
+}
+
+.product{
+    position: relative;
+    float: left;
+    width: 30vw;
+    height: 35vh;
+    display: inline-block;
+    margin-right: 2.2vw;
+    margin-left: 2.2vw
+}
+
+.product img{
+    display: block;
+    max-width: 15vw;
+    width: auto;
+    max-height: 20vh;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product label{
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.product span{
+    color: #F9787D;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Helvetica", monospace;
+    display: block;
+    margin: 0 auto; /*Center Text*/
+}
+
+.product button{
+    display: inline;
+    margin: 0 auto;
+    width: 20vw;
+    height: 4vh;
+    background-color: #F9787D;
+    color: white;
+    /*Center button to bottom of div*/
+    position: absolute;
+    bottom: 1vh;
+    text-align: center;
+    left: .5vw;
+}
+
+.product input{
+    position: absolute;
+    display: inline;
+    width: 20px;
+    bottom: 5px;
+    right: 20px;
+    border-radius: 5px;
+    height: 18px;
+    text-align: center;
+}
+
+
+/*Fix slight display error at 480p*/
+
+@media all and (orientation: landscape) and (max-width: 640px) {
+    #navbar li{
+    margin-right: .2vh;
+    margin-left: .2vh;
+    }
+}
