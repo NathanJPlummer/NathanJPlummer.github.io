@@ -220,7 +220,6 @@ html, body{
 /*END Shopping Cart*/
 
 /*Storefront*/
-
 #changebackground{ /*Slight hack to change background image at the bottom of the page*/
     position: absolute;
     background-image: url(images/Modern_Gradient_pink.png);
@@ -302,7 +301,7 @@ html, body{
 }
 
 .product input{
-    position<link type="text/css" rel="stylesheet" media="screen and (orientation: portrait)" href="portrait.css" />: absolute;
+    position: absolute;
     display: inline;
     width: 20px;
     bottom: 5px;
