@@ -1,0 +1,176 @@
+html, body{
+    font-family: "Roboto";
+}
+
+/******TOP HALF OF PAGE******/
+
+/*Generic Shortcuts to commonly used options*/
+.floatLeft{ /*Generic shortcut to float items left*/
+    float: left;
+}
+
+.floatRight{ /*Generic shortcut to float items right*/
+    float: right;
+}
+
+.italic{ /*Generic shortcut to italicize text*/
+    font-style: italic;
+}
+
+.modernBlue{ /*Quick select of Modern Developer blue*/
+    color: #74A1E9;
+}
+
+.modernGray{ /*Quick select of Modern Developer gray*/
+    color: #EFF1F2;
+}
+/*END Generic Quick Options*/
+
+input { /*Add pencil to inputs, remove border*/
+    background-image: url(images/pencil.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+.greyBack{ /*Change Background to gray*/
+    background-color: #EFF1F2;
+}
+
+/*Selection Box Options*/
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #F4F5F7;
+    background-image: url(images/pencil.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    border: none;
+}
+
+option{
+    text-align: center;
+}
+/*END Select Options*/
+
+.line{ /*Gray line used to seperate the divs.  I use a straight, gray line
+    and modify the height.  See /images/line.png*/
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 3vh;
+}
+
+#topline{
+    margin: 1% auto;
+    width: 85vw;
+}
+
+#gear{ /*top right corner icon*/
+    height: 20px;
+    margin-left: 6px;
+}
+
+#peopleLogo{ /*top left corner icon*/
+    height: 20px;
+    margin-right: 6px;
+}
+
+#collaborate:before{/*Add Blue text "Collaboration"*/
+    content: "Collaboration";
+    color: #74A1E9;
+}
+
+.blockDetails{ /*Frequently used gray text descriptions*/
+    display: inline-block;
+    width: 100%;
+    color: #BCBCBC;
+    font-size: 12px;
+}
+
+/*Options for Modifiable Room Name Section*/
+#roomName{ /* Full Div options*/
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+}
+
+#roomName input{
+    border: none;
+    font-size: 25px;
+    width: 153px;
+    height: auto;
+}
+
+#roomName .blockDetails{
+    color: black;
+    font-size: 19px;
+    font-weight: 300;
+}
+/*END Modifiable Room Name Section Options*/
+
+#rolesAndColors{ /*Define total page width of Colors/Roles Divs*/
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.rcTitles{
+    font-size: 22px;
+}
+
+#addRoles{ /*Define width of Roles div*/
+    width: 47.5%;
+}
+
+/*Allow user to define ROLES*/
+#defineRoles{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 150px;
+}
+
+#defineRoles span{
+    width: 50%;
+}
+
+#defineRoles input{
+    font-size: 14px;
+    border: none;
+    width: 50%;
+    padding: inherit;
+}
+/*END Options for User Control ROLES div*/
+
+/*define width of colors div*/
+#addColors{
+    width: 47.5%;
+}
+
+#defineColors{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+
+#defineColors span{
+    width: calc(100% - 85px);
+}
+
+#defineColors select{
+    width: 85px;
+    
+}
+
+#defineColors .blockDetails{
+    width: 100%;
+}
+
+/******BOTTOM HALF OF PAGE******/
+
