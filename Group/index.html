@@ -1,73 +1,90 @@
 <!DOCTYPE html>  <!--declare doctype-->
 <html>
     <head>
-        <title>Collaboaration.Modern Developer</title>
+        <title>Collaboration.Modern Developer</title>
         <link type="text/css" rel="stylesheet" href="normalize.css"/>
 	   <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,300italic|Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'><!--Font-->
     </head>
-<body>
-    <!--Top half of page-->
-    <div id="topline">
-        <img id="peopleLogo" class="floatLeft" src="images/Logov4.png">
-        <span id="collaborate" class="floatLeft">.Modern Developer</span>
-        <img id= "gear" class="floatRight" src="images/Gear.png">
-        <span  class="floatRight">ROOM NAME</span>
-        <img class="line" src="images/line.png"/>
-    </div>
-    <div id="roomName">
-        <span><input type="text" value="Room Name"/></span>
-        <span class="blockDetails">Change the details of the chatroom here</span>
-        <img class="line" src="images/line.png">
-    </div>
-    <div id="rolesAndColors">
-        <div class="floatLeft" id="addRoles">
-            <span class="rcTitles">ROLES</span>
-            <span class="modernBlue floatRight">+ add new</span>
-            <span class="blockDetails">Eu nulla morbi, eros placerat mattis lectus</span>
-            <img class="line" src="images/line.png"/>
-            <div class="floatLeft" id="defineRoles">
-                <span class="italic">Alex Miller</span>
-                <input type="text" value="Product Manager"/>
-                <span class="greyBack italic">Jame Morrison</span>
-                <input class="greyBack" type="text" value="3D Animator"/>
-                <span class="italic">Miranda Lopez</span>
-                <input type="text" value="Concept Artist"/>
-                <span class="greyBack italic">Alex Miller</span>
-                <input class="greyBack" type="text" value="Product Manager"/>
+    <body>
+        <div id="topBackGround">
+            <div id="topline">
+                <img id="peopleLogo" class="floatLeft" src="images/Logov4.png">
+                <span id="collaborate" class="floatLeft">.Modern Developer</span>
+                <img id= "gear" class="floatRight" src="images/Gear.png">
+                <span  class="floatRight">ROOM NAME</span>
+                <img class="line" src="images/line.png"/>
+            </div>
+            <div id="roomName">
+                <span><input type="text" value="Room Name"/></span>
+                <span class="blockDetails">Change the details of the chatroom here</span>
+                <br>
+                <img class="line" src="images/line.png">
+            </div>
+            <div id="rolesAndColors">
+                <div class="floatLeft" id="addRoles">
+                    <span class="floatLeft rcTitles">ROLES</span>
+                    <span class="modernBlue floatRight addNew">+ add new</span>
+                    <span class="blockDetails">Eu nulla morbi, eros placerat mattis lectus</span>
+                    <img class="line" src="images/line.png"/>
+                    <div class="floatLeft" id="defineRoles">
+                        <span class="italic">Alex Miller</span>
+                        <input type="text" value="Product Manager"/>
+                        <span class="greyBack italic">James Morrison</span>
+                        <input class="greyBack" type="text" value="3D Animator"/>
+                        <span class="italic">Miranda Lopez</span>
+                        <input type="text" value="Concept Artist"/>
+                        <span class="greyBack italic">Alex Miller</span>
+                        <input class="greyBack" type="text" value="Product Manager"/>
+                    </div>
+                </div>
+                <div class="floatRight" id="addColors">
+                    <span class="floatLeft rcTitles">COLORS</span>
+                    <span class="floatRight modernBlue addNew">Import <span class="modernGray">or</span> export</span>
+                    <span class="blockDetails">These colors are for the entire room</span>
+                    <img class="line" src="images/line.png"/>
+                    <div class="floatRight" id="defineColors">
+                        <span>Application</span>
+                         <select>
+                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
+                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
+                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                        </select>
+                        <span class="blockDetails">The general color used for the application</span>
+                        <span>Box value</span>
+                        <select>
+                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
+                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
+                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                        </select>
+                        <span class="blockDetails">The value of message backgrounds</span>
+                        <span>Text Color</span>
+                        <select>
+                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
+                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
+                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                        </select>
+                        <span class="blockDetails">The message text color</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="floatRight" id="addColors">
-            <span class="rcTitles">COLORS</span>
-            <span class="floatRight modernBlue">Import <span class="modernGray">or</span> export</span>
-            <span class="blockDetails">These colors are for the entire room</span>
-            <img class="line" src="images/line.png"/>
-            <div class="floatRight" id="defineColors">
-                <span>Application</span>
-                 <select>
-                        <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                        <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                        <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
-                </select>
-                <span class="blockDetails">The general color used for the application</span>
-                <span>Box value</span>
-                <select>
-                        <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                        <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                        <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
-                </select>
-                <span class="blockDetails">The value of message backgrounds</span>
-                <span>Text Color</span>
-                <select>
-                        <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                        <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                        <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
-                </select>
-                <span class="blockDetails">The message text color</span>
+            <!--Bottom of page-->
+        <div id="bottomUI">
+            <span>close settings</span>
+            <div id="panels">
+                <div id="leftPanel" class="bothPanels floatLeft">
+                    <div id="chatbox">
+                        <img id="user" class="floatLeft" src="images/userimage.jpg"/>
+                        <img id="nose" class="floatLeft" src="images/Nose.png"/>
+                        <input class="floatLeft" type="text"/>
+                        <input class="floatRight" type="submit" value="SEND">
+                    </div>
+                </div>
+                <div id="rightPanel" class="bothPanels floatRight">
+                </div>
             </div>
         </div>
-    </div>
-    <!--Bottom half of page-->
-</body>
+    </body>
 </html>
 

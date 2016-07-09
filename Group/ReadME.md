@@ -55,6 +55,7 @@ The "roles" div and the "color" div should be equal total height.  This is curre
 - Flexbox Browser Support
 	- Flexbox not supported is some browsers.  Normalize will help but browser testing will be especially necessary.
     
-- Odd misalgnment of divs
-    - Odd error causes two mid divs to not be aligned.  Alignment is off by just a couple pixels and hard to notice.  ![Imgur](http://i.imgur.com/vK24uvc.png)
-        - After 2 hours still couldn't fix this.
+COMPLETE:  Fixed after fixing code merge with error.
+~~Odd misalgnment of divs~~
+~~Odd error causes two mid divs to not be aligned.  Alignment is off by just a couple pixels and hard to notice.~~
+~~After 2 hours still couldn't fix this.~~
