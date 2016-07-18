@@ -7,7 +7,7 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,300italic|Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'><!--Font-->
     </head>
     <body>
-        <div id="topBackGround">
+        <div id="topUI">
             <div id="topline">
                 <img id="peopleLogo" class="floatLeft" src="images/Logov4.png">
                 <span id="collaborate" class="floatLeft">.Modern Developer</span>
@@ -70,19 +70,19 @@
             </div>
         </div>
             <!--Bottom of page-->
-        <div class="bottomUI">
-            <a href="#" class="closeSettings">close settings</a>
-            <div class="panels">
+        <div id="bottomUI">
+            <a href="#" id="closeSettings">close settings</a>
+            <div id="panelsLocation">
 
-                <div class="leftPanel">
+                <div class="bothPanels leftPanel floatLeft">
                     <div class="panelTabs">
-                        <div class="tab">
-                            <span class="tab-name active">Chat</span>
+                        <div class="tab" id="tabActive">
+                            <span>Chat</span>
                             <span class="close">X</span>
                         </div>
 
-                        <div class="tab">
-                            <span class="tab-name inactive">Screen Sharing</span>
+                        <div class="tab tabInactive">
+                            <span>Screen Sharing</span>
                             <span class="close">X</span>
                         </div>
 
@@ -186,17 +186,9 @@
                     </div>
 
                 </div>
-
-                <div class="rightPanel">
-                    <div class="panelTabs">
-
-                    </div>
-
-                    <div class="panelBody">
-
-                    </div>
-
-                </div>
+                <img id="ruler" src="images/Ruler.png"/>
+                <textarea class="bothPanels floatRight" id="rightPanel" type="text"></textarea>
+                
 
             </div>
         </div>

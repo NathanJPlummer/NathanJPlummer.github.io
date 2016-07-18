@@ -3,8 +3,13 @@ html, body{
     background-color: #F3F8FA;
 }
 
-#topBackGround{
+body{
+    overflow-x: hidden;
+}
+
+#topUI{
     background-color: #FFFFFF;
+    height: auto;
 }
 
 /*Generic classes for commonly used options*/
@@ -192,7 +197,11 @@ option{
 
 /*BOTTOM HALF OF PAGE*/
 
-.closeSettings{
+#bottomUI{ /*Keep percentages based on device width*/
+    width: 100vw;
+}
+
+#closeSettings{ /*Display close settings option*/
     color: darkgray;
     display: block;
     text-align: right;
@@ -200,60 +209,78 @@ option{
     text-decoration: none;
 }
 
-.bottomUI{ /*Allow change in background color*/
-    background-color: #F3F8FA;
-    height: 60vh;
-}
+/*---Options that affect BOTH panels---*/
 
-.panels{
-    height: 75%;
-    width: 90%;
+#panelsLocation{ /*Sets panels location on screen, adds bottom margin*/
+    display: block;
+    position: relative;
+    width: 85vw;
     margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-bottom: 50px;
 }
 
-.leftPanel, .rightPanel{
-    height:auto;
-    width: 50%;
+.bothPanels{ /*Set height of width of panels and insure they are of equal size*/
+    height: 450px;
+    width: 47.5%;
 }
 
-.panelTabs .tab{
-    border-top: 2px solid #6C84DC;
+#ruler{ /*Ruler slides between the panels*/
+    height: 100%;
+    width: 4.3%;
+}
+/*---END Options for BOTH Panels---*/
+
+/*---Left Panel Options---*/
+
+/*--Tabs Options--*/
+/*--Subset of left panel options--*/
+.panelTabs{ /*Block that displays panel tabs*/
+    display: block;
+    height: 10%;
+}
+
+.tab{ /*Generic options for all tabs*/
     display: inline-block;
     text-align: center;
-    padding-top: 5px;
-    width: 25%;
+    width: 30%;
+    height: 50%;
 }
 
-.panelTabs .active{
+#tabActive{ /*Options for the active tab.  There can only be one*/
+    display: inline-block;
     background: white;
+    border-top: 5px solid #6C84DC;
+    float: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.panelTabs .inactive{
-    background: darkgray;
+.tabInactive{ /*Options for the Inactive Tabs*/
+    display: inline-block;
+    background: #E1E7EB;
+    border-top: 5px solid #E1E7EB;
+    float: left;
 }
 
-.panelTabs .tab span.tab-name{
-    text-align: center;
-}
-
-.panelTabs .tab span.close{
+.close{ /*"X" closes an open tab.*/
     float: right;
     margin-right: 5px;
 }
 
-.panelTabs .tab-add{
-    float: right;
+.tab-add a{ /*Options to add an additional tab*/
     margin-right: 5px;
-}
-
-.panelTabs .tab-add a{
+    float: right;
     color: #6C84DC;
     text-decoration: none;
 }
+/*--End Tab options--*/
 
-.panelBody{
+
+.panelBody{ 
     background: white;
-    overflow: hidden;
+    overflow-y: scroll;
+    height: 62%;
 }
 
 .panelBody .commentLeft{
@@ -264,19 +291,15 @@ option{
     float: right;
 }
 
-.panelBody .commentLeft .commentBox,
-.panelBody .commentRight .commentBox,
-.panelChat .chatbox{
+.chatbox{
     margin: 10px 10px;
 }
 
-.panelBody .commentRight .commentBox{
-    overflow: hidden;
+.commentBox{
+    margin: 10px 10px;
 }
 
-.panelBody .commentLeft .commentBox img.user,
-.panelBody .commentRight .commentBox img.user,
-.panelChat .chatbox img.user{
+img.user{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -285,21 +308,20 @@ option{
     width: 45px;
 }
 
-.panelBody .commentRight .commentBox img.user{
+.commentRight .commentBox img.user{
     float: right;
 }
 
-.panelBody .commentLeft .commentBox img.nose{
+/*.commentLeft .commentBox img.nose{---Doesn't seem to do anything right now---
     color: #DD77CB;;
     margin-right: -8px;
     margin-top: 10px;
     position: relative;
     vertical-align: top;
     width: 12px;
-}
+}*/
 
-.panelBody .commentLeft .commentBox .comment,
-.panelBody .commentRight .commentBox .comment{
+.comment{
     background: #DD77CB;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -312,34 +334,29 @@ option{
     float: right;
 }
 
-.panelBody .commentLeft .commentBox .comment .header,
-.panelBody .commentRight .commentBox .comment .header{
+.header{
     margin-top: 5px;
     padding: 10px;
 }
 
-.panelBody .commentLeft .commentBox .comment .header .userName,
-.panelBody .commentRight .commentBox .comment .header .userName{
+.userName{
     display: inline;
     font-weight: 400;
 }
 
-.panelBody .commentLeft .commentBox .comment .header .time,
-.panelBody .commentRight .commentBox .comment .header .time{
+.time{
     color: #BCBCBC;
     float: right;
     font-size: 13px;
     margin-right: 10px;
 }
 
-.panelBody .commentLeft .commentBox .comment .message,
-.panelBody .commentRight .commentBox .comment .message{
+.message{
     margin: 0 auto;
     width: 90%;
 }
 
-.panelBody .commentLeft .commentBox .comment .message p,
-.panelBody .commentRight .commentBox .comment .message p{
+.message p{
     font-size: 14px;
     line-height: 150%;
     margin: 0;
@@ -348,24 +365,32 @@ option{
 .panelChat{
     background: white;
     border-top:1px solid darkgray;
-    overflow: hidden;
+    height: 28%;
 }
 
-.panelChat .chatbox{
+.chatbox{
     display: inline-block;
     margin-right:0;
     width: 65%;
 }
 
-.panelChat .chatbox textarea{
+.chatbox img{
+    float: left;
+}
+
+.chatbox textarea{
     height:80px;
     width:100%;
 }
 
-.panelChat .sendMessage{
+.sendMessage{
     display: inline-block;
 }
-.panelChat .sendMessage button{
+
+.sendMessage button{
+    display: inline-block;
+    position: relative;
+    float: left;
     background: #6C84DC;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
@@ -374,45 +399,33 @@ option{
     color: white;
     padding: 15px;
     width:120px;
+    left: 10px;
 }
+
+.sendMessage button:active{
+    position: relative;
+    top: 2px;
+}
+/*---END left panel Options---*/
+
+/*---Right Panel Options---*/
+#rightPanel{
+    border: none;
+    padding: none;
+    margin: none;
+    background-image: none;
+}
+
+
+/*OLD CODE*/
 
 /*
-.bothPanels{
-    background-color: #FFFFFF;
-    width: 47.5%;
-    height: 100%;
-}
-
-#bottomUI  > span{
-    display: block;
-    width: 85vw;
-    margin: 0 auto;
-    text-align: right;
-}
-
 #chatbox{
     height: 22%;
     position: absolute;
     bottom: 0;
     width: 47.5%;
     border-top: 1px solid #F8F8F8;
-}
-
-#user{
-    position: relative;
-    height: 70%;
-    margin-top: 2%;
-    margin-left: 2%;
-}
-
-#chatbox > input[type=text]{
-    border: none;
-    background-color: #F8F8F8;
-    width: 70%;
-    height: 70%;
-    position: relative;
-    margin-top: 2%;
-    margin-left: -1.3%;
 }
 
 #nose{
@@ -422,13 +435,3 @@ option{
     margin-top: 3%;
     margin-left: 1%;
 }
-
-#chatbox > input[type=submit]{
-    position: absolute;
-    background-image: none;
-    background-color: #759CEE;
-    width: 13%;
-    bottom: 10%;
-    right: 1%;
-    border-radius: 3px;
-}*/
