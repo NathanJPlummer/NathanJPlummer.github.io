@@ -16,6 +16,7 @@ body{
     background-image: url("/images/folded_light.jpg");
     color: #311C2E;
     border: 8px solid #c5d5cb;
+    -webkit-font-kerning: auto;
     font-kerning: auto;
     font-size: 16px;
     padding: 5px 10px 5px 10px;
