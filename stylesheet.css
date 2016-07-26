@@ -1,4 +1,4 @@
-html, body{
+body{
     height: 100vh;
     width: 100vw;
     background-image: url(images/Background_Image_Grey.png);
@@ -44,22 +44,22 @@ html, body{
 #navbar{
     display: block; /*For Centering*/
     color: whitesmoke;
-    max-width: 719px;
-    width: auto;
-    height: 50px;
+    width: 60vw;
+    height: auto;
     margin: 0 auto; /*Center*/
-    margin-top: -7px; /*Hug top of page*/
     background-color: #9fa8a3;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 #navbar li{
     position:relative;
     top: 12%;
-    display: inline;
+    display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
+    margin-top: 1vh;
     margin-right: .5vh;
     margin-left: .5vh;
     font-size: 4.6vh;
@@ -79,6 +79,8 @@ html, body{
 
 #notsidebar{ /*Prevent merging with sidebar*/
     width: 69vw;
+    height:auto;
+    margin-top: -7px;
 }
 
 #background{
@@ -91,6 +93,7 @@ html, body{
     display: block;
     position: relative;
     width: 85%;
+    height: auto;
     margin: 0 auto;
     top: 80px;
     border: 8px solid #c5d5cb;
