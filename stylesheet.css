@@ -3,6 +3,7 @@ html, body{
     width: 100vw;
     background-image: url(images/Background_Image_Grey.png);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 /*CSS for Profile Bar*/
@@ -11,8 +12,6 @@ html, body{
     top: 0;
     right:0;
     width:30vh;
-    min-height: 95vh;
-    max-height:200vh;/*Allow overflow without scrollbar*/
     height: auto;
     background-image: url("/images/folded_light.jpg");
     color: #311C2E;
@@ -20,7 +19,6 @@ html, body{
     font-kerning: auto;
     font-size: 16px;
     padding: 5px 10px 5px 10px;
-    overflow: visible;
 }
 
 #FvA{
