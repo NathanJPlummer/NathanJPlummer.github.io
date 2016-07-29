@@ -16,11 +16,19 @@ body{
 /*END Image Home Link*/
 
 /*Options for the background image/LOGO*/
+#background{
+    background-image: url(images/9845-loyd_column_1.png);
+    background-size: contain;
+    border: 8px solid #EA7277;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
+
 #background span{
-    position: relative;
     display: block;
-    bottom: 34vh;
-    width: 83.5%;
+    width: 70.5%;
     margin: 0 auto;
     opacity: .93;
     border: 3px solid #ED80B3;
@@ -59,11 +67,10 @@ body{
 #navbar{
     display: block; /*For Centering*/
     color: #E465A5;
-    max-width: 900px;
-    width: auto;
-    height: 50px;
+    width: 100%;
+    height: auto;
     margin: 0 auto; /*Center*/
-    margin-top: -7px; /*Hug top of page*/
+    
     background-color: whitesmoke;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -73,11 +80,7 @@ body{
 #navbar li{
     display: inline;
     font-family: 'Josefin Sans', sans-serif;
-    margin-right: .5vh;
-    margin-left: .5vh;
-    font-size: 5vh;
-    position: relative;
-    top: 1.6vh;
+    font-size: 200%;
 }
  width: 100%;
         font-size: 2vw;
