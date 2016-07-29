@@ -35,19 +35,11 @@ body{
     background-image: url(images/logoback.jpg);
 }
 
-#PCParts{
-    display: block;
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    top: 10vh;
-    border: 8px solid #EA7277;
-}
-
 #PC{
     position: relative;
     display: inline-block;
     width: 15%;
+    top: 3px;
     left: 22vh;
 }
 
@@ -312,10 +304,9 @@ body{
 @media all and (orientation: portrait){
     /*Changes to Shopping Cart*/
     #Shopping-Cart{
-        width: 20vw;
         border: 3px solid #F782B9;
-        height: 96vh;
         overflow-x: hidden;
+        overflow-y: auto;
     }
     
     #Shopping-Cart div{
@@ -329,7 +320,7 @@ body{
     #cartlogo{
         border: none;
         margin-bottom: -2vh;
-        max-width: 8vw;
+        max-width: 80%;
         width: auto;
         max-height: 5vh;
         height: auto;
@@ -340,7 +331,7 @@ body{
     }
     
     .incart img{
-        max-width: 8vw;
+        max-width: 95%;
         width: auto;
     }
     
