@@ -44,7 +44,6 @@ body{
 }
 
 #logotext{
-    position:relative;
     display: inline-block;
     width: 50%;
     background-color: dimgray;
