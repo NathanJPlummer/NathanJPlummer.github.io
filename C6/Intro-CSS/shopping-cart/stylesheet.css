@@ -1,6 +1,4 @@
-html, body{
-    height: 100vh;
-    width: 100vw;
+body{
     background-image: url(images/Modern_Gradient.png);
     background-attachment: fixed;
     background-repeat: repeat-y;
@@ -104,8 +102,8 @@ html, body{
     position: fixed;
     top: 0;
     right:0;
-    width:30vh;
-    height: 94vh;
+    width: 17vw;
+    height: 100vh;
     background-image: url(images/gtex.jpg);
     color: snow;
     border: 8px solid #F782B9;
@@ -114,6 +112,7 @@ html, body{
     padding: 5px 10px 5px 10px;
     z-index: 2;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 #name{
@@ -220,24 +219,16 @@ html, body{
 /*END Shopping Cart*/
 
 /*Storefront*/
-#changebackground{ /*Slight hack to change background image at the bottom of the page*/
-    position: absolute;
+#storefront{
+    width: 83vw;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
     background-image: url(images/Modern_Gradient_pink.png);
-    width: 100vw;
-    min-height: 100vh;
-    max-height: 160vh;
-    height: 1000px;
-    z-index: -1;
     background-attachment: fixed;
     background-repeat: repeat-x;
     border-top: 20px solid #969699;
     border-bottom: 20px solid #969699;
-}
-
-#storefront{
-    display: block;
-    position: relative;
-    top: 20vh; /*Keeps from leaving 2nd background*/
 }
 
 .product{
@@ -245,12 +236,10 @@ html, body{
     position: relative; /*For Children*/
     border: 3px solid #FD7A80;
     border-radius: 30px;
-    top: 0;
     display: inline-block;
     float: left; /*Prevent merging with NAVBAR*/
     margin: 5px;
     left: 5.5vw;
-    top: 6vh;
     height: 299px;
     width: 275px;
 }
@@ -418,10 +407,6 @@ html, body{
     }
     
     /*Storefront*/
-    #changebackground{ /*Too hacky to work on mobile*/
-        display: none;
-    }
-    
     #storefront{
         top: 0;  /*Only needed for disbaled hack*/
         width: 90%;
