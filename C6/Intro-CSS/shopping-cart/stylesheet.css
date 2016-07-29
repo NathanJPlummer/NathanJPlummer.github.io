@@ -220,6 +220,7 @@ body{
 
 /*Storefront*/
 #storefront{
+    display: block;
     width: 83vw;
     height: auto;
     overflow: hidden;
@@ -237,9 +238,9 @@ body{
     border: 3px solid #FD7A80;
     border-radius: 30px;
     display: inline-block;
-    float: left; /*Prevent merging with NAVBAR*/
-    margin: 5px;
-    left: 5.5vw;
+    float: left;
+    margin: .5%;
+    margin-left: 3.5vw;
     height: 299px;
     width: 275px;
 }
