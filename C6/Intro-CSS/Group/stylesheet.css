@@ -301,17 +301,21 @@ screen.  The folloing options
 affect both panels
 ******************************/
 
+#bottomUI{
+    width: 100vw;
+    height: 100vh;
+}
+
 #panelsLocation{ /*Sets panels location on screen, adds bottom margin*/
     display: block;
     width: 85%;
-    height:auto;
+    height:80%;
     margin: 0 auto;
-    margin-bottom: 3.125rem;
     overflow: hidden; /*Fixes float height issue*/
 }
 
 .bothPanels{ /*Set height of width of panels and insure they are of equal size*/
-    height: 31.25rem;
+    height: 100%;
     width: 50%;
     float: left;
     background-color: white;
@@ -341,6 +345,7 @@ require JavaScript.*/
     text-align: center;
     width: 35%;
     height: 100%;
+    font-size: 3vh
 }
 
 .tab a{
