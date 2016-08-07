@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     width: 100vw;
     background-image: url(images/Background_Image_Grey.png);
@@ -6,12 +6,15 @@ body{
     overflow-x: hidden;
 }
 
+
 /*CSS for Profile Bar*/
-#profile-bar{
+
+#profile-bar {
     position: absolute;
     top: 0;
-    right:0;
-    width:30vh;
+    right: 0;
+    width: 30vh;
+    min-height: 75vh;
     height: auto;
     background-image: url("/images/folded_light.jpg");
     color: #311C2E;
@@ -22,14 +25,14 @@ body{
     padding: 5px 10px 5px 10px;
 }
 
-#FvA{
+#FvA {
     width: 90%;
     border: 5px solid #9fa8a3;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-#name{
+#name {
     width: 48%;
     margin-left: 5%;
 }
@@ -39,15 +42,21 @@ body{
     margin-right: 2%;
     font-family: monospace;
 }
+
+
 /*END Profile Bar*/
 
+
 /*CSS for the Navigation Bar*/
-#navbar{
-    display: block; /*For Centering*/
+
+#navbar {
+    display: block;
+    /*For Centering*/
     color: whitesmoke;
     width: 60vw;
     height: auto;
-    margin: 0 auto; /*Center*/
+    margin: 0 auto;
+    /*Center*/
     background-color: #9fa8a3;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -55,8 +64,8 @@ body{
     box-sizing: border-box;
 }
 
-#navbar li{
-    position:relative;
+#navbar li {
+    position: relative;
     top: 12%;
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
@@ -72,25 +81,28 @@ body{
     color: inherit;
 }
 
-#navbar a:hover{
+#navbar a:hover {
     background-color: #c5d5cb;
     color: #9fa8a3;
 }
+
+
 /*END NAVBAR*/
 
-#notsidebar{ /*Prevent merging with sidebar*/
+#notsidebar {
+    /*Prevent merging with sidebar*/
     width: 69vw;
-    height:auto;
+    height: auto;
     margin-top: -7px;
 }
 
-#background{
+#background {
     display: block;
     width: inherit;
     margin: 0 auto;
 }
 
-#background img{
+#background img {
     display: block;
     position: relative;
     width: 85%;
@@ -100,7 +112,7 @@ body{
     border: 8px solid #c5d5cb;
 }
 
-#background span{
+#background span {
     position: relative;
     display: block;
     width: 85%;
