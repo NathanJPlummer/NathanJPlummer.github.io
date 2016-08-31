@@ -1,6 +1,8 @@
 #Andre Watts: The Entrepreneur
 ![Andre](./images/Andre.png)
 
+![Front End Developer](./images/careerPath_3.png)
+
 ##The Explorer
 To describe Andre Watts as ambitious would be an understatement.  When he decided to open up a website selling t-shirts in 2013, he was unfettered by a previous lack of web development experience.  With an attitude that defines the very core of "grit," Andre bought [a book on HTML and CSS Development](https://www.amazon.com/gp/product/1118008189/ref=as_li_tf_tl?ie=UTF8&tag=httpwwwhtmlan-20) and started building away.
 
