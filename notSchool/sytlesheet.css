@@ -1,0 +1,46 @@
+body{
+    border-left: 8vw solid #40992F;
+    padding-left: 1.5%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #882F99;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+
+
+h2, h3{
+    color: #2F9988;
+}
+
+h2 {
+    font-family: 'Lobster Two', Helvetica, sans-serif;
+    text-shadow: .5px .5px 0px #ededed, 2px 2px 0px rgba(0,0,0,0.15);
+}
+
+h4,h5{
+    color: #992F40;
+}
+
+a{
+    color: #2F9988;
+}
+
+a:hover{
+    color: #882F99;
+}
+
+a:visted{
+    color: #992F40;
+}
+
+#GVLogo{
+    width: 3%;
+}
+
+
