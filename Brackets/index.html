@@ -1,0 +1,157 @@
+<html>
+<head>
+    <link type="text/css" href="./sytlesheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1 id="brackets-linux-guide">
+        Brackets Linux Guide
+    </h1>
+    <p>
+        This page explains how to fix common ailments to fixing issues in Linux.
+    </p>
+    <h2 id="libcrypt11-missing-dependency-in-ubuntu">
+        Libcrypt11 Missing Dependency in Ubuntu
+    </h2>
+    <p>
+        Brackets depends on libcrypt11 but newer version of Ubuntu ship with libcrypt20. If you’re using Ubuntu or a derivative (Kubuntu, Linux Mint, etc) you may get an error message similar to the following:
+    </p>
+    <pre><code>dpkg: dependency problems prevent configuration of brackets:
+ brackets depends on libgcrypt11 (&gt;= 1.4.5); however:
+  Package libgcrypt11 is not installed.
+
+dpkg: error processing package brackets (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for hicolor-icon-theme (0.15-0ubuntu1) ...
+Errors were encountered while processing:
+ brackets
+</code></pre>
+    <h3 id="solution-1-manually-install-libcrypt11">
+        Solution 1: Manually Install libcrypt11
+    </h3>
+    <p>
+        The links below will download a copy of libcrypt11 from an older version of Ubuntu. Note that libcrypt11 can coexist peacefully with newer versions.
+    </p>
+    <ul>
+        <li>
+            <a href="https://launchpad.net/ubuntu/+archive/primary/+files/libgcrypt11_1.5.3-2ubuntu4.2_i386.deb">
+     32bit x86
+    </a>
+        </li>
+        <li>
+            <a href="https://launchpad.net/ubuntu/+archive/primary/+files/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb">
+     64bit x64
+    </a>
+        </li>
+        <li>
+            All other architectures can be found
+            <a href="https://launchpad.net/ubuntu/+source/libgcrypt11">
+     here
+    </a>
+        </li>
+    </ul>
+    <h3 id="solution-2-install-from-ppa">
+        Solution 2: Install from PPA
+    </h3>
+    <p>
+        Ubuntu has a PPA for Brackets installs which will automatically import libcrypt11 while also keeping Brackets up to date automatically. To install from PPA, open a terminal and then:
+    </p>
+    <ol>
+        <li>
+            sudo add-apt-repository ppa:webupd8team/brackets
+            <ul>
+                <li>
+                    If asked to install key say “yes”
+                </li>
+            </ul>
+        </li>
+        <li>
+            sudo apt-get update
+        </li>
+        <li>
+            sudo apt-get install brackets
+        </li>
+    </ol>
+    <h2 id="lack-of-hidpi-support">
+        Lack of HiDPI support
+    </h2>
+    <p>
+        If you have a high resolution screen, such as an Apple Retina, Brackets will ignore any HiDPI settings and present you with very small text and icons.
+    </p>
+    <h3 id="step-1-install-extension-ui-too-small">
+        Step 1: Install Extension “UI Too Small”
+    </h3>
+    <p>
+        The
+        <a href="https://github.com/1beb/ui-too-small">
+    UI Too Small
+   </a> Extension increases the size of fonts inside the Bracket’s UI. Unfortunately it does not change the size of the icons. You can install the extension from the Brackets Extension manager.
+    </p>
+    <ul>
+        <li>
+            From the Brackets File Menu choose “File” -&gt; “Extension Manager”
+        </li>
+        <li>
+            Search for “Ui Too Small”
+        </li>
+        <li>
+            The Extension’s author is: “Brandon Bertelsen”
+        </li>
+        <li>
+            Click “Install” next to the extension name
+        </li>
+        <li>
+            Save your work and restart Brackets
+        </li>
+    </ul>
+    <h3 id="step-2-change-your-font-size">
+        Step 2: Change your Font Size
+    </h3>
+    <p>
+        If the font in your work view i still too small, you can change you font size by:
+    </p>
+    <ul>
+        <li>
+            From the Brackets File Menu choose “View” -&gt; “Themes”
+        </li>
+        <li>
+            You’ll see a section Font Size:
+        </li>
+        <li>
+            Increase the number in front of “px.” Be sure to leave the “px” unit.
+        </li>
+    </ul>
+    <h1 id="brackets-electron">
+        Brackets-Electron
+    </h1>
+    <p>
+        An alternative to the above issues is to install <a href="https://github.com/zaggino/brackets-electron">Brackets-Electron</a>- a fork of Brackets that:
+    </p>
+    <ol>
+        <li>
+            Merges newer code that has not yet made it to Brackets standard
+        </li>
+        <li>
+            Replaces the Brackets CEF3 Shell with a more Linux friendly Electron Shell.
+        </li>
+    </ol>
+    <p>
+        Worth noting: Brackets-Electron is an unofficial fork and not supported by the Brackets team.
+    </p>
+    <p>
+        While being more cutting edge, an hence,
+        <em>
+    potentially
+   </em> more error prone, Brackets-Electron does fix the above issues. Furthermore, it retains compatibility with most Brackets Extensions and can be installed alongside vanilla Brackets without conflict.
+    </p>
+    <p>
+        You can download
+        <a href="https://github.com/zaggino/brackets-electron/releases">
+    Brackets-Electron here
+   </a> .
+    </p>
+</body>
+
+</html>
