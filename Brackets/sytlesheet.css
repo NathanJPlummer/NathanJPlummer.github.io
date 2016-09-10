@@ -36,3 +36,10 @@ a:hover {
 a:visted {
     color: #F57D20;
 }
+
+#appimage {
+    max-width: 650px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}

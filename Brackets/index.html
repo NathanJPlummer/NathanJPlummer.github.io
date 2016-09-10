@@ -127,6 +127,7 @@ Errors were encountered while processing:
     <h1 id="brackets-electron">
         Brackets-Electron
     </h1>
+    <h2>What is Brackets-Electron?</h2>
     <p>
         An alternative to the above issues is to install <a href="https://github.com/zaggino/brackets-electron">Brackets-Electron</a>- a fork of Brackets that:
     </p>
@@ -150,8 +151,61 @@ Errors were encountered while processing:
     <p>
         You can download
         <a href="https://github.com/zaggino/brackets-electron/releases">
-    Brackets-Electron here
-   </a>.
+    Brackets-Electron here.
+   </a>
+    </p>
+    <h2 id="install-brackets-electron-as-an-appimage">
+        Install Brackets-Electron as an AppImage
+    </h2>
+    <p>
+        While the Brackets-Electron team currently publishes .deb packages alongside the more universal AppImage format, plans are to eventually move to only AppImage Packages.
+    </p>
+    <p>
+        To install an AppImage:
+    </p>
+    <ol>
+        <li>
+            From the terminal, change to the directory where your AppImage is stored. Example:
+            <ul>
+                <li>
+                    <strong>
+       cd home/user/Downloads
+      </strong>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Change permissions on the AppImage with command “chmod a+x”
+            <ul>
+                <li>
+                    <strong>
+       chmod a+x brackets-electron-1.8.2-x86_64.AppImage
+      </strong>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Run image with ./imagename
+            <ul>
+                <li>
+                    <strong>
+       ./brackets-electron-1.8.2-x86_64.AppImage
+      </strong>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p>
+        Once you run the AppImage you will be given the option of installing a shortcut to Brackets-Electron in your program menu.
+    </p>
+    <p>
+        <img id="appimage" alt="Install from AppImage" src="./images/appimage.jpg" />
+    </p>
+    <p>
+        Click “Yes” to install to your menu.
+    </p>
+    <p>
+        NOTE: If you change the location of the AppImage your program link will cease to function. Put your AppImage in a more permanent location before you run it.
     </p>
 </body>
 
