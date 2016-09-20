@@ -1,0 +1,12 @@
+body {
+    border-left: 15vw solid #D51F56 ;
+}
+
+h2 {
+    color: #00C5E3;
+}
+
+blockquote {
+    background-color: #F5FBFC;
+    border: 2px solid rgb(174, 229, 239);
+}
