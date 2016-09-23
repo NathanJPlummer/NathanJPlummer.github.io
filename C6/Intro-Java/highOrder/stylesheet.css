@@ -1,0 +1,45 @@
+body {
+    border-left: 8vw solid #2098F5;
+    padding-left: 1.5%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #7D20F5;
+}
+
+h2,
+h3 {
+    color: #F57D20;
+}
+
+h3 {
+    color: #2098F5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #E820F5;
+}
+
+a:hover {
+    color: #882F99;
+}
+
+a:visted {
+    color: #F57D20;
+}
+
+#appimage {
+    max-width: 650px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
