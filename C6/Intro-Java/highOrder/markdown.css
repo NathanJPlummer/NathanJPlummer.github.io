@@ -164,11 +164,25 @@ pre {
 }
 
 .consider {
-    background-color: rgba(148, 255, 117,0.1);
+    background-color: rgba(148, 255, 117, 0.1);
     border: 5px double rgba(148, 255, 117, 0.8);
 }
 
-.bug{
-    background-color:  rgba(255, 118, 181, 0.1);
+.bug {
+    background-color: rgba(255, 118, 181, 0.1);
     border: 5px double rgba(255, 118, 181, 0.8);
+}
+
+.centerize {
+    display: block;
+    margin: 0 auto;
+    max-width: 50vw;
+    max-height: 50vh;
+    width: auto;
+    height: auto;
+}
+
+#entropy {
+    max-width: 80vw;
+    max-height: 80vh;
 }
