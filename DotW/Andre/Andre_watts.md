@@ -24,6 +24,7 @@ Indeed, such exploration is baked into Andre's DNA.  He speaks fondly of a trip 
 
 ![New York](./images/NewYork.png)
 
+
 ##The Autodidact
 
 The explorer spirit applies equally to Andre's philosophies regarding learning and education- set frequent, small goals, and let your ambition be your perseverance.
@@ -38,6 +39,20 @@ This amalgamation of momentum and gradual progress is how Andre finds himself in
 
 "I'm pretty familiar with codeschool, udacity, the odin project, freecodecamp, tryregex, coderbyte, youtube tutorials and a bunch of other resources."
 
+##The Inquirer
+
+![Curious](./images/curious.jpg)
+
+From a young age, Andre's mind was primed to see the world as a series of questions.  For Andre, it's not good enough that something works.   He wants to know *why* it works.
+
+>I took apart a radio piece by piece. My mom asked me why I did it and I responded, "I wanted to see how it worked." Which I think is why she left me off the hook. Maybe it's because I'm pretty observant that I don't speak out so much? I like to listen mostly for some reason.
+
+Most impressive of all is Andre's ability to remain inquisitive even through the most difficult and trying situations.
+
+"I had to put school on hold due to getting shot... You'd never think things like that would happen to you, but it can happen to anybody. The pain was insane. I wore a colostomy bag for a year and a half."
+
+>I went to visit some friends for a few months in Portland. My buddy and I would make these t-shirts and wear them everywhere.  We always got compliments so we decided that maybe we should sell 'em. I wanted to make a website.  The next thing I know I'm learning web development.
+
 ##The Artist
 
 Inside Andre lies the soul of a creator.  When describing the reasons he pursued Front-End development, Andre is quick to respond.
@@ -49,6 +64,19 @@ Such fusion of entrepreneurship and art further composes the core of Andre's lov
 "I plan on manifesting my ideas from thin air and bringing them to reality. This is why I chose programming."
 
 ![Idea](./images/IdeaBW.jpg)
+
+##The Technophile
+![Technophile](./images/Technophile.jpg)
+
+Andre received his first computer at age 6, and it did not take him long to start entering command prompts.  He speaks equally nostalgic about his introduction to the Internet.
+
+"I remember getting on AOL for the first time. I lived in the chat rooms. I remember that crazy annoying sound you had to listen to when you sign on."
+
+Rather it be through his blog, on the Modern QA, or speaking to him directly, one thing Andre shows a clear passion for is leveraging the power of technology for great efficiency. 
+
+>If I can create an automated system that solves a problem it's like hiring all other computers to do the work for free. Thats what I call leverage.
+
+
 
 ##The Boss
 
