@@ -1,0 +1,37 @@
+.hid{
+  display: none;
+}
+
+.shw{
+  display: inherit;
+}
+
+.show-error{
+  text-align: center;
+}
+
+.error-img{
+  width: 100px;
+  height: 200px;
+}
+
+.hide{
+  visibility: hidden;
+  opacity: 0;
+  visibility 0s, opacity 0.5s linear;
+  -webkit-transition: 3s linear;
+  -moz-transition: 3s linear;
+  -o-transition: 3s linear;
+  -ms-transition: 3s linear;
+  transition: 3s linear;
+}
+
+.visible{
+  opacity: 1;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -o-transition: 1s linear;
+  -ms-transition: 1s linear;
+  transition: 1s linear;
+  visibility: visible;
+}
