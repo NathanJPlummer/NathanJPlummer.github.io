@@ -18,7 +18,7 @@ While others may find themselves flustered, perhaps even distraught, over findin
 
 ![Mario](./images/Mario.png)
 
-Indeed, such exploration is baked into Andre's DNA.  He speaks fondly of a trip of New York City.
+Indeed, such exploration is baked into Andre's DNA.  He speaks fondly of a trip to New York City.
 
 "One of the best experiences I've ever had was my visit to New York! Just walking down 42nd street was amazing! Those bright lights...They inspire you somehow... We didn't even do anything. We just walked the strip, road the subway, visited all the burrows and met tons of people. I'd do it again in a heartbeat."
 
