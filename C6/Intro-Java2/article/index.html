@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Call, apply, and Bind
+    </title>
+    <link rel="stylesheet" type="text/css" href="font/FireFont.css" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="MarkdownCSS.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+
+<body>
+    <h1 id="setting-the-context-of-a-javascript-function">
+   Setting The Context of a JavaScript Function
+  </h1>
+    <p>
+        (Working with The JavaScript
+        <code>
+    this
+   </code> Keyword)
+    </p>
+    <p>
+        The “this” keyword in JavaScript allows you to refer to the object the code belongs to. Let’s take a look at an example:
+    </p>
+    <pre><code>var Ranger = function(color, firstName, lastName, teamName) {
+    this.color = color;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.teamName = teamName;
+}
+</code></pre>
+    <p>
+        Say we want to create a Power Ranger database. To do this efficiently, we need to create an object function, Ranger, which we can use to create objects and add properties quickly.
+    </p>
+    <pre><code>var greenRanger = new Ranger("Green", "Tommy", "Oliver", "Mighty Morphin");
+</code></pre>
+    <p>
+        Noticed we have added several properties to our Ranger. We need a way to tell the program
+        <em>
+    what
+   </em> we are adding the property to. One way to add a property is with dot notation. For example, if we wanted to change the Green Ranger’s team name we could do it as so:
+    </p>
+    <pre><code>greenRanger.teamName = "Zeo Rangers."
+</code></pre>
+    <p>
+        That works, because greenRanger is an already defined object. But when we are defining an object function we can’t simply:
+    </p>
+    <pre class="bug"><code>var Ranger = function(color, firstName, lastName, teamName) {
+    Ranger.color = color;
+    Ranger.firstName = firstName;
+    Ranger.lastName = lastName;
+    Ranger.teamName = teamName;
+}
+</code></pre>
+    <p>
+        Why not?
+    </p>
+    <ol>
+        <li>
+            Ranger does not yet exist. We are defining it here.
+        </li>
+        <li>
+            “Ranger” is actually a placeholder, to be replaced with another value every time we create a linked object. For example, “greenRanger.”
+        </li>
+    </ol>
+    <p>
+        So if we consider:
+    </p>
+    <pre><code>var greenRanger = new Ranger("Green", "Tommy", "Oliver", "Mighty Morphin");
+</code></pre>
+    <p>
+        We need a way to say “I am referring to a value in
+        <em>
+    this
+   </em> created object.”
+    </p>
+    <p>
+        And, what do you know, we literally use the word this.
+    </p>
+    <h2 id="call">
+   Call
+  </h2>
+    <p>
+        Here we have a function that, in theory, displays a lot of info about an object.
+    </p>
+    <p>
+        function getInfo() {
+        <br/> console.log(“Color: ” + this.color);
+        <br/> console.log(“First Name: ” + this.firstName);
+        <br/> console.log(“Last Name: ” + this.lastName);
+        <br/> console.log(“Team: ” + this.teamName);
+        <br/> }
+    </p>
+    <p>
+        Can you see the issue here? Even though we are asking it to find “this”, we haven’t defined what “this” is yet. Running the function:
+    </p>
+    <pre><code>getInfo()
+</code></pre>
+    <p>
+        results in an error because we have not given the function a reference for “this.”
+    </p>
+    <p>
+        The call parameter provides just that reference.
+    </p>
+    <pre><code>getInfo.call(greenRanger)
+</code></pre>
+    <p>
+        Will result in the log:
+    </p>
+    <pre><code>"Color: Green"
+"First Name: Tommy"
+"Last Name: Oliver"
+"Team: Mighty Morphin"
+</code></pre>
+    <p>
+        Try it yourself
+        <a href="https://codepen.io/DreamMastR/pen/bwPLpg?editors=0012">
+    here
+   </a> .
+    </p>
+    <p>
+        In short, the .call parameter changes the reference location of this, so the code above:
+    </p>
+    <pre><code>getInfo.call(greenRanger)
+</code></pre>
+    <p>
+        Is actually saying: “Run the getInfo() function but when keyword “this” is used, have object “greenRanger” by the reference for this.”
+    </p>
+    <h2 id="callintermediate-example">
+   Call(Intermediate Example)
+  </h2>
+    <p>
+        The above code would be great for keeping a database of the many different Power Rangers over the years, but the entries in the database may at times have slightly different properties you may need to account for.
+    </p>
+    <p>
+        Take, for example, additions of the
+        <a href="https://en.wikipedia.org/wiki/VR_Troopers">
+    VRTroopers
+   </a> to your database.
+    </p>
+    <pre><code>var VRTrooper = function (color, color2, firstName, lastName, teamName) {
+    this.color = color;
+    this.color2 = color2;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.teamName = teamName;
+};
+
+var redTrooper = new VRTrooper("Red","Blue","Ryan","Steele","VR Troopers");
+</code></pre>
+    <p>
+        The object properties of a VRTrooper are
+        <em>
+    almost
+   </em> identical to a Power Ranger with a single exception- a VRTrooper has a secondary color.
+    </p>
+    <p>
+        Recall that using the call property allows us to reuse a method with our object. You can do:
+    </p>
+    <pre><code>getInfo.call(redTrooper);
+</code></pre>
+    <p>
+        This works- except you’re missing the second color.
+    </p>
+    <pre><code>"Color: Red"
+"First Name: Ryan"
+"Last Name: Steele"
+"Team: VR Troopers"
+</code></pre>
+    <p>
+        You may think, “We can simply add the missing color to our getInfo() method” and you’d be right.
+    </p>
+    <pre><code>function getInfo() {
+    console.log("Color: " + this.color);
+    console.log("Secondary Color: " + this.color2);
+    console.log("First Name: " + this.firstName);
+    console.log("Last Name: " + this.lastName);
+    console.log("Team: " + this.teamName);
+}
+
+getInfo.call(redTrooper);
+</code></pre>
+    <p>
+        Will result in a log of:
+    </p>
+    <pre><code>"Color: Red"
+"Secondary Color: Blue"
+"First Name: Ryan"
+"Last Name: Steele"
+"Team: VR Troopers"
+</code></pre>
+    <p>
+        Where things get a little trickier is if you then want to run the new, updated getInfo() function on a Power Ranger. Let’s run greenRanger through the function again, using our call parameter.
+    </p>
+    <pre><code>getInfo.call(greenRanger);
+</code></pre>
+    <p>
+        Will result in a log of:
+    </p>
+    <pre><code>"Color: Green"
+"Secondary Color: undefined"
+"First Name: Tommy"
+"Last Name: Oliver"
+"Team: Mighty Morphin"
+</code></pre>
+    <p class="consider">
+        Note: Your JavaScript interpreter makes a difference here. While some interpreters, such as the one at CodePen, returned the value of “undefined” for property color2, other less comprehensive interpreters simply refuse to run any further code once they hit the undefined value.
+    </p>
+    <p>
+        That works- okay… but as we add properties, the number of undefined values can only grow, and eventually, that could become distracting.
+    </p>
+    <h3 id="the-cumbersome-solution">
+   The Cumbersome Solution
+  </h3>
+    <p>
+        We
+        <em>
+    could
+   </em> create a second getInfo() like function for VR Troopers.
+    </p>
+    <p>
+        Say, for example:
+    </p>
+    <p>
+        function getInfoVR() {
+        <br/> console.log(“Color: ” + this.color);
+        <br/> console.log(“Secondary Color: ” + this.color2);
+        <br/> console.log(“First Name: ” + this.firstName);
+        <br/> console.log(“Last Name: ” + this.lastName);
+        <br/> console.log(“Team: ” + this.teamName);
+        <br/> }
+    </p>
+    <p>
+        Technically, that’s fine. It will work. It does, however, bring with it the following issues:
+    </p>
+    <ol>
+        <li>
+            Rewriting of code that’s mostly identical.
+        </li>
+        <li>
+            Code is sloppy, and hard to read.
+            <ul>
+                <li>
+                    Keep in mind, we could later decide we want to add other similar series, such as “Superhuman Samurai” and “Masked Rider” to the database. That’s going to be a lot of functions to read through during a code audit.
+                </li>
+            </ul>
+        </li>
+        <li>
+            It’s up to the programmer to choose the right function when using getInfo and derivatives. In other words, the programmer’s doing the work- not the code.
+        </li>
+    </ol>
+    <p>
+        What if we could create a universal getInfo() function that would only show the relevant data?
+    </p>
+    <p>
+        Good news, we can! It’s here you’ll start to see the power of using call.
+    </p>
+    <h3 id="step-one">
+   Step One
+  </h3>
+    <p>
+        We’re going to add to new property to our Ranger() and VRTrooper functions, “type.”
+    </p>
+    <pre><code>var Ranger = function (color, firstName, lastName, teamName) {
+    this.type = "pRanger";
+    this.color = color;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.teamName = teamName;
+}
+
+var VRTrooper = function (color, color2, firstName, lastName, teamName) {
+    this.type = "vTrooper";
+    this.color = color;
+    this.color2 = color2;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.teamName = teamName;
+};
+</code></pre>
+    <div class="consider">
+        <p>
+            Eagle eyed readers may have noticed that before now we did not
+            <em>
+    really
+   </em> need to create separate objects for a Power Ranger and a VRTrooper. Since at the time they were nearly identical, we could have simply added the property “color2” to Ranger(). Creating separate object functions allows us to account for consistent differences between the object types.
+        </p>
+        <p>
+            Notice the new property “this.type” is set by the object, and not the user. A Power Ranger will
+            <em>
+    always
+   </em> have the type pRanger will a VR Trooper will similarly always have the type vTrooper. It’s here our object functions start to diverge.
+        </p>
+        <p>
+            We can take this a step further to clean up our VRTrooper function.
+        </p>
+        <p>
+            If you look at the final property, teamName, this is another area where the series, and hence the object properties, diverge. There’s are dozens of different types of Power Ranger. A Power Ranger can be “Mighty Morphin”, “Zeo”, “Turbo”, “Ninja Storm”, etc.
+        </p>
+        <p>
+            Meanwhile, there’s only one VR Trooper team. For this reason, the final value can be removed from the user settings for the VR Trooper function, and be set automatically by the function.
+        </p>
+        <pre><code>var VRTrooper = function (color, color2, firstName, lastName) {
+        this.type = "vTrooper";
+        this.color = color;
+        this.color2 = color2;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.teamName = "VR Troopers";
+    };
+</code></pre>
+        <p>
+            If we were to create our Red VR Trooper with the function now, we no longer have to define teamName as an argument:
+        </p>
+        <pre><code>var redTrooper = new VRTrooper("Red","Blue","Ryan","Steele");
+</code></pre>
+        <p>
+            You can take a look at the code from this point
+            <a href="https://codepen.io/DreamMastR/pen/wzLxyE?editors=0012">
+    at this CodePen link
+   </a>
+        </p>
+    </div>
+    <br>
+    <p>
+        With the new property, we can display only the relevant info using a simple “if” statement.
+    </p>
+    <pre><code>function getInfo() {
+    console.log("Color: " + this.color);
+    if (this.type === "vTrooper") {
+        console.log("Secondary Color: " + this.color2);
+    }
+    console.log("First Name: " + this.firstName);
+    console.log("Last Name: " + this.lastName);
+    console.log("Team: " + this.teamName);
+}
+</code></pre>
+    <p>
+        This concept can be expanded infinitively. As new types are added, we can simply add more properties to the single, universal getInfo() function, and allow the code to sort the particulars out!
+    </p>
+    <p>
+        <a href="https://codepen.io/DreamMastR/pen/vXqzYr?editors=0012">
+    Try it out yourself!
+   </a>
+    </p>
+    <h2 id="apply">
+   Apply
+  </h2>
+    <p>
+        Apply works similar to call. In fact, in the code above, the call and apply methods function exactly the same.
+        <a href="https://codepen.io/DreamMastR/pen/YGoOBg?editors=0012">
+    See for yourself
+   </a> .
+    </p>
+    <p>
+        The difference comes into play when you start adding arguments to your function. Take another glance at the getInfo() code.
+    </p>
+    <pre><code>function getInfo() {
+        console.log("Color: " + this.color);
+        if (this.type === "vTrooper") {
+            console.log("Secondary Color: " + this.color2);
+        }
+        console.log("First Name: " + this.firstName);
+        console.log("Last Name: " + this.lastName);
+        console.log("Team: " + this.teamName);
+    }
+</code></pre>
+    <h3 id="using-function-arguments-in-call">
+   Using Function Arguments in Call
+  </h3>
+    <p>
+        We’re going to slightly modify the code here to allow two custom arguments to the output.
+    </p>
+    <pre><code>function getInfo(custom1, custom2) {
+    console.log("Color: " + this.color);
+    if (this.type === "vTrooper") {
+        console.log("Secondary Color: " + this.color2);
+    }
+    console.log("First Name: " + this.firstName);
+    console.log("Last Name: " + this.lastName);
+    console.log("Team: " + this.teamName);
+    console.log(custom1);
+    console.log(custom2);
+}
+</code></pre>
+    <p>
+        Now the function requires the passing of two arguments. When using the call method, arguments must always be passed right after pointing out the reference object. Such as:
+    </p>
+    <pre><code>functionName.call(referenceObject, argument1, argument2);
+</code></pre>
+    <p>
+        For example:
+    </p>
+    <pre><code>getInfo.call(greenRanger, "Tommy is the most popular Ranger", 
+"Tommy has appeared in 8 Power Ranger Series");
+</code></pre>
+    <h3 id="using-function-arguments-in-apply">
+   Using Function Arguments in Apply
+  </h3>
+    <p>
+        Apply has only a single difference from call. Instead of taking
+        <em>
+    individual arguments
+   </em> it instead takes an array, using each index as a single argument.
+    </p>
+    <p>
+        Technically, this is a proper use of apply:
+    </p>
+    <pre><code>getInfo.apply(greenRanger, ["Tommy is the most popular Ranger", 
+"Tommy has appeared in 8 Power Ranger Series"]);
+</code></pre>
+    <p>
+        In reality, however, you would use apply when you already have an array in place.
+    </p>
+    <pre><code>var userFacts = ["Tommy is the most popular Ranger", 
+"Tommy has appeared in 8 Power Ranger Series"];
+
+getInfo.apply(greenRanger, userFacts);
+</code></pre>
+    <p>
+        <a href="https://codepen.io/DreamMastR/pen/vXoLrv?editors=0002">
+    Try it out
+   </a>
+    </p>
+    <h2 id="bind">
+   Bind
+  </h2>
+    <p>
+        Bind works slightly different from call and apply.
+    </p>
+    <p>
+        Instead of modifying the function with a method, Bind creates a new function changing only the reference in bind.
+    </p>
+    <pre><code>newFunction = oldFunction.bind(referenceObject);
+</code></pre>
+    <p>
+        We could then, using bind, create a new function that only displays the Green Ranger’s info without having to rewrite the getInfo() code.
+    </p>
+    <pre><code>var greenRangerInfo = getInfo.bind(greenRanger);
+
+greenRangerInfo();
+</code></pre>
+    <p>
+        If can think of call and apply as post-processors- modifying a function on use.
+    </p>
+    <p>
+        In contrast, bind is a
+        <em>
+    preprocessor
+   </em> - it modifies a function at the creation level, before it is called.
+    </p>
+    <p>
+        <a href="https://codepen.io/DreamMastR/pen/rMXeed?editors=0012">
+    Give it a Try
+   </a>
+    </p>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+
+
+    </script>
+    <script>
+        hljs.initHighlightingOnLoad();
+
+    </script>
+</body>
+
+</html>

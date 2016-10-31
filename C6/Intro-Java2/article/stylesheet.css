@@ -1,0 +1,48 @@
+html {
+    background-color: #FFFFF8;
+}
+
+body {
+    background-color: ghostwhite;
+    border-left: .5vw solid rgba(117, 216, 255, 0.28);
+    border-bottom: .5vw solid rgb(255, 227, 211, 0.28);
+}
+
+h1 {
+    color: #7D20F5;
+}
+
+h2,
+h3 {
+    color: #F57D20;
+}
+
+h3 {
+    color: #2098F5;
+}
+
+a {
+    color: #E820F5;
+}
+
+a:hover {
+    color: #882F99;
+}
+
+a:visted {
+    color: #F57D20;
+}
+
+.consider {
+    background-color: rgba(148, 255, 117, 0.1);
+    border: 5px double rgba(148, 255, 117, 0.8);
+}
+
+.bug {
+    background-color: rgba(255, 118, 181, 0.1);
+    border: 5px double rgba(255, 118, 181, 0.8);
+}
+
+code {
+    font-family: 'fira_coderetina';
+}
