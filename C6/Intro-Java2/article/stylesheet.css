@@ -6,10 +6,6 @@ html {
 body {
     background-color: ghostwhite;
     border-left: .5vw solid rgba(117, 216, 255, 0.28);
-    display: block;
-    width: 90vw;
-    height: auto;
-    margin: 0 auto;
 }
 
 h1 {
