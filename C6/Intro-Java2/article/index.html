@@ -86,14 +86,14 @@
     <p>
         Here we have a function that, in theory, displays a lot of info about an object.
     </p>
-    <p>
+    <pre><code>
         function getInfo() {
-        <br/> console.log(“Color: ” + this.color);
-        <br/> console.log(“First Name: ” + this.firstName);
-        <br/> console.log(“Last Name: ” + this.lastName);
-        <br/> console.log(“Team: ” + this.teamName);
-        <br/> }
-    </p>
+            console.log(“Color: ” + this.color);
+            console.log(“First Name: ” + this.firstName);
+            console.log(“Last Name: ” + this.lastName);
+            console.log(“Team: ” + this.teamName);
+        }
+    </code></pre>
     <p>
         Can you see the issue here? Even though we are asking it to find “this”, we haven’t defined what “this” is yet. Running the function:
     </p>
