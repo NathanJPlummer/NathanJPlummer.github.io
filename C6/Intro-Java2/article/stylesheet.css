@@ -47,3 +47,14 @@ a:visted {
 code {
     font-family: 'fira_coderetina';
 }
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50vw;
+    width: auto;
+    max-height: 30vh;
+    height: auto;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+}
