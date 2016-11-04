@@ -128,7 +128,7 @@
     <pre><code>getInfo.call(greenRanger)
 </code></pre>
     <p>
-        Is actually saying: “Run the getInfo() function but when keyword “this” is used, have object “greenRanger” by the reference for this.”
+        Is actually saying: “Run the getInfo() function but when keyword “this” is used, have object “greenRanger” be the reference for this.”
     </p>
     <h2 id="callintermediate-example">
    Call(Intermediate Example)
@@ -137,7 +137,7 @@
         The above code would be great for keeping a database of the many different Power Rangers over the years, but the entries in the database may at times have slightly different properties you may need to account for.
     </p>
     <p>
-        Take, for example, additions of the
+        Take, for example, the addition of the
         <a href="https://en.wikipedia.org/wiki/VR_Troopers">
     VRTroopers
    </a> to your database.
@@ -156,7 +156,7 @@ var redTrooper = new VRTrooper("Red","Blue","Ryan","Steele","VR Troopers");
         The object properties of a VRTrooper are
         <em>
     almost
-   </em> identical to a Power Ranger with a single exception- a VRTrooper has a secondary color.
+   </em> identical to a Power Ranger with only a single exception- a VRTrooper has a secondary color.
     </p>
     <img src="img/VRTroopers2.jpg" />
     <p>
@@ -264,7 +264,7 @@ getInfo.call(redTrooper);
    Step One
   </h3>
     <p>
-        We’re going to add to new property to our Ranger() and VRTrooper functions, “type.”
+        We’re going to add to a new property to our Ranger() and VRTrooper() functions, “type.”
     </p>
     <pre><code>var Ranger = function (color, firstName, lastName, teamName) {
     this.type = "pRanger";
@@ -291,19 +291,19 @@ var VRTrooper = function (color, color2, firstName, lastName, teamName) {
    </em> need to create separate objects for a Power Ranger and a VRTrooper. Since at the time they were nearly identical, we could have simply added the property “color2” to Ranger(). Creating separate object functions allows us to account for consistent differences between the object types.
         </p>
         <p>
-            Notice the new property “this.type” is set by the object, and not the user. A Power Ranger will
+            Notice the new property “this.type” is set by the object, and not the function. A Power Ranger will
             <em>
     always
-   </em> have the type pRanger will a VR Trooper will similarly always have the type vTrooper. It’s here our object functions start to diverge.
+   </em> have the type pRanger while a VR Trooper will similarly always have the type vTrooper. It’s here our objects- and their relative functions- start to diverge.
         </p>
         <p>
-            We can take this a step further to clean up our VRTrooper function.
+            We can take this a step further to clean up our VRTrooper() function.
         </p>
         <p>
-            If you look at the final property, teamName, this is another area where the series, and hence the object properties, diverge. There’s are dozens of different types of Power Ranger. A Power Ranger can be “Mighty Morphin”, “Zeo”, “Turbo”, “Ninja Storm”, etc.
+            If you look at the final property, teamName, this is another area where the series, and hence the object properties, diverge. There are dozens of different teams of Power Rangers. A Power Ranger can be “Mighty Morphin”, “Zeo”, “Turbo”, “Ninja Storm”, etc.
         </p>
         <p>
-            Meanwhile, there’s only one VR Trooper team. For this reason, the final value can be removed from the user settings for the VR Trooper function, and be set automatically by the function.
+            Meanwhile, there’s only one VR Trooper team. For this reason, the final value can be removed from the VR Trooper function arguments, and be set automatically by the object type.
         </p>
         <pre><code>var VRTrooper = function (color, color2, firstName, lastName) {
         this.type = "vTrooper";
@@ -315,7 +315,7 @@ var VRTrooper = function (color, color2, firstName, lastName, teamName) {
     };
 </code></pre>
         <p>
-            If we were to create our Red VR Trooper with the function now, we no longer have to define teamName as an argument:
+            If we were to create our Red VR Trooper with the function now, we no longer have to define teamName:
         </p>
         <pre><code>var redTrooper = new VRTrooper("Red","Blue","Ryan","Steele");
 </code></pre>
@@ -341,7 +341,7 @@ var VRTrooper = function (color, color2, firstName, lastName, teamName) {
 }
 </code></pre>
     <p>
-        This concept can be expanded infinitively. As new types are added, we can simply add more properties to the single, universal getInfo() function, and allow the code to sort the particulars out!
+        This concept can be expanded infinitively. As new types are added, we can simply add more properties to the single, universal getInfo() function, and by using call methods we can allow the code to sort the particulars out!
     </p>
     <p>
         <a href="https://codepen.io/DreamMastR/pen/vXqzYr?editors=0012">
