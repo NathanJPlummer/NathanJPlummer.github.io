@@ -12,16 +12,15 @@
         <img id = "wranger" src="images/White-Trim.jpg"/>
         <h3>Create a Ranger!</h3>
         <div id="sliders">
-            <span>R:</span><img src="images/Red.jpg"/><input type="range" min="0" value="0" max="255" step="1"/>
+            <span>R:</span><img src="images/Red.jpg"/><input onchange="customRangerColor()" id="red" type="range" min="0" value="0" max="255" step="1"/>
+            <br> 
+            <span>G:</span><img src="images/Green.jpg"/><input onchange="customRangerColor()" id="green" type="range" min="0" value="0" max="255" step="1"/>
             <br>
-            <span>G:</span><img src="images/Green.jpg"/><input type="range" min="0" value="0" max="255" step="1"/>
-            <br>
-            <span>B:</span><img src="images/Blue.jpg"/><input type="range" min="0" value="0" max="255" step="1"/>
+            <span>B:</span><img src="images/Blue.jpg"/><input onchange="customRangerColor()" id="blue" type="range" min="0" value="0" max="255" step="1"/>
         </div>
         <img id ="custom" src="images/Custom_Ranger.png"/>
+        <script src="app.js"></script>
     </body>
-     <!--<script src="app.js"</script> <!--pointer to JavaScript code if applicable-->
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--loads JQUERY library-->-->
 </html>
 
 

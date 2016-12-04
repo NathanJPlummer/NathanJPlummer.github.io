@@ -1,1 +1,8 @@
-alert("This site is currently incomplete and not functional.\nYou can not change the color of the Ranger at this time.");
+function customRangerColor() {
+    var rangerColor = document.getElementById("custom");
+
+    var r = document.getElementById("red").value;
+    var b = document.getElementById("blue").value;
+    var g = document.getElementById("green").value;
+    rangerColor.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+}
