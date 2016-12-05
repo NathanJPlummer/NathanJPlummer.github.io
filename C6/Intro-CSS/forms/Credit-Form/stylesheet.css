@@ -102,6 +102,18 @@ input, label {
     float:left;
 }
 
+#submit {
+    position: relative;
+    width: 200px;
+    left: 40px;
+    color: white;
+    background-color: blue;
+}
+
+#submit:hover {
+    background-color: black;
+}
+
 /*Small Screen Devices in Landscape (ex: Blackberry)*/
 @media all and (orientation: landscape) and (max-height: 379px){
     h1{
