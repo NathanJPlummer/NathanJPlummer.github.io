@@ -202,6 +202,6 @@ input, label {
     }
     
     #submit {
-        left: none;
+        left: 5px;
     }
 }
