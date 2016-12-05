@@ -173,10 +173,6 @@ input, label {
     #dateselect{
         width: 20%;
     }
-    
-    #submit{
-        left: 0px;
-    }
 }
 
 /*Small portrait devices (Feature Phones, Motorola RazR)*/
@@ -206,6 +202,6 @@ input, label {
     }
     
     #submit {
-        left: 0px;
+        left: none;
     }
 }
