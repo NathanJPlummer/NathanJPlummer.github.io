@@ -1,4 +1,4 @@
-/*jslint plusplus: true, sloppy: true*/
+/*jslint devel: true, white: true, plusplus: true, sloppy: true*/
 var validator = {};
 
 validator.isEmail = (function (input) {
@@ -181,23 +181,23 @@ validator.isEmpty = (function (input) {
 });
 
 validator.contains = (function (input, words, caseSensitive) {
-    var i;  //used in loops
-    
+    var i; //used in loops
+
     //convert "-" to " "
     while (input.indexOf("-") !== -1) {
         input = input.replace("-", " ");
     }
-    
+
     //remove symbols from input
     input = validator.withoutSymbols(input);
-    
+
     //allows user to enter string of words instead of array to check a phrase
     //converts string to single index array
     if (Array.isArray(words) === false) {
         words = [words];
-        
+
     }
-    
+
     //remove case check unless enabled by user
     if (caseSensitive !== true) {
         input = input.toLowerCase();
@@ -205,18 +205,18 @@ validator.contains = (function (input, words, caseSensitive) {
             words[i] = words[i].toLowerCase();
         }
     }
-    
+
     //convert input to array of seperate words
     input = input.split(" ");
-    
+
     for (i = 0; i < words.length; i++) {
         if (input.indexOf(words[i]) === -1) {
             return false;
         }
     }
-    
+
     return true;
-    
+
 });
 
 validator.lacks = (function (input, words, caseSensitive) {
@@ -254,7 +254,7 @@ validator.isComposedOf = (function (input, strings, caseSensitive) {
 
 validator.isLength = (function (input, n) {
     //Checks if the input parameter’s character count is less than or equal to the n parameter.
-    
+
     //convert string to number if possible
     n = n - 0;
 
@@ -310,7 +310,7 @@ validator.countWords = (function (input) {
     while (input.indexOf("-") !== -1) {
         input = input.replace("-", " ");
     }
-    
+
     //accounts for edge case of no input
     if (input === "" || input === null) {
         return 0;
@@ -609,8 +609,33 @@ validator.isTrimmed = (function (input) {
 
 });
 
+validator.isName = (function (input) {
+    //trim whitespace
+    while (input.indexOf(" ") !== -1) {
+        input = input.replace(" ", "");
+    }
+
+    //length checl
+    if (input.length < 2) {
+        return false;
+    }
+
+    //all alpha characters check
+    var i; // used in loop
+    input = input.split("");
+    console.log(input);
+    for (i = 0; i < input.length; i++) {
+        if (input[i].toUpperCase() === input[i].toLowerCase()) {
+            return false;
+        }
+    }
+    return true;
+});
+
 //TEST ADDITIONAL FUNCTIONS (Non-Assigned)
 //console.log(validator.areTheyDates(["October 17, 1986 11:23:07", "October 16, 1986 11:23:07", "October 15, 1986 11:23:07"]));
+//console.log(validator.isName("Tommy Oliver"));
+
 
 //TEST ASSIGNMENT FUNCTIONS (Personal Examples)
 //console.log(validator.isEmail("Jackjay@user.com"));
