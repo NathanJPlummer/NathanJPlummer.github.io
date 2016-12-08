@@ -35,8 +35,8 @@ function validateName() {
 function validateCSV() {
     var csv = document.getElementById("csv");
     
-    if (csv.value.lengh < 5) {
-        csv.setCustomValidity("CSV values never exceed 4 digits");
+    if ((csv.value.lengh > 4) || (csv.value.length === 0)) {
+        csv.setCustomValidity("CSV values are between 1 and 4 digits");
         csv.style.border = "2px solid red";
     } else if (isNaN(csv.value) === true) {
         csv.setCustomValidity("CSV must be a number");
