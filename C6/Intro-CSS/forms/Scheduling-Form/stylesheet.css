@@ -28,12 +28,12 @@ html, body{
 }
 
 h3{
-    width: 90%;
-    position:relative fixed;
-    top: 0;
-    display:inline-block;
+    margin: 0 auto;
+    width: 50vw;
+    display:block;
     background-color: #FAB148;
     text-align: center;
+    border-radius: 3px;
 }
 
 .num3{
@@ -50,9 +50,12 @@ label{
     font-weight: 900;
     border: 7px solid #F8B9F3;
     border-radius: 20px;
-    width:100%;
+    width:55%;
     display: block;
     line-height: 0.5;
+    margin: 0 auto;
+    margin-bottom: .8vh;
+    margin-top: .8vh;
 }
 
 form{
@@ -72,4 +75,16 @@ input[type=text]{
 a{
     color:aliceblue;
 }
-    
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2vh;
+    width: 30%;
+    height: 5vh;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #486CFA;
+    color: white;
+    font-weight: 600;
+}

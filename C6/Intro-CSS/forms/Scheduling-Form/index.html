@@ -93,15 +93,19 @@
             </select>
             <a href="http://www.areacodetimezone.com/">I don't know my time zone!</a>
             <label>Event Description:</label>
-            <input type="text"/>
+            <input id="event" type="text"/>
             <label>Contact Number:</label>
-            <input class="num3" type="text" />
+            <span>1 - </span>
+            <input maxlength="3" name="phone1" class="num3" type="text" />
             <span>-</span>
-            <input class="num3" type="text"/>
+            <input maxlength="3" name="phone2" class="num3" type="text"/>
             <span>-</span>
-            <input id="num4" type="text"/>
+            <input maxlength="4" name="phone3" id="num4" type="text"/>
             <label>E-mail:</label>
             <input type="text"/>
+            <input id="submit" name="submit" type="submit" value="Add Event!">
         </form>
+        <script type="text/javascript" src="validator.js"></script>
+        <script type=text/javascript src="app.js"></script>
     </body>
 </html>
