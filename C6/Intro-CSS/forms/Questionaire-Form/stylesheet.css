@@ -97,7 +97,7 @@ h1 {
         font-size: 70%;       
     }
     
-    #other{
+    #otherText{
         width: 90px;
     }
 }
@@ -132,7 +132,7 @@ h1 {
         font-size: 90%;
     }
     
-    #other{
+    #otherText{
         width: 55%;
     }
 }
