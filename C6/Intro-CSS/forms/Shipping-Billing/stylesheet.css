@@ -61,6 +61,16 @@ h5{
     line-height: 1;
 }
 
+#submit {
+    position: relative;
+    display: block;
+    margin-top: 2vh;
+    width: 12%;
+    color: white;
+    background-color: #5B00FF;
+    border-radius: 3px;
+}
+
 /*Small Screen Feature Phones*/
 @media all and (orientation: portrait) and (max-width: 239px){
     input {
