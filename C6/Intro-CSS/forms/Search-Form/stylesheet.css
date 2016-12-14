@@ -60,7 +60,7 @@ body > p {
 
 /*Options for search box*/
 
-#search{
+#searchForm{
     position:relative;
     top: 43.5%;
     left: 26%;
@@ -69,14 +69,15 @@ body > p {
     display: block;
 }
 
-#search input{
+#searchForm input{
     background-color: black;
+    color: white;
 }
 
 
 /*Slight Adjustments for Higher Resolution Display devices*/
 @media all and (min-width: 1920px){
-    #search{
+    #searchForm {
         left: 29.5%;
         top: 47%;
     }
@@ -110,7 +111,7 @@ body > p {
         left: 20%;
     }
     
-    #search {
+    #searchForm {
         width:100%;
         top:55%;
         bottom: 15%;
@@ -134,7 +135,7 @@ body > p {
         left:0;
     }
     
-    #search{
+    #searchForm{
         bottom:0;
         left:0;
     }
@@ -147,7 +148,7 @@ body > p {
         left:0;
     }
     
-    #search{
+    #searchForm{
         left:0;
     }
     
@@ -164,7 +165,7 @@ body > p {
         left:0;
     }
     
-    #search{
+    #searchForm{
         left:0;
     }
     
