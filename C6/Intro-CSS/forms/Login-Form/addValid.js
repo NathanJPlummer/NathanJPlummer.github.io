@@ -9,23 +9,10 @@ function validateUsernamePassword() {
             inputs[i].style.border = "2px solid red";
         } else {
             inputs[i].setCustomValidity("");
+            inputs[i].style.border = "2px solid green";
         }
     }
 }
-
-//debug code
-/*
-function validateUserName() {
-    var userName = document.querySelector("#username");
-    
-    if (validator.isName(userName.value)) {
-        userName.setCustomValidity("Yes");
-    } else {
-        userName.setCustomValidity("No");
-        userName.style.border = "2px solid red";
-    }
-}
-*/
 
 
 //Main Program Code

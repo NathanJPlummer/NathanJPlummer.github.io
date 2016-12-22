@@ -4,6 +4,7 @@ body{
     background-repeat: repeat-y;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /*Imge Link to Homepage*/
@@ -21,10 +22,11 @@ body{
     background-image: url(images/9845-loyd_column_1.png);
     background-size: contain;
     border: 8px solid #EA7277;
-    width: 80%;
+    width: 66.4vw;
     margin: 0 auto;
     margin-top: 10vh;
     margin-bottom: 20vh;
+    margin-right: 25vw;
 }
 
 #background span{
@@ -60,8 +62,7 @@ body{
     color: #E465A5;
     width: 100%;
     height: auto;
-    margin: 0 auto; /*Center*/
-    
+    margin: 0;
     background-color: whitesmoke;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -73,14 +74,6 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 200%;
 }
- width: 100%;
-        font-size: 2vw;
-        margin-bottom: 1vh;
-/*Not needed since links are active yet#navbar a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 800;
-}*/
 
 #navbar li:hover{ /*Change to a:hover when links are active*/
     background-color: #E465A5;
@@ -88,13 +81,9 @@ body{
 }
 /*END NAVBAR*/
 
-#notsidebar{ /*Prevent merging with shopping-cart*/
-    width: 71vw;
-    box-sizing: border-box;
-}
-
 /*CSS for Shopping Cart*/
 #Shopping-Cart{
+    display: none;
     position: fixed;
     top: 0;
     right:0;
@@ -107,6 +96,11 @@ body{
     z-index: 2;
     overflow: auto;
     box-sizing: border-box;
+}
+
+#Shopping-Cart .price, #Total {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
 }
 
 #name{
@@ -154,7 +148,7 @@ body{
     text-align: center;
 }
 
-.price{
+.incart .price{
     display: block;
     width: 100%;
     text-align: center;
@@ -162,16 +156,15 @@ body{
     color: #F782B9;
 }
 
-.removeFromCart{
-    display: inline-block;
-    text-align: center ;
-    width: auto;
-}
 
-.removeBox{
+.countBox{
     display: inline-block;
+    width: 20px;
+    height: 20px;
     float: right;
-    margin-top: 3.2%;
+    text-align: center;
+    color: #ED94BD;
+    font-weight: 600;
 }
 
 #Total{
@@ -211,6 +204,7 @@ body{
     background-color: #2AD97D;
     color: white;
     border-radius: 30px;
+    margin-bottom: 20px;
 }
 
 #Checkout:hover{
@@ -221,7 +215,7 @@ body{
 /*Storefront*/
 #storefront{
     display: block;
-    width: 83vw;
+    width: 100vw;
     height: auto;
     overflow: hidden;
     box-sizing: border-box;
@@ -233,16 +227,15 @@ body{
 }
 
 .product{
-    display: block;
+    float: left;
     position: relative; /*For Children*/
     border: 3px solid #FD7A80;
     border-radius: 30px;
-    display: inline-block;
-    float: left;
-    margin: .5%;
     margin-left: 3.5vw;
     height: 299px;
     width: 275px;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 
 .product img{
@@ -301,6 +294,20 @@ body{
     text-align: center;
 }
 /*End PRODUCTS Options*/
+
+#displayCart {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 100px;
+    padding: 0;
+    right: 17vw;
+    bottom: 49.5vh;
+    word-wrap: break-word;
+    color: white;
+    background-color: #F9787D;
+    border-bottom-left-radius: 15px;
+}
 
 /*CSS for Portrait devices (ex: iPhone)*/
 
@@ -367,15 +374,12 @@ body{
     }
     
     #Checkout{
-         width: 100%;
+        width: 100%;
         font-size: 2.5vw;
         margin-bottom: 1vh;
     }
-    /*END Shopping Cart*/
     
-    #notsidebar{ /*Prevents merging with shopping cart*/
-        width: 71vw;
-    }
+    /*END Shopping Cart*/
     
     /*Remove mobile incompatible background*/
     #background{
@@ -408,9 +412,7 @@ body{
     
     /*Storefront*/
     #storefront{
-        top: 0;  /*Only needed for disbaled hack*/
-        width: 90%;
-        margin: 0 auto;
+        width: 100vw;
     }
     
     .product{

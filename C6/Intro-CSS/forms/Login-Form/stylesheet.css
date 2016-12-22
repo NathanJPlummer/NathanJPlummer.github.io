@@ -45,22 +45,19 @@ body > p{
 }
 
 #logbox{
+    top: 8vh;
+    left: 14vw;
     position: relative;
     font-size: 150%;
     font-family: "Helvetica";
     font-weight: 600;
     width: 60%;
-    margin-left: 14%;
     margin-right: auto;
     color: #A204A2;
     display: block;
     height: 32%;
 }
 
-*#elementpos{
-    position: absolute;
-    bottom: 0;
-}
 
 #login{
     width: inherit;
