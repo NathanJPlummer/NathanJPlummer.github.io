@@ -1,0 +1,39 @@
+html {
+    border-left: 2vw solid rgba(18, 8, 16, 0.65);
+    background-color: #3B3E6D;
+    border-right: .5vw solid rgba(168, 54, 28, 0.65);
+}
+
+body {
+    background-color: #F8F8EE;
+    border-left: .5vw solid rgba(66, 93, 141, 0.28);
+    background: url(img/wall3.jpg) repeat;
+}
+
+p {
+    color: #1E1729;
+}
+
+#a-farewell-to-fisher {
+    color: #9E3429;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50vw;
+    width: auto;
+    max-height: 30vh;
+    height: auto;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+}
+
+.caption {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+}
