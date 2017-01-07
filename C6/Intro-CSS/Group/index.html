@@ -12,11 +12,11 @@
                 <img id="peopleLogo" src="images/Logov4.png">
                 <span id="collaborate">.Modern Developer</span>
                 <img id= "gear" src="images/Gear.png">
-                <span  class="floatRight">ROOM NAME</span>
+                <span  id="rn" class="floatRight">ROOM NAME</span>
                 <img class="line" src="images/line.png"/>
             </div>
-            <div id="roomName">
-                <span><input type="text" value="Room Name"/></span>
+            <div id="roomNameDiv">
+                <input id="roomName" type="text" value="Room Name"/>
                 <span class="blockDetails">Change the details of the chatroom here</span>
                 <br>
                 <img class="line" src="images/line.png">
@@ -29,13 +29,13 @@
                     <img class="line" src="images/line.png"/>
                     <div id="defineRoles">
                         <span class="italic">Alex Miller</span>
-                        <input type="text" value="Product Manager"/>
-                        <span class="greyBack italic">James Morrison</span>
-                        <input class="greyBack" type="text" value="3D Animator"/>
+                        <input class="role" type="text" value="Product Manager"/>
+                        <span class="italic">James Morrison</span>
+                        <input class="role" type="text" value="3D Animator"/>
                         <span class="italic">Miranda Lopez</span>
-                        <input type="text" value="Concept Artist"/>
-                        <span class="greyBack italic">Alex Miller</span>
-                        <input class="greyBack" type="text" value="Product Manager"/>
+                        <input class="role" type="text" value="Concept Artist"/>
+                        <span class="italic">Jason Miller</span>
+                        <input class="role" type="text" value="Product Manager"/>
                     </div>
                 </div>
                 <div id="addColors">
@@ -45,24 +45,27 @@
                     <img class="line" src="images/line.png"/>
                     <div id="defineColors">
                         <span>Application</span>
-                         <select>
-                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                         <select name="Application">
+                                <option value="#DD77CB">#DD77CB</option>
+                                <option value="#6C84DC">#6C84DC</option>
+                                <option value="#8D8D8D">#8D8D8D</option>
+                                <option value="">Default</option>
                         </select>
                         <span class="blockDetails">The general color used for the application</span>
                         <span>Box value</span>
-                        <select>
-                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                        <select name="boxValue">
+                                <option value="#DD77CB">#DD77CB</option>
+                                <option value="#6C84DC">#6C84DC</option>
+                                <option value="#8D8D8D">#8D8D8D</option>
+                                <option value="">Default</option>
                         </select>
                         <span class="blockDetails">The value of message backgrounds</span>
                         <span>Text Color</span>
-                        <select>
-                                <option style="color: #DD77CB;" value="#DD77CB">#DD77CB</option>
-                                <option style="color: #6C84DC;" value="#6C84DC">#6C84DC</option>
-                                <option style="color: #8D8D8D;" value="#8D8D8D">#8D8D8D</option>
+                        <select name="textColor">
+                                <option value="#DD77CB">#DD77CB</option>
+                                <option value="#6C84DC">#6C84DC</option>
+                                <option value="#8D8D8D">#8D8D8D</option>
+                                <option value="">Default</option>
                         </select>
                         <span class="blockDetails">The message text color</span>
                     </div>
@@ -75,7 +78,7 @@
             <div id="panelsLocation">
                 <div class="bothPanels leftPanel">
                     <div class="panelTabs">
-                        <div class="tab" id="tabActive">
+                        <div class="tab tabActive">
                             <a href="#" class="blueBox-name">Chat</a>
                             <span class="close color-inactive">X</span>
                         </div>
@@ -144,17 +147,17 @@
                         </div>
                     </div>
                     <div class="panelChat">
-                        <div id="chatbox">
+                        <div id="chatbox" data-username="Nathan Plummer">
                             <img class="user" src="images/userimage.jpg"/>
-                            <textarea type="text">Say something...</textarea>
-                        <button class="sendMessage" type="submit">SEND</button>
+                            <textarea type="text" id="textMessage">Say something...</textarea>
+                            <button class="sendMessage" type="submit">SEND</button>
                         </div>
                     </div>
                 </div>
                 <div class="bothPanels" id="rightPanel">
                     <div class="panelTabs">
-                        <div class="tab" id="tabActive">
-                            <a href="#" class="blueBox-name">Chat</a>
+                        <div class="tab tabActive pinkTabTop">
+                            <a href="#" class="pinkBox-name">Code Editor</a>
                             <span class="close color-inactive">X</span>
                         </div>
 
@@ -162,14 +165,17 @@
                             <a href="#" class="color-inactive">Screen Sharing</a>
                             <span class="close color-inactive">X</span>
                         </div>
-                        <a class="tab-add" href="#">+ add panel</a>
+                        <a class="tab-add pinkFont" href="#">+ add panel</a>
                     </div>
                     <div id="rightPanelBody">
                         <img id="ruler" src="images/Ruler.png"/>
                         <textarea type="text"></textarea>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="NoSymbols.js"></script>
+        <script type="text/javascript" src="chat.js"></script>
     </body>
 </html>

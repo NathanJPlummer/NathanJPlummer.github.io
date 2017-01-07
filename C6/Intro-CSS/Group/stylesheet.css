@@ -53,10 +53,6 @@ input { /*Add pencil image to inputs, remove border*/
     background-size: 0.75rem;
 }
 
-.greyBack{ /*Change Background to gray*/
-    background-color: #EFF1F2;
-}
-
 .line{ /*Gray line used to separate the divs.  I use a straight, gray line
     and modify the height.  See /images/line.png*/
     display: block;
@@ -112,20 +108,20 @@ Allows user to adjust the name of
 the room and details of the
 chatroom.
 *******************************/
-#roomName{ /*Div options*/
+#roomNameDiv{ /*Div options*/
     display: block;
     width: 80vw;
     margin: 0 auto;
     margin-bottom: 3vh;
 }
 
-#roomName .blockDetails{ /*Modify gray text explanation for this section of site*/
+#roomNameDiv .blockDetails{ /*Modify gray text explanation for this section of site*/
     color: black;
     font-size: 1.188rem;
     font-weight: 300;
 }
 
-#roomName input{
+#roomNameDiv input{
     border: none;
     font-size: 1.563rem;
     width: 9.563rem;
@@ -165,9 +161,19 @@ both panels.
 add additonal roles and/or colors*/
 .addNew{
     color: #74A1E9;
-    width: calc(100% - 5.25rem);
+    width: auto;
     text-align: right;
     float: right;
+}
+
+.addNew:hover {
+    color: #DD77CB;
+    cursor: pointer;
+}
+
+.addNew:active {
+    text-shadow: 4px 4px 2px gray;
+    font-size: .95rem;
 }
 
 .addNew + .blockDetails{ 
@@ -226,16 +232,27 @@ JavaScript*/
 select{
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: #F4F5F7;
-    background-image: url(images/pencil.png);
-    background-position: right;
+    background-image: url(images/Circle.png),url(images/pencil.png), url(images/Smoke.jpg);
+    background-position: left, right, right;
     background-repeat: no-repeat;
-    background-size: 0.75rem;
-    border: none;
+    background-size: 21%, 13.8%, 80%;
+    text-align: center;
+    text-indent: 19.1%;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 option{
     text-align: center;
+    background-image: url(images/Circle.png),url(images/pencil.png), url(images/Smoke.jpg);
+    background-position: left, right, right;
+    background-repeat: no-repeat;
+    background-size: 21%, 13.8%, 80%;
+    text-align: center;
+    text-indent: 19.1%;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #F3F4F6;
 }
 /*END Select Options*/
 
@@ -353,13 +370,17 @@ require JavaScript.*/
     text-decoration: none;
 }
 
-#tabActive{ /*Options for the active tab.  There can only be one*/
+.tabActive{ /*Options for the active tab.  There can only be one*/
     display: inline-block;
     background: white;
     border-top: 0.3125rem solid #6C84DC;
     float: left;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.pinkTabTop {
+    border-top: 0.3125rem solid rgb(221,119,203);
 }
 
 .tabInactive{ /*Options for the Inactive Tabs*/
@@ -379,6 +400,10 @@ require JavaScript.*/
     float: right;
     margin-right: 0.3125rem;
     text-decoration: none;
+}
+
+.pinkFont {
+    color: rgb(221,119,203);
 }
 
 .color-inactive{
@@ -449,6 +474,7 @@ LEFT PANEL
 .pinkBox-name{
     color: rgba(221,119,203,1);
 }
+
 /*END Background colors*/
 
 .comment{
