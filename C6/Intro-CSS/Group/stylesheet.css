@@ -37,7 +37,7 @@ Generic classes for quick select of
 
 /*************************************************************************************************
                                                                         TOP HALF OF PAGE
-The top half of the page allows the user to change the room name, the page layout colors, and the roles of active 
+The top half of the page allows the user to change the room name, the page layout colors, and the roles of active
 users.
 *************************************************************************************************/
 #topUI{ /*Set background color, white, for top of page*/
@@ -104,7 +104,7 @@ in top-right corner
 
 /******************************
                 ROOM NAME
-Allows user to adjust the name of 
+Allows user to adjust the name of
 the room and details of the
 chatroom.
 *******************************/
@@ -131,9 +131,9 @@ chatroom.
 
 /******************************
             ROLES AND COLORS
-The roles and colors section of the 
-page and allows users to change the 
-roles of the users in chat as well as 
+The roles and colors section of the
+page and allows users to change the
+roles of the users in chat as well as
 modify page color schemes.
 
 It consist of two panels of sharing
@@ -176,7 +176,7 @@ add additonal roles and/or colors*/
     font-size: .95rem;
 }
 
-.addNew + .blockDetails{ 
+.addNew + .blockDetails{
         /*Fix rare scalling issue that causes different heights*/
         /*Media Queries are a better solution and this will likely be replaced
         When code is made more responsive.*/
@@ -285,7 +285,7 @@ option{
 
 #defineColors select{
     width: 5.313rem;
-    
+
 }
 
 #defineColors .blockDetails{
@@ -337,7 +337,7 @@ affect both panels
     float: left;
     background-color: white;
     /*Fix differences in element border calculations*/
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 #ruler{ /*Ruler slides between the panels*/
@@ -423,9 +423,11 @@ LEFT PANEL
 }
 
 .commentBox{
-        /*users' image plus chat text*/
-    margin: 0.625rem 0.625rem;
+    /*users' image plus chat text*/
+    display: block;
     float: left;
+    margin: 0.625rem 0.625rem;
+    width: 100%;
 }
 
 /*Options for when a Comment is aligned to the right*/
@@ -440,6 +442,7 @@ LEFT PANEL
 }
 
 .commentBoxRight .comment {
+    text-align: right;
     float: right;
 }
 
@@ -506,6 +509,7 @@ LEFT PANEL
     width: 47.5%;
     font-size: 0.8125rem;
     text-align: right;
+    vertical-align: top;
 }
 
 .message{
@@ -588,7 +592,7 @@ LEFT PANEL
     position: absolute;
     right: 0;
     bottom: -2px;
-    
+
 }
 /***---END left panel Options---***/
 

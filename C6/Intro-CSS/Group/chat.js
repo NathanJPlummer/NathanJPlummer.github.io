@@ -8,9 +8,13 @@ var chat_box = document.getElementById("chatbox");
 
 inp_text[0].addEventListener("click", function (e) {
     createMessage();
+    inp_textarea.value = "";
 });
 
-function createMessage() {
+var chatBox = {};
+
+function createMessage(){
+
     var commentBox = document.createElement("div");
     var image = document.createElement("img");
     var comment = document.createElement("div");
@@ -19,6 +23,9 @@ function createMessage() {
     var time = document.createElement("span");
     var text = document.createElement("p");
 
+    chatBox.userName = chat_box.dataset.username;
+    chatBox.userImg = "images/userimage.jpg";
+
     text.setAttribute("class", "message");
     text.appendChild(document.createTextNode(inp_textarea.value));
 
@@ -26,7 +33,9 @@ function createMessage() {
     time.appendChild(document.createTextNode("right now"));
 
     name.setAttribute("class", "userName");
-    name.appendChild(document.createTextNode(chat_box.dataset.username));
+
+    //name.appendChild( document.createTextNode(chat_box.dataset.username) );
+    name.appendChild( document.createTextNode(chatBox.userName) );
 
     header.setAttribute("class", "header");
     header.appendChild(time);
@@ -37,11 +46,16 @@ function createMessage() {
     comment.appendChild(text);
 
     image.setAttribute("class", "user");
-    image.setAttribute("src", "images/userimage.jpg");
+    //image.setAttribute("src", "images/userimage.jpg");
+    image.setAttribute("src", chatBox.userImg);
 
     commentBox.setAttribute("class", "commentBox commentBoxRight");
     commentBox.appendChild(image);
     commentBox.appendChild(comment);
+
+    data.chatBox = chatBox;
+
+    console.log(data);
 
     panel_body[0].appendChild(commentBox);
 }
