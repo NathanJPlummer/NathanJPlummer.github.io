@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Georgia;
+  background-color: #ffe5ff;
+}
+.subHeading {
+  text-decoration: underline;
+}
+section{
+  background: #EFF5FB;
+  padding: 10px;
+  border: dashed 2px maroon;
+  margin-bottom: 20px;
+  width: 15%;
+}
