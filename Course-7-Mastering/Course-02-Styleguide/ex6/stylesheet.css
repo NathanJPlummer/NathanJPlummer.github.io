@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Georgia;
+  background-color: #ffe5ff;
+}
+.subHeading {
+  text-decoration: underline;
+}
+section{
+  background: #EFF5FB;
+  padding: 10px;
+  border: dashed 2px maroon;
+  margin-bottom: 20px;
+  width: 40%;
+}
+article{
+  background: #FBEFF2;
+  border: 3px dotted #ff006e;
+  margin-top:5px;
+  padding: 10px;
+  width: 80%;
+}
