@@ -50,11 +50,10 @@ button:active {
 }
 
 #MText {
-    width: 75%;
-    position: relative;
-    top: 85px;
-    left: 10px;
-    float: left;
+    width: 16%;
+    position: absolute;
+    top: 628px;
+    left: 112px;
 }
 
 #MCalc {
