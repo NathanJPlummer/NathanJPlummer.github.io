@@ -148,8 +148,9 @@ img {
         max-width: inherit;
     }
     
-    .art3plusAd p {
+    #article3 p {
         width: 100%;
+        padding-right: 2%;
     }
     
     img {
@@ -176,8 +177,9 @@ img {
         max-width: inherit;
     }
 
-    .art3plusAd p {
+    #article3 p {
         width: 100%;
+        padding-right: 2%;
     }
 
     img {
