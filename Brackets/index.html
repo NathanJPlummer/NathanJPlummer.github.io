@@ -2,6 +2,7 @@
 
 <head>
     <title>Fix Brackets in Linux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="./sytlesheet.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -75,6 +76,10 @@ Errors were encountered while processing:
             sudo apt-get install brackets
         </li>
     </ol>
+    <h3>A Note Regarding Brackets 1.9 Preview:</h3>
+    <p>1.9 Preview requires a newer version of lincrypt 11.  The only place I could currently located such a version was an Ubuntu PPA.  As with all PPAs security could be a concern.</p>
+    <p>You can download that file from  <a href="https://launchpad.net/~ubuntu-security-proposed/+archive/ubuntu/ppa/+build/10628783/+files/libgcrypt11-dbg_1.5.3-2ubuntu4.4_amd64.deb">Here</a>.</p>
+    <p>If this problem still persist after the final release I'll look for better solutions add an issue to the Brackets GitHub.</p>
     <h2 id="lack-of-hidpi-support">
         Lack of HiDPI support
     </h2>
