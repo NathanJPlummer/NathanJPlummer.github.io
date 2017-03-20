@@ -1,11 +1,12 @@
-html, body{
-    height: 98%;
-}
+/*import font*/
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 
 body {
-    background-image: url("images/Pink.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #ef6d7d;
+    box-sizing: border-box;
+    font-family: 'Fredericka the Great', cursive;
+    color: #94949494;
+    overflow: hidden;
 }
 
 /*Image links for HOME PAGE and FORM HOME PAGE*/
@@ -26,147 +27,72 @@ body {
 
 }
 /*END LINKS*/
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-top: 11.8%;
+    align-items: center;
+    max-width: 70%;
+    flex-basis: 70%;
+    margin: 0;
+}
+
+.content select {
+    margin-bottom: 2%;
+}
 
 #logo {
-    width: 40%;
-    position: absolute;
-    top: 9%;
-    left: 25%;
+    width: 525px;
+    max-width: 100%;
 }
 
-/*List Box*/
-
-body > p {
-    position: relative;
-    top: 40.5%;
-    left: 39%;
-    color: white;
-    font-family: fantasy;
-    display: block;
+.background {
+    display: flex;
+    max-width: 30%;
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
-#series{
-    position: relative;
-    left: 39.5%;
-    top: 39%;
-    line-height: 0;
-    text-align: center;
-    color: #F2E16D;
-    font-family: fantasy;
-    resize: both;
-    background-color: black;
-    display: block;
+.pranger {
+    width: 100%;
+    height: auto;
 }
 
-/*Options for search box*/
-
-#searchForm{
-    position:relative;
-    top: 43.5%;
-    left: 26%;
-    font-family: fantasy;
-    color: white;
-    display: block;
-}
-
-#searchForm input{
-    background-color: black;
-    color: white;
-}
-
-
-/*Slight Adjustments for Higher Resolution Display devices*/
-@media all and (min-width: 1920px){
-    #searchForm {
-        left: 29.5%;
-        top: 47%;
-    }
-}
-
-/*Additonal CSS for iPhones and Mobile devices*/
-@media all and (orientation: portrait){
-    body{
-        background-image: url("images/Pink_mobile.jpg");
-        background-size: cover;
-        background-position: top;
+@media all and (orientation: portrait) {
+    .container {
+        flex-flow: column nowrap;
     }
     
-    #logo{
-        position: absolute;
-        top: 35%;
-        width: 70%;
-        left: 12%;
-        display: block;
+    .content {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 100%;
+        flex-basis: 50%;
+        margin: 0;
     }
     
-    body > p {
-        position: absolute;
-        top:0;
-        width: 100%;
-        left: 20%;
+    .background {
+        max-width: 100%;
+        flex-basis: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
     
-    #series{
-        top: 50%; 
-        left: 20%;
+    .pranger {
+        height: 80%;
+        max-width: 100%;
+        width: auto;
     }
-    
-    #searchForm {
-        width:100%;
-        top:55%;
-        bottom: 15%;
-        left: 20%;
-    }
-}
-
-/*Super low res devices and portrait mode*/
-@media all and (orientation: portrait) and (max-width: 240px){
-    #logo{
-        width:50%;
-        left: 20%;
-    }
-    body > p {
-        height: 18px;
-        left: 2px;
-        top: -5%;
-    }
-    
-    #series{
-        left:0;
-    }
-    
-    #searchForm{
-        bottom:0;
-        left:0;
-    }
-}
-
-/*Larger Cell Phones*/
-@media all and (orientation: portrait) and (min-width: 360px) and (max-width: 414px){
-    
-    #series{
-        left:0;
-    }
-    
-    #searchForm{
-        left:0;
-    }
-    
-}
-
-/*Blackberry*/
-@media all and (orientation: landscape) and (width: 320px) and (height: 240px){
-    
-    body > p{
-        left:0;
-    }
-    
-    #series{
-        left:0;
-    }
-    
-    #searchForm{
-        left:0;
-    }
-    
 }

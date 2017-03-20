@@ -1,29 +1,44 @@
-<!DOCTYPE html>  <!--declare doctype-->
+<!DOCTYPE html>
+<!--declare doctype-->
 <html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-        <title>Search the Mighty Database!</title>
-    </head>
-    <body>
-        <a href="https://nathanjplummer.github.io"><img id="gohome" src="images/Home_Icon_L.png"/></a>
-        <a href="https://nathanjplummer.github.io/C6/Intro-CSS/forms/"><img id="goform" src="images/Form_Icon_L.png"/></a>
-        <img id="logo" src="images/powertransparent2.png"/>
-        <p>Choose Your Power Source</p>
-        <select id="series">
-            <option>Mighty Morphin Rangers</option>
-            <option>Zeo Rangers</option>
-            <option>Turbo Rangers</option>
-            <options>Dino Thunder</options>
-            <option>Ninja Storm</option>
-            <option>The Movies</option>
-            <option>Comic Books</option>
-        </select>
-        <form id="searchForm">
-            Search The Power Database:
-            <input name="search" type="search" placeholder="It's Morphin' Time!">
-        </form>
-        <script type="text/javascript" src="app.js"></script>
-    </body>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="normalize.css" />
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    <title>Search the Mighty Database!</title>
+</head>
+
+<body>
+    <a href="https://nathanjplummer.github.io"><img id="gohome" src="images/Home_Icon_L.png" /></a>
+    <a href="https://nathanjplummer.github.io/C6/Intro-CSS/forms/"><img id="goform" src="images/Form_Icon_L.png" /></a>
+
+
+    <div class="container">
+        <div class="content">
+            <img id="logo" src="images/powertransparent2.png" />
+            <p>Choose Your Power Source</p>
+            <select id="series">
+                    <option>Mighty Morphin Rangers</option>
+                    <option>Zeo Rangers</option>
+                    <option>Turbo Rangers</option>
+                    <options>Dino Thunder</options>
+                    <option>Ninja Storm</option>
+                    <option>The Movies</option>
+                    <option>Comic Books</option>
+                </select>
+            <form id="searchForm">
+                Search The Power Database:
+                <input name="search" type="search" placeholder="It's Morphin' Time!">
+            </form>
+        </div>
+
+            <picture class="background">
+                <source class="pranger" media="(orientation:portrait)" srcset="images/pranger-portrait-2x.png 2x, images/pranger-portrait-1x.png 1x">
+                <source class="pranger" media="orientation:landscape" srcset="images/pranger-landscape-2x.jpg 2x, images/pranger-landscape-1x.png 1x">
+                <img class="pranger" src="images/pranger-landscape-1x.png" alt="PinkRanger" />
+            </picture>
+    </div>
+</body>
+
 </html>
-
-
