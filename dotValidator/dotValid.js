@@ -13,21 +13,12 @@ var validator = {};
 //EMAIL
 validator.isEmail = (function (input) {
     //Test for valid Email address
-    try {
-        switch (input.indexOf("@")) {
-            case 0:
-                throw "An Email Address can not start with @ symbol";
-            case -1:
-                throw "An Email Address must have an @ symbol";
-            case (input.length - 1):
-                throw "An Email Address may not end with an @ symbol";
-        }
-    } catch (err) {
-        console.log("ERROR: " + err);
-        return false;
-    }
-
-    return true;
+      
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))  
+        {  
+            return (true);
+        }  
+        return (false);    
 });
 
 //Phone Numbers
