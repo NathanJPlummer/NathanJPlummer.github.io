@@ -13,10 +13,10 @@
     background-color: #ECEFF3;
     display: flex;
     flex-flow: row nowrap;
-    height: 50px;
+    height: 60px;
     max-width: 100%;
     position: relative;
-    width: 150px;
+    width: 220px;
 }
 
 
@@ -26,7 +26,7 @@
     color: #9CABBA;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    padding: 2%;
+    padding: 10px;
     position: absolute;
 }
 
@@ -38,7 +38,7 @@
     border: none;
     color: #212121;
     font-family: 'Roboto', sans-serif;
-    padding: 6% 2% 2% 2%;
+    padding: 32px 10px 10px 10px;
     width: 100%;
 }
 
@@ -56,11 +56,11 @@
 .validation-dot {
     background-color: #F2617A;
     border-radius: 20px;
-    height: 10px;
+    height: 6px;
     position: absolute;
-    right: 5%;
-    top: 10%;
-    width: 10px;
+    right: 10px;
+    top: 10px;
+    width: 6px;
 }
 
 
@@ -71,9 +71,3 @@
     width: 80px;
 }
 
-
-/*Options for Age Box info span*/
-
-#dot-valid-age {
-    padding-top: 25%;
-}
