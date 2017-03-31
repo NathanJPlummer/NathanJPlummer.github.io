@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+/*import Roboto Font*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*Input Container*/
+.ui-input-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 150px;
+    max-width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #ECEFF3;
+}
+
+/*Descriptions: ex: "Phone Number (US)*/
+.ui-input-description {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 12px;
+    color: #9CABBA;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Style the input boxes*/
+.ui-input {
+    width: 100%;
+    background-color: #ECEFF3;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: 212121;
+    padding-top: 2%;
+}
+
+/*Add focus transition for input boxes*/
+.ui-input:focus {
+    border: 2px solid #51D0EF;
+    transition: .8s ease-in;
+}
+
+/*style the validation dot*/
+.validation-dot {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 10px;
+    height: 10px;
+    background-color: #F2617A;
+    border-radius: 20px;
+    border: 2px solid #212121;
+}
+
+/*Change container values for Age Box*/
+.ui-input-container-adultcheck {
+    width: 80px;
+    font-size: 16px;
+}
+
+/*Options for Age Box info span*/
+#dot-valid-age {
+    padding-top: 25%;
+}
