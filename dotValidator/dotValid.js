@@ -1,3 +1,4 @@
+/*jslint plusplus: true*/
 var i; //used in loop
 
 /*****Define dot colors******/
@@ -6,19 +7,19 @@ var dotNoInput = "#F2617A";
 var dotInvalid = "#EDBE69";
 var dotValid = "#31E96B";
 
-/*****Internal Validation Library*****/
-//backedn libraries used for validation
+/*****START INTERNAL VALIDATION LIBRARY*****/
+//backend libraries used for validation
+
 var validator = {};
 
 //EMAIL
 validator.isEmail = (function (input) {
     //Test for valid Email address
-      
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))  
-        {  
-            return (true);
-        }  
-        return (false);    
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)) {
+        return (true);
+    }
+    return (false);
 });
 
 //Phone Numbers
@@ -101,15 +102,11 @@ validator.password = (function (input) {
     if (input.length < 12) {
         return false;
     }
-    
+
     //check for at least one symbol
     if (input === validator.withoutSymbols(input)) {
         return false;
     }
-    
-    return true;
-    
-    
 
     return true;
 });
@@ -137,47 +134,48 @@ validator.username = (function (input) {
     if (input.length < 5) {
         return false;
     }
-    
+
     if (!validator.isAlphanumeric(input)) {
         return false;
     }
-    
+
     return true;
 
 });
 
 //validate zipcode
 validator.zipcode = (function (input) {
-    
+
     //check input length is not six
     //fixes edge case of five digits plus hyphen
     //with no additional digits
     if (input.length === 6) {
         return false;
     }
-    
+
     //convert to string
     input = input.toString();
-    
+
     //remove hyphen if present
     input = input.replace("-", "");
-    
+
     //check length is 5 or 9 digits
     if ((input.length !== 5) && (input.length !== 9)) {
         return false;
     }
-    
+
     //check string is only digits
     if (Number.isNaN(input) === true) {
         return false;
     }
-    
+
     return true;
 
 });
 
+/*****END INTERNAL VALIDATION LIBRARAY*****/
 
-/*****validateMe sub functions- change validation procedure based on input type*****/
+/*****validateMe sub functions- validation procedure via content type*****/
 
 var inputCode = {};
 
@@ -196,13 +194,10 @@ inputCode.email = (function (targ) {
 inputCode.search = (function (targ) {
     if (targ.value === "") {
         targ.nextElementSibling.style.backgroundColor = dotNoInput;
-        console.log(targ.value.length);
     } else if (targ.value.length > 2) {
         targ.nextElementSibling.style.backgroundColor = dotValid;
-        console.log(targ.value.length);
     } else {
         targ.nextElementSibling.style.backgroundColor = dotInvalid;
-        console.log(targ.value.length);
     }
 });
 
@@ -249,6 +244,7 @@ inputCode.date = (function (targ) {
         } else {
             ageDisplay.nextElementSibling.style.backgroundColor = dotValid;
         }
+        ageDisplay.classList.remove("dot-age-inactive");
     }
     //check if DOB if a valid date
     if (targ.value === "") {
@@ -314,7 +310,7 @@ function validateMe(targ) {
     } else if ((targ.type === "text") && (targ.previousElementSibling.innerHTML === "Zipcode")) {
         inputCode.zipcode(targ);
     }
-    
+
 }
 
 
