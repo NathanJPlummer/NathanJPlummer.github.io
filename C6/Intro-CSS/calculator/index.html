@@ -1,45 +1,50 @@
-<!DOCTYPE html>  <!--declare doctype-->
+<!DOCTYPE html>
+<!--declare doctype-->
 
 
 <html>
-    <head>
-        <title>Modern Calculator</title>
-	   <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-    </head>
-    <body>
-        <a href="https://nathanjplummer.github.io"><img id=gohome src="images/Home_Icon_L.png"/></a>
-        <form id="calculator">
-            <div id="line1">
-                <button value="clear" id="clear">C</button>
-                <input type="text" id="output" value="" readonly>
-            </div>
-            <div id="line2">
-                <button value="7">7</button>
-                <button value="8">8</button>
-                <button value="9">9</button>
-                <button value="+">+</button>
-            </div>
-            <div id="line3">
-                <button value="4">4</button>
-                <button value="5">5</button>
-                <button value="6">6</button>
-                <button value="-">-</button>
-            </div>
-             <div id="line4">
-                <button value="1">1</button>
-                <button value="2">2</button>
-                <button value="3">3</button>
-                <button value="/">/</button>
-            </div>
-            <div id="line5">
-                <button value="0">0</button>
-                <button value=".">.</button>
-                <button value="=">=</button>
-                <button value="*">x</button>
-            </div>
+
+<head>
+    <title>Modern Calculator</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <form id="calculator">
+        <div class="lines" id="line1">
+            <button value="clear" id="clear">C</button>
+            <input type="text" id="output" value="" readonly>
+        </div>
+        <div class="lines" id="line2">
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button class="h-line" value="+">+</button>
+        </div>
+        <div class="lines" id="line3">
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button class="h-line" value="-">-</button>
+        </div>
+        <div class="lines" id="line4">
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button class="h-line" value="/">/</button>
+        </div>
+        <div class="lines" id="line5">
+            <button value="0">0</button>
+            <button value=".">.</button>
+            <button value="=">=</button>
+            <button class="h-line" value="*">x</button>
+        </div>
+        <div class="lines" id="line6">
             <button value="delete" id="delete">DEL</button>
-            <img id="MText" src="images/ModernText.png"/>
-        </form>
-        <script type="text/javascript" src="app.js"></script>
-    </body>
+        </div>
+    </form>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
