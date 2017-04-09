@@ -1,0 +1,60 @@
+/*Media Queries for low resolution devices (under 480p) at portrait mode*/
+
+@media all and (orientation: landscape) and (max-width: 719px) {
+    
+    /*Home Pane(About Me)*/
+    .myName, .lastName {
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        font-size: 7vw;
+        padding-right: 3%;
+    }
+      
+    .myDescription {
+        width: 100%;
+        font-size: 2.2vw;
+    }
+    
+    .myDescription br {
+        line-height: 120%;
+    }
+    
+    .quote br {
+        display: none;
+    }
+    
+    .quote {
+        left: 25%;
+        max-width: 100%;
+        font-size: 2.5vw;
+    }
+    
+    /*dotValidatior*/
+    .dotValidator-veryBigOnly {
+        display: none;
+    }
+}
+
+@media all and (orientation: landscape) and (max-width: 639px) {
+    /*Graphics Pane*/
+    .c-thumbnail-spiderlee {
+        display: none;
+    }
+    
+    .c-thumbnail{
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    
+    /*dotValidator*/
+    .dotValidator-bigOnly {
+        display: none;
+    }
+    
+    .eureka-c-dotValidator-container {
+        max-width: 45%;
+        max-height: 30%;
+    }
+}

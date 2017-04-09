@@ -1,0 +1,54 @@
+.content-div-skills {
+    display: flex;
+    justify-content: space-between;
+    width: 74%;
+    height: 75%;
+    margin-left: 1.5625%;
+    border: .211rem ridge #bbb7d6;
+    font-size: calc(10% + 1vw);
+    align-items: center;
+    padding-right: 1.5625%;
+    position: absolute;
+    left: 23%;
+    opacity: 0;
+}
+
+.bar-graph {
+    display: flex;
+    justify-content: center;
+    max-width: 30%;
+    height: 50%;
+}
+
+.bar-graph__legend {
+    height: 50%;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 65%;
+    align-self: flex-end;
+    padding-top: 4.8vh;
+    padding-left: 1.5%;
+}
+
+.bar-graph__legend-value {
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5vh; 
+}
+
+.bar-graph__bar {
+    position: relative;
+}
+
+.bar-graph__bar-title {
+    display: inline-block;
+    font-size: 80%;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+}
+
+/***Projects Navigator***/
+
+
