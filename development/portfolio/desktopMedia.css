@@ -1,6 +1,9 @@
 /*Media Queries for low resolution devices (under 480p) at portrait mode*/
 
 @media all and (orientation: landscape) and (max-width: 719px) {
+    .nav-icon {
+        font-size: 5.8vmin;
+    }
     
     /*Home Pane(About Me)*/
     .myName, .lastName {
@@ -10,6 +13,10 @@
         margin: 0;
         font-size: 7vw;
         padding-right: 3%;
+    }
+    
+    .nerdAngel {
+        margin-top:1%;
     }
       
     .myDescription {

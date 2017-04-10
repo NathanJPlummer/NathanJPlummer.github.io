@@ -72,11 +72,11 @@
         display: block;
         margin: 0;
         text-align: center;
-        font-size: 8.5vw;
+        font-size: 5.7vh;
     }
     
     .nav-icon-home {
-        font-size: 12.75vw;
+        font-size: 9vh;
     }
     
     .nav-icon-name{
@@ -131,7 +131,7 @@
         width: 90%;
         line-height: 120%;
         color: rgb(143,139,163);
-        font-size: 1.97vh;
+        font-size: 1.8vh;
     }
     
     /***Contact Pane***/
