@@ -5,4 +5,15 @@
     .c-thumbnail-spiderlee {
         display: none;
     }
+    
+    /*Projects*/
+    
+    /*dotValidator*/
+    .dotValidator-veryBigOnly {
+        display: none;
+    }
+    
+    .eureka-c-dotValidator-container {
+        font-size: 2vh;
+    }
 }

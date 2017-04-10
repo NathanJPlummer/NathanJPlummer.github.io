@@ -8,9 +8,6 @@
         display: none;
     }
     
-    /*Full Page Container for Desktop
-    Navigator on left
-    Current Page content on right*/
     .portfolio-flexbox-container {
         width: 100%;
         height: 100vh;
@@ -163,8 +160,8 @@
         
     .contact-info {
         display: flex;
-        max-width: 90%;
-        width: 90%;
+        max-width: 95%;
+        width: 95%;
         flex-flow: column nowrap;
         margin-top: 2%;
         text-align: center;
@@ -249,15 +246,17 @@
         padding: 0;
         align-items: center;
         opacity: 0;
+        padding: 3%;
+        padding-top: 0;
     }
     
     .c-thumbnail {
         display: flex;
         align-items: center;
-        flex-direction: column row;
+        flex-direction: column nowrap;
         flex: 1 1 30%;
         justify-content: center;
-        height: 100%;
+        max-height: 50%;
         max-width: 100%;
         border: 6px solid rgba(143, 139, 163, 0.26);
         background-color: rgba(251, 238, 244, 0.25);
@@ -284,11 +283,13 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+        padding-left: 2%
     }
     
     .nav-projects-icon-display {
         max-width: 25%;
         flex: 1 1 25%;
+        padding: 0;
     }
     
     /*Content- Dot Validator*/
