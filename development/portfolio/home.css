@@ -1,9 +1,22 @@
+html,
 body {
     box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
     padding-left: 1.5625%;
     padding-right: 1.5625%;
     font-size: 16px;
+    font-family: "Source Sans Pro", "Helvetica", sans-serif;
+    line-height: 1.4;
 }
+
 /*Full Page Container for Desktop
 Navigator on left
 Current Page content on right*/
