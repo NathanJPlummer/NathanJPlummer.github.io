@@ -8,9 +8,6 @@
         display: none;
     }
     
-    /*Full Page Container for Desktop
-    Navigator on left
-    Current Page content on right*/
     .portfolio-flexbox-container {
         width: 100%;
         height: 100vh;
@@ -75,11 +72,11 @@
         display: block;
         margin: 0;
         text-align: center;
-        font-size: 8.5vw;
+        font-size: 5.7vh;
     }
     
     .nav-icon-home {
-        font-size: 12.75vw;
+        font-size: 9vh;
     }
     
     .nav-icon-name{
@@ -134,7 +131,7 @@
         width: 90%;
         line-height: 120%;
         color: rgb(143,139,163);
-        font-size: 1.97vh;
+        font-size: 1.8vh;
     }
     
     /***Contact Pane***/
@@ -163,8 +160,8 @@
         
     .contact-info {
         display: flex;
-        max-width: 90%;
-        width: 90%;
+        max-width: 95%;
+        width: 95%;
         flex-flow: column nowrap;
         margin-top: 2%;
         text-align: center;
@@ -180,56 +177,65 @@
     
     /***Skills Pane***/
     .content-div-skills {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        display: block;
         width: 98%;
         height: 82%;
         border: 0;
-        font-size: 12px;
-        align-items: center;
-        position: absolute;
         left: 0;
         top: 0;
         opacity: 0;
-        padding: 10%;
         margin: 0;
     }
     
-    .bar-graph__legend {
-        display: none;   
-    }
-    
-    .bar-graph__bar-desktop-only {
-        display: none;
+    .bar-graph-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 0 0 3em;
+        font-size: 2vw;
+        padding: 12%;
     }
     
     .bar-graph {
         display: flex;
-        flex-flow: column nowrap;
+        flex-wrap: nowrap;
+        border-bottom: 1px solid #bbb7d6;
+        max-height: 25%;
         flex: 1 1 33%;
-        margin: 0;
     }
     
     .bar-graph__heading {
-        height: 20%;
-        font-size: 4vw;
-        margin: 0;
-        padding: 0;
+        margin: 0.9em 0;
+        font-size: 1.4em;
+        font-weight: normal;
+        text-align: center;
+        flex: 1 1 100%;
     }
     
-    .bar-graph__bar {
-        position: relative;
-        width: 100%;
+    .bar-graph__legend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 0 1 20%;
+        font-size: 0.9em;
+        padding-top: 0.7em;
     }
     
     .bar-graph__bar-title {
-        display: inline-block;
-        font-size: 2.5vmin;
-        margin: 0;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+        position: absolute;
+        bottom: 2.5em;
+        margin-top: 0;
+        margin: 0 0 0 0.5em;
+        transform: rotate(45deg);
+        white-space: nowrap;
+        display:inline-block;
+        font-size: 0.7em;
+        right: 0;
+        color: #37374F;
     }
     
     /***Graphics Pane***/
@@ -249,15 +255,17 @@
         padding: 0;
         align-items: center;
         opacity: 0;
+        padding: 3%;
+        padding-top: 0;
     }
     
     .c-thumbnail {
         display: flex;
         align-items: center;
-        flex-direction: column row;
+        flex-direction: column nowrap;
         flex: 1 1 30%;
         justify-content: center;
-        height: 100%;
+        max-height: 50%;
         max-width: 100%;
         border: 6px solid rgba(143, 139, 163, 0.26);
         background-color: rgba(251, 238, 244, 0.25);
@@ -284,11 +292,13 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+        padding-left: 2%
     }
     
     .nav-projects-icon-display {
         max-width: 25%;
         flex: 1 1 25%;
+        padding: 0;
     }
     
     /*Content- Dot Validator*/

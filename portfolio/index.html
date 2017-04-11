@@ -6,6 +6,9 @@
     <title>
         Nathan J Plummer's Responsive Portfolio
     </title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="eureka-light.css" rel="stylesheet">
+    <link href="open-iconic.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="styles-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -29,40 +32,56 @@
         
         <!--Skills Pane-->
         <div id="skills-pane" class="content-div-skills content-home-nav">
-             <div class="bar-graph__legend">
-                  <div class="bar-graph__legend-value">Expert</div>
-                  <div class="bar-graph__legend-value">Proficient</div>
-                  <div class="bar-graph__legend-value">Competent</div>
-                  <div class="bar-graph__legend-value">Learning</div>
+            <div class="bar-graph-container">
+                <div class="bar-graph">
+                    <h3 class="bar-graph__heading">Web Development</h3>
+                    <div class="bar-graph__legend">
+                        <div class="bar-graph__legend-value">Expert</div>
+                        <div class="bar-graph__legend-value">Proficient</div>
+                        <div class="bar-graph__legend-value">Competent</div>
+                        <div class="bar-graph__legend-value">Learning</div>
+                    </div>
+                    <div class="bar-graph__bars">
+                        <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">HTML</p></div>
+                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">CSS</p></div>
+                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">SCSS</p></div>
+                        <div class="bar-graph__bar" data-level="60"><p class="bar-graph__bar-title">JavaScript</p></div>
+                        <div class="bar-graph__bar" data-level="95"><p class="bar-graph__bar-title">Markdown</p></div>
+                    </div>
                 </div>
-              <div class="bar-graph">
-                <h3 class="bar-graph__heading">Web Development</h3>
-                <div class="bar-graph__bars">
-                  <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">HTML</p></div>
-                  <div class="bar-graph__bar" data-level="75"><p class="bar-graph__bar-title">CSS</p></div>
-                  <div class="bar-graph__bar" data-level="60"><p class="bar-graph__bar-title">JavaScript</p></div>
-                    <div class="bar-graph__bar bar-graph__bar-desktop-only" data-level="50"><p class="bar-graph__bar-title">UI/UX</p></div>
+                <div class="bar-graph">
+                    <h3 class="bar-graph__heading">Graphics</h3>
+                    <div class="bar-graph__legend">
+                        <div class="bar-graph__legend-value">Expert</div>
+                        <div class="bar-graph__legend-value">Proficient</div>
+                        <div class="bar-graph__legend-value">Competent</div>
+                        <div class="bar-graph__legend-value">Learning</div>
+                    </div>
+                    <div class="bar-graph__bars">
+                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">Affinity Photo</p></div>
+                        <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">GIMP</p></div>
+                        <div class="bar-graph__bar" data-level="15"><p class="bar-graph__bar-title">Affinity Designer</p></div>
+                        <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">Image Compression</p></div>
+                        <div class="bar-graph__bar" data-level="50"><p class="bar-graph__bar-title">Color Management</p></div>
+                    </div>
                 </div>
-              </div>
-              <div class="bar-graph">
-                <h3 class="bar-graph__heading">Graphics</h3>
-                
-                <div class="bar-graph__bars">
-                    <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">Affinity Photo</p></div>
-                  <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">GIMP</p></div>
-                    <div class="bar-graph__bar bar-graph__bar-desktop-only" data-level="20"><p class="bar-graph__bar-title">Affinity Designer</p></div>
-                  <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">Image Compression </p></div>
+                <div class="bar-graph">
+                    <h3 class="bar-graph__heading">Other</h3>
+                    <div class="bar-graph__legend">
+                        <div class="bar-graph__legend-value">Expert</div>
+                        <div class="bar-graph__legend-value">Proficient</div>
+                        <div class="bar-graph__legend-value">Competent</div>
+                        <div class="bar-graph__legend-value">Learning</div>
+                    </div>
+                    <div class="bar-graph__bars">
+                        <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">Written Communication</p></div>
+                        <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">Public Speaking</p></div>
+                        <div class="bar-graph__bar" data-level="82"><p class="bar-graph__bar-title">Project Management</p></div>
+                        <div class="bar-graph__bar" data-level="88"><p class="bar-graph__bar-title">Customer Service</p></div>
+                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">Documentation</p></div>
+                    </div>
                 </div>
-              </div>
-              <div class="bar-graph">
-                <h3 class="bar-graph__heading">Other</h3>
-                <div class="bar-graph__bars">
-                  <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">Written Communication</p></div>
-                  <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">Project  Managent</p></div>
-                  <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">Public Speaking</p></div>
-                    <div class="bar-graph__bar bar-graph__bar-desktop-only" data-level="90"><p class="bar-graph__bar-title">Customer Service</p></div>
-                </div>
-              </div>
+            </div>
         </div>
         
         <!--Contact Pane-->

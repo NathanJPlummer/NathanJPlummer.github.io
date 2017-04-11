@@ -57,21 +57,26 @@
     .content {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: space-around;
         max-width: 100%;
-        flex-basis: 50%;
+        flex-basis: 65%;
+        max-height: 65%;
         margin: 0;
-        padding-left: 1%;
+        padding: 4%;
     }
+    
     .background {
         max-width: 100%;
-        flex-basis: 50%;
+        flex-basis: 35%;
+        max-height: 35%;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
     .pranger {
-        height: 80%;
+        max-height: 90%;
         max-width: 100%;
         width: auto;
+        height: auto;
     }
 }
