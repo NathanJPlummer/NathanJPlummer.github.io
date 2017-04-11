@@ -21,7 +21,7 @@
 .bar-graph {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 1 auto;
+    flex: 0 1 45%;
     border-bottom: 1px solid #bbb7d6;
 }
 .bar-graph__heading {
