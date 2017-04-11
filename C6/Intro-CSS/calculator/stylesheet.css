@@ -19,6 +19,7 @@
     border-bottom-left-radius: 30px;
     font-family: 'Roboto', sans-serif;
     padding: 1%;
+    overflow: hidden;
 }
 
 .lines {
