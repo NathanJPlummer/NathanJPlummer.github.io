@@ -18,28 +18,36 @@
     padding: 0 0 3em;
     font-size: 1.765vh;
 }
+
 .bar-graph {
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 45%;
     border-bottom: 1px solid #bbb7d6;
 }
+
 .bar-graph__heading {
     margin: 0.5em 0;
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
     flex: 1 1 100%;
+    color: #8f8ba3;
 }
+
 .bar-graph__legend {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     flex: 0 1 20%;
+    /*color: #8f8ba3;*/
+    color: rgba(0, 0, 0, 0.79);
 }
+
 .bar-graph__legend-value {
     padding: 0.5em 0 1.5em 0.1em;
 }
+
 .bar-graph__bars {
     display: flex;
     align-content: flex-end;
@@ -47,6 +55,7 @@
     flex-basis: 79%;
     margin-left: 1%;
 }
+
 .bar-graph__bar {
     width: 2em;
     height: 0;
@@ -57,13 +66,20 @@
     box-shadow: 1px 0 1px #bdbdbd;
     position: relative;
 }
+
 .bar-graph__bar-title {
     position: absolute;
-    bottom: -2.5em;
-    margin: 0 0 0 0.5em;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.8em;
+    bottom: 0;
     transform: rotate(45deg);
-    white-space: nowrap;
+    white-space: wrap;
+    font-size: 0.85em;
+    width: 2em;
+    height: 0;
+    right: 0.5em;
+    /*color: rgba(60, 46, 128, 0.69);*/
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.79);
 }
-/***Projects Navigator***/
-
-
