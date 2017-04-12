@@ -33,6 +33,7 @@
     text-align: center;
     flex: 1 1 100%;
     color: #8f8ba3;
+    font-family: 'Roboto', sans-serif;
 }
 
 .bar-graph__legend {
@@ -57,29 +58,26 @@
 }
 
 .bar-graph__bar {
-    width: 2em;
+    width: 2.6em;
     height: 0;
     background-color: #EE98B4;
     border-radius: 5px 5px 0 0;
-    margin: 0 0.7em;
+    margin: 0 0.65em;
     transition: height 2s ease-in-out;
     box-shadow: 1px 0 1px #bdbdbd;
     position: relative;
 }
 
 .bar-graph__bar-title {
+    display: inline;
     position: absolute;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 0.8em;
-    bottom: 0;
-    transform: rotate(45deg);
+    bottom: -3.8em;
     white-space: wrap;
     font-size: 0.85em;
-    width: 2em;
-    height: 0;
-    right: 0.5em;
+    width: 3.15em;
+    height: 2.8em;
     /*color: rgba(60, 46, 128, 0.69);*/
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', 'Segoe UI', sans-serif;
     color: rgba(0, 0, 0, 0.79);
+    text-align: center;
 }

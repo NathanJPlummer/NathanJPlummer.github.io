@@ -205,13 +205,12 @@
         flex-wrap: nowrap;
         border-bottom: 1px solid #bbb7d6;
         max-height: 25%;
-        flex: 1 1 33%;
+        width: 110%;
     }
     
     .bar-graph__heading {
         margin: 0.9em 0;
-        font-size: 1.4em;
-        font-weight: normal;
+        font-size: 1.8em;
         text-align: center;
         flex: 1 1 100%;
     }
@@ -221,19 +220,14 @@
         flex-direction: column;
         align-items: flex-end;
         flex: 0 1 20%;
-        font-size: 0.9em;
+        font-size: 1em;
         padding-top: 0.7em;
     }
     
     .bar-graph__bar-title {
         position: absolute;
-        bottom: 2.5em;
-        margin-top: 0;
-        margin: 0 0 0 0.5em;
-        transform: rotate(45deg);
-        white-space: nowrap;
-        display:inline-block;
-        font-size: 0.7em;
+        white-space: wrap;
+        font-size: 0.9em;
         right: 0;
         color: #37374F;
     }
