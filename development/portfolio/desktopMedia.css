@@ -1,5 +1,12 @@
 /*Media Queries for low resolution devices (under 480p) at portrait mode*/
 
+@media all and (orientation: landscape) and (max-width: 736px) {
+    /*dotValidatior*/
+    .dotValidator-veryBigOnly {
+        display: none;
+    }
+}
+
 @media all and (orientation: landscape) and (max-width: 719px) {
     .nav-icon {
         font-size: 5.8vmin;
@@ -36,11 +43,6 @@
         left: 25%;
         max-width: 100%;
         font-size: 2.5vw;
-    }
-    
-    /*dotValidatior*/
-    .dotValidator-veryBigOnly {
-        display: none;
     }
 }
 
