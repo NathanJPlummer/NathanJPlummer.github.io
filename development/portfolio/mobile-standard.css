@@ -217,11 +217,16 @@
     
     .bar-graph__legend {
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
         align-items: flex-end;
         flex: 0 1 10%;
         font-size: 1em;
-        padding-top: .14em;
+        margin-top: 1.2em;
+    }
+    
+    .bar-graph__legend-value {
+        padding: 0;
     }
     
     .bar-graph__bar-title {
