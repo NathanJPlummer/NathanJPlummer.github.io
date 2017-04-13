@@ -73,10 +73,15 @@
     bottom: -3.8em;
     white-space: wrap;
     font-size: 0.85em;
-    width: 3.15em;
+    width: 4.2em;
+    right: -0.45em;
     height: 2.8em;
     /*color: rgba(60, 46, 128, 0.69);*/
     font-family: 'Roboto Condensed', 'Segoe UI', sans-serif;
     color: rgba(0, 0, 0, 0.79);
     text-align: center;
 }
+
+/*.bar-graph-leadership {
+    left: -0.36em;
+}*/
