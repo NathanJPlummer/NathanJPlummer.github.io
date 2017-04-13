@@ -17,6 +17,11 @@ body {
     line-height: 1.4;
 }
 
+/*Used in error message for really small devices*/
+.mobile-equals-blackberry {
+    display: none;
+}
+
 /*Full Page Container for Desktop
 Navigator on left
 Current Page content on right*/

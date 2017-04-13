@@ -53,16 +53,15 @@
     display: flex;
     align-content: flex-end;
     align-items: flex-end;
-    flex-basis: 79%;
-    margin-left: 1%;
+    flex: 0 1 79%;
 }
 
 .bar-graph__bar {
-    width: 2.6em;
+    width: 2.8em;
     height: 0;
     background-color: #EE98B4;
     border-radius: 5px 5px 0 0;
-    margin: 0 0.65em;
+    margin-left: 1em;
     transition: height 2s ease-in-out;
     box-shadow: 1px 0 1px #bdbdbd;
     position: relative;
