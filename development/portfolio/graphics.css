@@ -40,3 +40,8 @@
     height: auto;
     border: 4px ridge rgba(238, 152, 180, 0.46);
 }
+
+.c-thumbnail__img:hover {
+    transform: scale(1.7,1.7);
+    transition: .3s transform;
+}
