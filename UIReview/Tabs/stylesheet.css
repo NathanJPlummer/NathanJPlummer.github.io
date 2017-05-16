@@ -1,0 +1,57 @@
+div.tabComponent div {
+    display: inline-block;
+    max-width: 33%;
+    text-align: center;
+}
+
+
+/* Selector #1  */
+
+div.tabComponent input {
+    display: none;
+}
+
+
+/* Selector #2  */
+
+div.tabComponent label {
+    background-color: skyblue;
+    color: white;
+    display: inline-block;
+    font-family: 'Roboto Light', 'Helvetica Light', 'Roboto', 'Helvetica', sans-serif;
+    font-weight: 300;
+    max-width: 100%;
+    opacity: 0.8;
+    padding: 5px;
+    position: relative;
+    width: 100px;
+    z-index: 1;
+}
+
+
+/*Default State of paragraph text inside tab divs*/
+
+div.tabComponent p {
+    display: none;
+}
+
+
+/*What happens to the label when clicked*/
+
+div.tabComponent input:checked~label {
+    background-color: hotpink;
+    box-shadow: 2px 2px 2px black;
+    color: black;
+    padding: 4px;
+    transform: scale(1.2, 1.2);
+    z-index: 2;
+}
+
+div.tabComponent input:checked~p {
+    display: block;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-weight: 500;
+    left: 1%;
+    position: absolute;
+    top: 5%;
+}
