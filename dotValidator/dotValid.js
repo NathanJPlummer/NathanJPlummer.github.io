@@ -1,10 +1,14 @@
+/*dotValidator
+Written by: Nathan J Plummer
+Contributions by: Melissa Miller*/
+
 /*jslint plusplus: true*/
 var i; //used in loop
 
 /*****Define dot colors******/
 //no input
-var dotNoInput = "#F2617A";
-var dotInvalid = "#EDBE69";
+var dotNoInput = "#EDBE69";
+var dotInvalid = "#F2617A";
 var dotValid = "#31E96B";
 
 /*****START INTERNAL VALIDATION LIBRARY*****/
@@ -15,11 +19,7 @@ var validator = {};
 //EMAIL
 validator.isEmail = (function (input) {
     //Test for valid Email address
-
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)) {
-        return (true);
-    }
-    return (false);
+    return /\w+([\.-]?\w+)+@[a-z0-9][a-z0-9-]+[a-z0-9]*?(\.[a-z0-9]{2,})+/gi.test(input);
 });
 
 //Phone Numbers
@@ -69,28 +69,7 @@ validator.isDate = (function (input) {
 
 //removes symbols from a string.  Used in the Password validator and alphanumeric validator
 validator.withoutSymbols = (function (input) {
-    //convert input to an array
-    input = input.toString();
-    input = input.split("");
-
-    //output will be input without symbols
-    var output = [];
-
-    var i; //used in loop
-
-    //If upper and lower case are not equal (alpha check)
-    //OR Is Not a Number equls false (Number Check)
-    //push value to output array
-    for (i = 0; i < input.length; i++) {
-        if ((input[i].toUpperCase() !== input[i].toLowerCase()) || (isNaN(input[i]) === false)) {
-            output.push(input[i]);
-        }
-    }
-
-    //convert Array back to string
-    output = output.join("");
-
-    return output;
+    return input.replace(/[^a-z0-9]/gi, "");
 });
 
 //check for strong password
@@ -114,33 +93,12 @@ validator.password = (function (input) {
 //test inout is alphanumeric, used in username validator
 validator.isAlphanumeric = (function (input) {
     //checks if input is alphanumeric only
-
-    //create newInput from input w/o symbols
-    var newInput = validator.withoutSymbols(input);
-
-    //remove whitespace from newInput
-    newInput = newInput.replace(" ", "");
-
-    if (input === newInput) {
-        return true;
-    }
-
-    return false;
-
+    return /^[a-z0-9]+$/gi.test(input);
 });
 
 //checks username is valid
 validator.username = (function (input) {
-    if (input.length < 5) {
-        return false;
-    }
-
-    if (!validator.isAlphanumeric(input)) {
-        return false;
-    }
-
-    return true;
-
+  return input.length >= 5 && validator.isAlphanumeric(input);
 });
 
 //validate zipcode
@@ -236,7 +194,7 @@ inputCode.date = (function (targ) {
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
-        var ageDisplay = document.getElementById("dot-valid-age");
+        var ageDisplay = document.getElementById("evo-c-dotValidator-age-id");
         console.log(age);
         ageDisplay.innerHTML = age;
         if (age < 18) {
@@ -244,7 +202,7 @@ inputCode.date = (function (targ) {
         } else {
             ageDisplay.nextElementSibling.style.backgroundColor = dotValid;
         }
-        ageDisplay.classList.remove("dot-age-inactive");
+        ageDisplay.classList.remove("evo-c-dotValidator-age-inactive");
     }
     //check if DOB if a valid date
     if (targ.value === "") {
@@ -288,7 +246,9 @@ inputCode.zipcode = (function (targ) {
 });
 
 //select all inputs with dotValidator enabled
-var validotMe = document.querySelectorAll("[data-dotvalid='true']");
+var validotMe = document.querySelectorAll("[data-dotValidator='true']");
+//provides check validotMe is present.  If not, skip script.
+var len = validotMe && validotMe.length || false;
 
 
 //based on input type load appropriate function
@@ -316,14 +276,18 @@ function validateMe(targ) {
 
 //for loop will add event listener to inputs
 //will automatically detect the appropriate event listener
-for (i = 0; i < validotMe.length; i++) {
-    if (validotMe[i].type === "date") {
-        validotMe[i].addEventListener("blur", function (event) {
-            validateMe(this);
-        });
-    } else {
-        validotMe[i].addEventListener("input", function (event) {
-            validateMe(this);
-        });
+//len checks that validotMe is present
+//if not skip rest of script
+if (len) {
+    for (i = 0; i < validotMe.length; i++) {
+        if (validotMe[i].type === "date") {
+            validotMe[i].addEventListener("blur", function (event) {
+                validateMe(this);
+            });
+        } else {
+            validotMe[i].addEventListener("input", function (event) {
+                validateMe(this);
+            });
+        }
     }
 }

@@ -1,7 +1,6 @@
-* {
+*[class^=”evo-c-dotValidator”] {
     box-sizing: border-box;
 }
-
 
 /*import Roboto Font*/
 
@@ -9,7 +8,7 @@
 
 /*Input Container*/
 
-.ui-input-container {
+.evo-c-dotValidator-container {
     background-color: #ECEFF3;
     display: flex;
     flex-flow: row nowrap;
@@ -19,10 +18,9 @@
     width: 220px;
 }
 
-
 /*Descriptions: ex: "Phone Number (US)*/
 
-.ui-input-description {
+.evo-c-dotValidator-label {
     color: #9CABBA;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -33,7 +31,7 @@
 
 /*Style the input boxes*/
 
-.ui-input {
+.evo-c-dotValidator-input {
     background-color: #ECEFF3;
     border: none;
     color: #212121;
@@ -45,7 +43,7 @@
 
 /*Add focus transition for input boxes*/
 
-.ui-input:focus {
+.evo-c-dotValidator-input:focus {
     border: 2px solid #51D0EF;
     transition: .8s ease-in;
     outline: none;
@@ -54,8 +52,8 @@
 
 /*style the validation dot*/
 
-.validation-dot {
-    background-color: #F2617A;
+.evo-c-validation-dot {
+    background-color: #EDBE69;
     border-radius: 20px;
     height: 6px;
     position: absolute;
@@ -67,14 +65,17 @@
 
 /*Change container values for Age Box*/
 
-.ui-input-container-adultcheck {
+.evo-c-dotValidator-container-age {
     font-size: 16px;
     width: 80px;
 }
 
-.dot-age-inactive {
+.evo-c-dotValidator-age-inactive {
     background-color: lightslategray;
     opacity: 0.48;
     border-bottom: 2px solid #212121;
 }
 
+.evo-c-dotValidator-age-inactive + .evo-c-validation-dot {
+  background-color: #777;
+}
