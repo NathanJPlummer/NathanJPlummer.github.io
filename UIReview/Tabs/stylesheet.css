@@ -40,7 +40,7 @@ div.tabComponent p {
 
 div.tabComponent input:checked~label {
     background-color: hotpink;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 1px 1px 2px black;
     color: black;
     padding: 4px;
     transform: scale(1.2, 1.2);
