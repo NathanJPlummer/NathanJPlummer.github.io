@@ -68,10 +68,10 @@ body {
 }
 
 #navbar li {
-    display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 5vmin;
     font-weight: 800;
+    list-style: none;
 }
 
 #navbar a {
