@@ -35,10 +35,22 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    '../../portfolio/styles.min.css': ['normalize.css', 'eureka-light.css','open-iconic.css','fonts/fonts.css','home.css','contact.css','skills.css','graphics.css','calculator.css','powerSearch.css','projects.css','navigator.css','desktopMedia.css','mobile-standard.css','mobile-media.css']
+                    '../../portfolio/styles.min.css': ['normalize.css', 'eureka-light.css', 'open-iconic.css', 'fonts/fonts.css', 'home.css', 'contact.css', 'skills.css', 'graphics.css', 'calculator.css', 'powerSearch.css', 'projects.css', 'navigator.css', 'desktopMedia.css', 'mobile-standard.css', 'mobile-media.css']
                 }
             }
-        }
+        },
+
+        autoprefixer: {
+            options: {
+                // Task-specific options go here.
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            dist: {
+                files: {
+                    '../../portfolio/styles.min.css': '../../portfolio/styles.min.css'
+                }
+            }
+        },
     });
 
 
@@ -47,6 +59,6 @@ module.exports = function (grunt) {
     grunt.registerTask('default', function () {
         console.log('Grunt has run');
     });
-    
-     grunt.registerTask('pCompress', ['uglify', 'cssmin']);
+
+    grunt.registerTask('pCompress', ['uglify', 'cssmin', 'autoprefixer']);
 };
