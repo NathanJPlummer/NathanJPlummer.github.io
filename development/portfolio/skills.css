@@ -39,10 +39,11 @@
 .bar-graph__legend {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     flex: 0 1 20%;
     /*color: #8f8ba3;*/
     color: rgba(0, 0, 0, 0.79);
+    margin-top: .8em
 }
 
 .bar-graph__legend-value {
@@ -51,18 +52,19 @@
 
 .bar-graph__bars {
     display: flex;
+    padding-left: 0.5em;
     align-content: flex-end;
     align-items: flex-end;
     flex: 0 1 79%;
+    
 }
 
 .bar-graph__bar {
-    width: 2.8em;
+    width: 3em;
     height: 0;
     background-color: #EE98B4;
     border-radius: 5px 5px 0 0;
-    margin-left: 1em;
-    transition: height 2s ease-in-out;
+    margin-left: 2.5em;
     box-shadow: 1px 0 1px #bdbdbd;
     position: relative;
 }
@@ -73,15 +75,11 @@
     bottom: -3.8em;
     white-space: wrap;
     font-size: 0.85em;
-    width: 4.4em;
-    right: -0.61em;
-    height: 2.8em;
+    width: 4.8em;
+    right: -0.87em;
+    height: 2.2em;
     /*color: rgba(60, 46, 128, 0.69);*/
     font-family: 'Roboto Condensed', 'Segoe UI', sans-serif;
     color: rgba(0, 0, 0, 0.79);
     text-align: center;
 }
-
-/*.bar-graph-leadership {
-    left: -0.36em;
-}*/
