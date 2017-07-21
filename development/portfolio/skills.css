@@ -42,6 +42,7 @@
     align-items: flex-end;
     flex: 0 1 20%;
     /*color: #8f8ba3;*/
+    color: black; /*Fallback*/
     color: rgba(0, 0, 0, 0.79);
     margin-top: .8em
 }
@@ -68,16 +69,17 @@
 }
 
 .bar-graph__bar-title {
-    display: inline;
+    display: inline-block;
     position: absolute;
     bottom: -3.8em;
-    white-space: wrap;
+    /*white-space: wrap;*/
     font-size: 0.85em;
     width: 4.8em;
     right: -0.87em;
     height: 2.2em;
     /*color: rgba(60, 46, 128, 0.69);*/
     font-family: 'Roboto Condensed', 'Segoe UI', sans-serif;
+    color: black; /*Fallback*/
     color: rgba(0, 0, 0, 0.79);
     text-align: center;
 }
@@ -105,7 +107,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: stretch;
-        padding: 0 0 3em;
+        /*padding: 0 0 3em;*/
         font-size: 2vw;
         padding: 12%;
     }
@@ -145,10 +147,9 @@
     
     .bar-graph__bar-title {
         position: absolute;
-        white-space: wrap;
+        /*white-space: wrap*/;
         font-size: 0.8em;
         color: #37374F;
-        text-align: none;
     }
     
     .bar-graph__bar {
