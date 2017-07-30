@@ -1,1 +1,0 @@
-Completed or incorporated images
