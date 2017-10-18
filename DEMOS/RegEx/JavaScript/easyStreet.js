@@ -1,0 +1,4 @@
+//to make instructors life easier, set default value of textarea
+//but not really needed functionally
+var easyStreet = document.querySelector("#userTextArea");
+easyStreet.value = 'Lorem ipsum dolor <a href="mailto:sit@amet.com">site</a> consectetur <span>adipiscing elit</span>, sed do <strong>eiusmod tempor incididunt</strong> ut <a href="http://exampleurl1.com">labore et</a> dolore <a href="mailto:magna@aliqua.com">Ut</a>. <em>enim ad minim</em> veniam, <a href="#anchor">quis nostrud</a> exercitation ullamco laboris nisi ut <a href="https://exampleurl2.com">aliquip</a> ex ea commodo consequat.</p>';
