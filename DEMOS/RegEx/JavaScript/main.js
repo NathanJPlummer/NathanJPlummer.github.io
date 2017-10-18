@@ -1,36 +1,51 @@
-var i; //loop variable
-
 //grab the user submit button
 var parseButton = document.querySelector("#parse");
 
 //grab the results section
 var results = document.querySelector("#results");
 
-//When the user lciks the "GET RESULTS Button..."
+//When the user clicks the "GET RESULTS Button..."
 parseButton.addEventListener("click", function () {
+    
     //get text from the textarea
     var userText = document.querySelector("#userTextArea").value;
-
+    
     //send text to the parseMe() function in parser.js to extract links/emails
     //returns an object which you can view in console
     var userObj = parseMe(userText);
     console.log(userObj);
-
-    //grab paragraphs then ae not displayed before submit
-    //then make them visible: display = block
-    var displayClass = document.getElementsByClassName('hideB4Submit');
-    for (i = 0; i < displayClass.length; i++) {
-        displayClass[i].style.display = "block";
+    
+    //check if no results and if so run function to display that to user
+    if (userObj === null) {
+        noValuesDisplay();
+        return;
     }
-
-    //extract email results from object and format them for page display
-    var emailResult = document.getElementById('emailResults');
-    emailResult.innerHTML = userObj.emailAddresses.toString().replace(",", ", ");
+    
+    displayHiddenParagraphs();
 
     /***extract email results from object and format them for page display***/
+    
+    //grab email results paragraph
+    var emailResult = document.getElementById('emailResults');
+    
+    //display the email results to user
+    if (userObj.emailAddresses === null) {
+        emailResult.innerHTML = "NO RESULT";
+    } else {
+        emailResult.innerHTML = userObj.emailAddresses.toString().replace(",", ", ");
+    }
+    
+    
+    /***extract link results from object and format them for page display***/
 
-    //Grab paragraph that displays results
+    //Grab paragraph that displays links results
     var linkResultsDisplay = document.getElementById('linkResults');
+    
+    //IF no links say so and move on!  ;)
+    if (userObj.links === null) {
+        linkResultsDisplay.innerHTML = "NO RESULT";
+        return;
+    }
 
     //extract links from userObj and stringify them
     var linkResults = JSON.stringify(userObj.links).match(/(url":").*?"/g);
@@ -59,4 +74,7 @@ with its innerHTML = results[i];
 I kept it this way since I had to use a bunch of additional RegEx code in my
 solution and that's what we're actually testing for in this course.
 
-But if you need this fixed up just drop me a line!*/
+But if you need this fixed up just drop me a line!
+
+Also, I could have cleaned this up with more functions, but I wanted to maintain
+RegEx code to either main.js or parser.js*/

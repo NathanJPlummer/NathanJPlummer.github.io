@@ -96,4 +96,5 @@ Label is then used as subtitue input=file*/
 
 .hideB4Submit {
     display: none;
+    text-decoration: underline;
 }
