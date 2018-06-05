@@ -3,302 +3,374 @@
 <html>
 
 <head>
-    <title>
-        Nathan J Plummer's Responsive Portfolio
-    </title>
-    <link href="fonts/fonts.css">
-    <link href="./CSS/styles.old.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Nathan J Plummer's Responsive Portfolio
+  </title>
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+  <!--Bangers used in Power Search Demo-->
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="./CSS/virtualCell.css" rel="stylesheet">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    
-    <!--HOME Navigator-->
-    <div class="portfolio-flexbox-container">
-        
-        <!--About Me Pane-->
-        <div id="home-page" class="content-div-home content-home-nav">
-            <span class="myName">Nathan</span>
-            <span class="myName lastname">J Plummer</span>
-            <img class="nerdAngel" src="img/NerdAngelV2.jpg" alt="Nathan J Plummer" />
-            <span class="myInfo"></span>
-            <span class="myDescription">Aspiring web developer and proud geek here!<br>I'm a Joss Whedon fanatic and a gadget fiend. My mornings consist of checking the Gizmodo RSS feed while simultaneously hunting for the nearest caffeine source.<br>
+
+  <div class="container-fluid virtualCell-container">
+    <nav class="virtualCell-navPane" id="navpane-home">
+      <a href="#virtualCell-contentPane-Projects-Default" class="virtualCell-navPane-icons-wrapper" id="projects-switch">
+                <span class="oi oi-clipboard virtualCell-navPane-icons-glyphs" title="projects" aria-hidden="true"></span>
+                <span class="virtualCell-navPane-icons-glyphs-name">Projects</span>
+            </a>
+
+      <a href="#virtualCell-contentPane-Skills" class="virtualCell-navPane-icons-wrapper">
+                <span class="oi oi-bar-chart virtualCell-navPane-icons-glyphs" title="skills" aria-hidden="true"></span>
+                <span class="virtualCell-navPane-icons-glyphs-name">Skills</span>
+            </a>
+
+      <a href="#virtualCell-contentPane-Graphics" class="virtualCell-navPane-icons-wrapper">
+                <span class="oi oi-image virtualCell-navPane-icons-glyphs" title="graphics" aria-hidden="true"></span>
+                <span class="virtualCell-navPane-icons-glyphs-name">Graphics</span>
+            </a>
+
+      <a href="#virtualCell-contentPane-Contact" class="virtualCell-navPane-icons-wrapper">
+                <span class="oi oi-phone virtualCell-navPane-icons-glyphs" title="contact" aria-hidden="true"></span>
+                <span class="virtualCell-navPane-icons-glyphs-name">Contact</span>
+            </a>
+
+      <a href="#home" id="home-nav-a-home" class="virtualCell-navPane-icons-wrapper virtualCell-navPane-icons-wrapper-home">
+            <span class="oi oi-home virtualCell-navPane-icons-glyphs" title="home" aria-hidden="true"></span>
+      </a>
+    </nav>
+
+    <!--PROJECTS Navigator-->
+
+
+    <nav class="virtualCell-navPane virtualCell-navPane-Projects" id="navpane-project">
+      <a href="#virtualCell-contentPane-Projects-Default" class="virtualCell-navPane-icons-wrapper">
+          <span class="oi oi-circle-check" title="dotValidator" aria-hidden="true"></span>
+          <span class="nav-icon-name">dotValidator</span>
+      </a>
+
+      <a href="#virtualCell-contentPane-Projects-PowerSearch" class="virtualCell-navPane-icons-wrapper">
+          <span class="oi oi-pulse" title="Power-Search" aria-hidden="true"></span>
+          <span class="nav-icon-name">Power Search</span>
+      </a>
+
+      <a href="#virtualCell-contentPane-Projects-Calculator" class="virtualCell-navPane-icons-wrapper">
+          <span class="oi oi-calculator" title="calculator" aria-hidden="true"></span>
+          <span class="nav-icon-name">Calculator</span>
+      </a>
+
+      <a href="#home" id="home-switch" class="virtualCell-navPane-icons-wrapper virtualCell-navPane-icons-wrapper-home">
+            <span class="oi oi-home virtualCell-navPane-icons-glyphs" title="home" aria-hidden="true"></span>
+      </a>
+
+    </nav>
+
+    <div class="virtualCell-contentPane">
+
+      <div id="home" class="virtualCell-contentPane-Target">
+        <div class="portfolio-home-wrapper">
+          <div class="portfolio-home-name">
+            <h2>Nathan J</h2>
+            <h2>Plummer</h2>
+          </div>
+          <div class="portfolio-home-aboutme">
+            <div class="portfolio-home-aboutme-img-wrapper">
+              <img src="img/NerdAngel.png" alt="Nerd Angel">
+            </div>
+            <span class="portfolio-home-aboutme-text">
+              Aspiring web developer and proud geek here!<br>I'm a Joss Whedon fanatic and a gadget fiend. My mornings consist of checking the Gizmodo RSS feed while simultaneously hunting for the nearest caffeine source.<br>
             As soon as I get a new cell phone, game system, or PC the first thing I do is wipe out the OS and replace it with something that will let me play the 30 years old original Super Mario Brothers.<br>
-                <a href=https://github.com/adobe/brackets/wiki/Brackets-Linux-Guide>I sometimes write documentation for fun.</a>
+                <a href="https://github.com/adobe/brackets/wiki/Brackets-Linux-Guide">I sometimes write documentation for fun.</a>
             </span>
+          </div>
         </div>
-        
-        <!--Skills Pane-->
-        <div id="skills-pane" class="content-div-skills content-home-nav">
-            <div class="bar-graph-container">
-                <div class="bar-graph">
-                    <h3 class="bar-graph__heading">Web Development</h3>
-                    <div class="bar-graph__legend">
-                        <div class="bar-graph__legend-value">Expert</div>
-                        <div class="bar-graph__legend-value">Proficient</div>
-                        <div class="bar-graph__legend-value">Competent</div>
-                        <div class="bar-graph__legend-value">Learning</div>
-                    </div>
-                    <div class="bar-graph__bars">
-                        <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">HTML</p></div>
-                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">CSS</p></div>
-                        <div class="bar-graph__bar" data-level="60"><p class="bar-graph__bar-title">JavaScript</p></div>
-                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">SCSS</p></div>
-                        
-                    </div>
-                </div>
-                <div class="bar-graph">
-                    <h3 class="bar-graph__heading">Graphics</h3>
-                    <div class="bar-graph__legend">
-                        <div class="bar-graph__legend-value">Expert</div>
-                        <div class="bar-graph__legend-value">Proficient</div>
-                        <div class="bar-graph__legend-value">Competent</div>
-                        <div class="bar-graph__legend-value">Learning</div>
-                    </div>
-                    <div class="bar-graph__bars">
-                        <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">Affinity Photo</p></div>
-                        <div class="bar-graph__bar" data-level="85"><p class="bar-graph__bar-title">GIMP</p></div>
-                        <div class="bar-graph__bar" data-level="50"><p class="bar-graph__bar-title">CMS</p></div>
-                        <div class="bar-graph__bar" data-level="15"><p class="bar-graph__bar-title">Affinity Designer</p></div>
-                    </div>
-                </div>
-                <div class="bar-graph">
-                    <h3 class="bar-graph__heading">Other</h3>
-                    <div class="bar-graph__legend">
-                        <div class="bar-graph__legend-value">Expert</div>
-                        <div class="bar-graph__legend-value">Proficient</div>
-                        <div class="bar-graph__legend-value">Competent</div>
-                        <div class="bar-graph__legend-value">Learning</div>
-                    </div>
-                    <div class="bar-graph__bars">
-                        <div class="bar-graph__bar" data-level="90"><p class="bar-graph__bar-title">Writing</p></div>
-                        <div class="bar-graph__bar" data-level="82"><p class="bar-graph__bar-title bar-graph-leadership">Leadership</p></div>
-                        <div class="bar-graph__bar" data-level="88"><p class="bar-graph__bar-title">Customer Service</p></div>
-                        <div class="bar-graph__bar" data-level="80"><p class="bar-graph__bar-title">Documentation</p></div>
-                    </div>
-                </div>
+      </div>
+
+      <!--Displayed Projects-->
+      <div id="virtualCell-contentPane-Projects-Default" class="virtualCell-contentPane-Target">
+        <!--DEFAULT Project goes here.  Currently dotValidator-->
+        <div class="portfolio-Project-dotValidator-Wrapper">
+          <div class="portfolio-Project-dotValidator-heading-wrapper">
+            <h2>dotValidator</h2>
+            <h4>Real Time Input Validation</h4>
+          </div>
+          <div class="portfolio-Project-dotValidator-inputs-Wrapper">
+            <div class="evo-c-dotValidator-container under-md-none">
+              <label label for="evo-c-dotValidator-search" class="evo-c-dotValidator-label">Search</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-search" type="search">
+              <span class="evo-c-validation-dot"></span>
             </div>
+
+
+
+            <div class="evo-c-dotValidator-container">
+              <label for="evo-c-dotValidator-email" class="evo-c-dotValidator-label">Email</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-email" type="email">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+
+
+
+            <div class="evo-c-dotValidator-container">
+              <label for="evo-c-dotValidator-phone" class="evo-c-dotValidator-label">Phone Number (US)</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-phone" type="tel">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-Project-dotValidator-inputs-Wrapper under-sm-none">
+
+            <div class="evo-c-dotValidator-container under-md-none">
+              <label for="evo-c-dotValidator-number" class="evo-c-dotValidator-label">Generic Number </label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-number" type="number">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+
+
+
+            <div class="evo-c-dotValidator-container">
+              <label for="dot-valid-DOB" class="evo-c-dotValidator-label">Date of Birth</label>
+              <input data-dotvalidator="true" id="dot-valid-DOB" class="evo-c-dotValidator-input" type="date">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+
+            <div class="evo-c-dotValidator-container evo-c-dotValidator-container-age">
+              <label class="evo-c-dotValidator-label">Age</label>
+              <span id="evo-c-dotValidator-age-id" class="evo-c-dotValidator-input evo-c-dotValidator-age-inactive" type="text"></span>
+              <span class="evo-c-validation-dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-Project-dotValidator-inputs-Wrapper under-xs-none">
+            <div class="evo-c-dotValidator-container">
+              <label for="evo-c-dotValidator-password" class="evo-c-dotValidator-label">Password</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-password" type="password">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+
+
+            <div class="evo-c-dotValidator-container under-md-none">
+              <label for="evo-c-dotValidator-username" class="evo-c-dotValidator-label">Username</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-username" type="text">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+
+            <div class="evo-c-dotValidator-container">
+              <label for="evo-c-dotValidator-zipcode" class="evo-c-dotValidator-label">Zipcode</label>
+              <input data-dotvalidator="true" class="evo-c-dotValidator-input" id="evo-c-dotValidator-zipcode" type="text">
+              <span class="evo-c-validation-dot"></span>
+            </div>
+          </div>
         </div>
-        
-        <!--Contact Pane-->
-        <div id="contact-pane" class="content-div-contact content-home-nav">
-            <div class="contact-image-container">
-                <img class="contact-image" src="img/dancingNate_2x.jpg"/>
+      </div>
+      <!--END DEFAULT PROJECT-->
+
+      <!--PROJECT: Power Search-->
+      <div id="virtualCell-contentPane-Projects-PowerSearch" class="virtualCell-contentPane-Target">
+        <div class="powerSearch-container container-fluid">
+          <form class="powerSearch-form" id="powerSearch-form">
+            <div class="powerSearch-Logo">
+              <img class="powerSearch-Logo" src="img/pr.png">
             </div>
-            <div class="contact-info">
-                <span class="oi nav-icon contact-icon-email" data-glyph="envelope-open" title="graphics" aria-hidden="true"></span>
-                <a class="contact-email" href="mailto:nathanjplummer@gmail.com">nathanjplummer@gmail.com</a>
+            <div>
+              <h3>Choose Your Power Source</h3>
+              <select class="custom-select" id="powerSearch-selectbox">
+                    <option value="Wikia">The Ranger Wikia</option>
+                    <option value="Google">Google</option>
+              </select>
             </div>
+            <div class="row powerSearch-search-wrapper">
+              <span class="col-4">Search the Power Database</span>
+              <input class="col-8 form-control powerSearch-input-search" id="powerSearch-searchbox" type="search">
+            </div>
+            <input type="submit" class="powerSearch-button-submit btn submit-button">
+          </form>
+          <div class="powerSearch-background-image">
+            <img src="img/Pink.jpg" class="powerSearch-Landscape">
+            <img src="img/Pink_mobile_s.png" class="powerSearch-Portrait">
+          </div>
         </div>
-        
-        <!--Graphics Pane-->
-        <div id="graphics-pane" class="content-div-graphics content-home-nav">
-            <div class="c-thumbnail">
-                    <img class="c-thumbnail__img" src="img/Affinity/NTearsFB.jpg" alt="Nocturnal Tears">
-                    <label>Complex Image</label>
-                </div>
-                <div class="c-thumbnail c-thumbnail-spiderlee">
-                    <img class="c-thumbnail__img" src="img/Affinity/SpiderLee.jpg" alt="Spider Lee">
-                    <label>Simple Face Swap</label>
-                </div>
-                <div class="c-thumbnail">
-                    <img class="c-thumbnail__img" src="img/Affinity/SuperPaul.jpg" alt="Super Paul">
-                    <label>Complex Face Swap</label>
-                </div>
+      </div>
+      <!--END PROJECT: Power Search-->
+
+      <!--PROJECT: Calculator-->
+      <div id="virtualCell-contentPane-Projects-Calculator" class="virtualCell-contentPane-Target">
+        <div class="portfolio-Project-Calculator-Wrapper">
+          <form id="project-calculator-form" class="project-calculator-form">
+            <div class="project-calculator-lines" id="project-line-line1">
+              <button value="clear" class="project-button-clear" id="project-button-clear">C</button>
+              <input type="text" class="project-calculator-output" id="project-calculator-output" value="" readonly>
+            </div>
+            <div class="project-calculator-lines project-line-line2" id="project-line-line2">
+              <button value="7">7</button>
+              <button value="8">8</button>
+              <button value="9">9</button>
+              <button class="project-line-horizontal" value="+">+</button>
+            </div>
+            <div class="project-calculator-lines project-line-line3" id="project-line-line3">
+              <button value="4">4</button>
+              <button value="5">5</button>
+              <button value="6">6</button>
+              <button class="project-line-horizontal" value="-">-</button>
+            </div>
+            <div class="project-calculator-lines project-line-line4" id="project-line-line4">
+              <button value="1">1</button>
+              <button value="2">2</button>
+              <button value="3">3</button>
+              <button class="project-line-horizontal" value="/">/</button>
+            </div>
+            <div class="project-calculator-lines project-line-line5" id="project-line-line5">
+              <button value="0">0</button>
+              <button value=".">.</button>
+              <button value="=">=</button>
+              <button class="project-line-horizontal" value="*">x</button>
+            </div>
+            <div class="project-calculator-lines project-line-line6" id="project-line-line6">
+              <button value="delete" class="project-button-delete" id="project-button-delete">DEL</button>
+            </div>
+          </form>
         </div>
-        
-        <!--PROJECT: dotValidator Pane-->
-        <div id="projects-page" class="content-div-projects-dotValidator content-project-nav">
-            <div class="content-div-projects-dotValidator-title-container">
-                <a class="content-div-projects-dotValidator-titleLink" href="https://github.com/NathanJPlummer/dotValidator">dotValidator</a>
-                <label class="content-div-projects-dotValidator-titleLabel">Realtime Input Validation</label>
-            </div>
-            
-            <div class="eureka-c-dotValidator-container dotValidator-bigOnly">
-                <label class="eureka-c-dotValidator-label">Search</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="search">
-                <span class="eureka-c-validation-dot"></span>
-            </div>
-            
-            <div class="eureka-c-dotValidator-container">
-                <label class="eureka-c-dotValidator-label">Email</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="email">
-                <span class="eureka-c-validation-dot"></span>
-            </div>
-            
-            <div class="eureka-c-dotValidator-container">
-                <label class="eureka-c-dotValidator-label">Phone Number</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="tel">
-                <span class="eureka-c-validation-dot"></span>
-            </div>
-            
-            <div class="eureka-c-dotValidator-container dotValidator-bigOnly">
-                <label class="eureka-c-dotValidator-label">Generic Number</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="number">
-                <span class="eureka-c-validation-dot"></span>
-            </div>
-            
-            <div class="eureka-c-dotValidator-container dotValidator-bigOnly dotValidator-veryBigOnly">
-                <label class="eureka-c-dotValidator-label">Date of Birth</label>
-                <input data-dotValidator="true" id="dot-valid-DOB" class="eureka-c-dotValidator-input" type="date">
-                <span class="eureka-c-validation-dot"></span>
-            </div>
+      </div>
 
-            <div class="eureka-c-dotValidator-container eureka-c-dotValidator-container-age dotValidator-bigOnly dotValidator-veryBigOnly">
-                <label class="eureka-c-dotValidator-label">Age</label>
-                <span id="eureka-c-dotValidator-age-id" class="eureka-c-dotValidator-input eureka-c-dotValidator-age-inactive" type="text"></span>
-                <span class="eureka-c-validation-dot"></span>
+
+      <div id="virtualCell-contentPane-Skills" class="virtualCell-contentPane-Target">
+        <div class="bar-graph-container">
+          <div class="bar-graph">
+            <h3 class="bar-graph__heading">Web Development</h3>
+            <div class="bar-graph__legend">
+              <div class="bar-graph__legend-value">Expert</div>
+              <div class="bar-graph__legend-value">Proficient</div>
+              <div class="bar-graph__legend-value">Competent</div>
+              <div class="bar-graph__legend-value">Learning</div>
             </div>
-            
-            <div class="eureka-c-dotValidator-container">
-                <label class="eureka-c-dotValidator-label">Password</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="password">
-                <span class="eureka-c-validation-dot"></span>
+            <div class="bar-graph__bars">
+              <div class="bar-graph__bar" data-level="90">
+                <p class="bar-graph__bar-title">HTML</p>
+              </div>
+              <div class="bar-graph__bar" data-level="80">
+                <p class="bar-graph__bar-title">CSS</p>
+              </div>
+              <div class="bar-graph__bar" data-level="60">
+                <p class="bar-graph__bar-title">JavaScript</p>
+              </div>
+              <div class="bar-graph__bar" data-level="80">
+                <p class="bar-graph__bar-title">SCSS</p>
+              </div>
+
             </div>
-            
-            <div class="eureka-c-dotValidator-container dotValidator-bigOnly">
-                <label class="eureka-c-dotValidator-label ">Username</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="text">
-                <span class="eureka-c-validation-dot"></span>
+          </div>
+          <div class="bar-graph">
+            <h3 class="bar-graph__heading">Graphics</h3>
+            <div class="bar-graph__legend">
+              <div class="bar-graph__legend-value">Expert</div>
+              <div class="bar-graph__legend-value">Proficient</div>
+              <div class="bar-graph__legend-value">Competent</div>
+              <div class="bar-graph__legend-value">Learning</div>
             </div>
-            
-            <div class="eureka-c-dotValidator-container dotValidator-bigOnly">
-                <label class="eureka-c-dotValidator-label">Zipcode</label>
-                <input data-dotValidator="true" class="eureka-c-dotValidator-input" type="text">
-                <span class="eureka-c-validation-dot"></span>
+            <div class="bar-graph__bars">
+              <div class="bar-graph__bar" data-level="85">
+                <p class="bar-graph__bar-title">Affinity Photo</p>
+              </div>
+              <div class="bar-graph__bar" data-level="85">
+                <p class="bar-graph__bar-title">GIMP</p>
+              </div>
+              <div class="bar-graph__bar" data-level="50">
+                <p class="bar-graph__bar-title">CMS</p>
+              </div>
+              <div class="bar-graph__bar" data-level="15">
+                <p class="bar-graph__bar-title">Affinity Designer</p>
+              </div>
             </div>
-            
+          </div>
+          <div class="bar-graph">
+            <h3 class="bar-graph__heading">Other</h3>
+            <div class="bar-graph__legend">
+              <div class="bar-graph__legend-value">Expert</div>
+              <div class="bar-graph__legend-value">Proficient</div>
+              <div class="bar-graph__legend-value">Competent</div>
+              <div class="bar-graph__legend-value">Learning</div>
+            </div>
+            <div class="bar-graph__bars">
+              <div class="bar-graph__bar" data-level="90">
+                <p class="bar-graph__bar-title">Writing</p>
+              </div>
+              <div class="bar-graph__bar" data-level="82">
+                <p class="bar-graph__bar-title bar-graph-leadership">Leadership</p>
+              </div>
+              <div class="bar-graph__bar" data-level="88">
+                <p class="bar-graph__bar-title">Customer Service</p>
+              </div>
+              <div class="bar-graph__bar" data-level="80">
+                <p class="bar-graph__bar-title">Documentation</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!--PROJECT: Calculator Pane-->
-        <div id="calculator-display" class="content-div-projects-calculator content-project-nav">
-            <form id="calculator">
-                <div class="lines" id="line1">
-                    <button value="clear" id="clear">C</button>
-                    <input type="text" id="output" value="" readonly>
-                </div>
-                <div class="lines" id="line2">
-                    <button value="7">7</button>
-                    <button value="8">8</button>
-                    <button value="9">9</button>
-                    <button class="h-line" value="+">+</button>
-                </div>
-                <div class="lines" id="line3">
-                    <button value="4">4</button>
-                    <button value="5">5</button>
-                    <button value="6">6</button>
-                    <button class="h-line" value="-">-</button>
-                </div>
-                <div class="lines" id="line4">
-                    <button value="1">1</button>
-                    <button value="2">2</button>
-                    <button value="3">3</button>
-                    <button class="h-line" value="/">/</button>
-                </div>
-                <div class="lines" id="line5">
-                    <button value="0">0</button>
-                    <button value=".">.</button>
-                    <button value="=">=</button>
-                    <button class="h-line" value="*">x</button>
-                </div>
-                <div class="lines" id="line6">
-                    <button value="delete" id="delete">DEL</button>
-                </div>
-            </form>
+      </div>
+
+      <div id="virtualCell-contentPane-Graphics" class="virtualCell-contentPane-Target">
+
+        <section class="portfolio-graphics-wrapper" id="portfolio-graphics-wrapper-section">
+          <div class="portfolio-graphics-img-wrapper">
+            <img src="img/newNT.jpg" alt="A Nightmare on Elm Street Nocturnal Tears" id="portfolio-graphics-img">
+          </div>
+          <div class="portfolio-graphics-info-nav">
+            <p id="porfolio-graphics-info-nav-p">This image is based on a screenplay I wrote when I was 17, a prequel to "A Nightmare on Elm Street."<br><br>The poster was developed using a variety of tools: Photoshop, Inkscape, and even some neural network styling.<br><br>It is intentionally
+              designed to mimic the original series' posters created by <a href="http://matthewpeak.com/category/movie-posters">Mathew Peak.</a></p>
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb" id="portfolio-graphics-breadcrumb">
+                <li class="breadcrumb-item">Complex Image</li>
+                <li class="breadcrumb-item">Complex Swap</li>
+                <li class="breadcrumb-item active">Simple Swap</li>
+              </ol>
+            </nav>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="virtualCell-contentPane-Contact" class="virtualCell-contentPane-Target">
+        <div class="portfolio-contact-wrapper">
+
+          <div class="portfolio-contact-img-wrapper">
+            <img src="img/dancingNate_2x.jpg" alt="Dancing Nathan">
+          </div>
+
+          <div class="portfolio-contact-info-wrapper">
+            <span class="oi nav-icon contact-icon-email" data-glyph="envelope-open" title="graphics" aria-hidden="true"></span>
+            <a class="contact-email" href="mailto:nathanjplummer@gmail.com">nathanjplummer@gmail.com</a>
+          </div>
+
         </div>
-        
-        <!--PROJECT: Power Search Pane-->
-        <div id="powerSearch" class="content-div-projects-powerSearch content-project-nav">
-            <div class="container">
-                <div class="content">
-                    <img id="logo" src="images/powertransparent2.png" />
-                    <p>Choose Your Power Source</p>
-                    <select id="series">
-                        <option>Mighty Morphin Rangers</option>
-                        <option>Zeo Rangers</option>
-                        <option>Turbo Rangers</option>
-                        <options>Dino Thunder</options>
-                        <option>Ninja Storm</option>
-                        <option>The Movies</option>
-                        <option>Comic Books</option>
-                    </select>
-                    <form id="searchForm">
-                        Search The Power Database:
-                        <input name="powerSearch" type="search" placeholder="It's Morphin' Time!">
-                    </form>
-                </div>
+      </div>
 
-                <picture class="background">
-                    <source class="pranger" media="(orientation:portrait)" srcset="images/pranger-portrait-2x.png 2x, images/pranger-portrait-1x.png 1x">
-                    <source class="pranger" media="orientation:landscape" srcset="images/pranger-landscape-2x.jpg 2x, images/pranger-landscape-1x.png 1x">
-                    <img class="pranger" src="images/pranger-landscape-1x.png" alt="PinkRanger" />
-                </picture>
-            </div>
-        </div>
-        
-        <div class="navigator-home-flex-container">
-
-            <a href="#projects-page" class="nav-home-icon-display">
-                <span class="oi nav-icon" data-glyph="clipboard" title="projects" aria-hidden="true"></span>
-                <span class="nav-icon-name">Projects</span>
-            </a>
-
-            <a href="#skills-pane" class="nav-home-icon-display">
-                <span class="oi nav-icon" data-glyph="bar-chart" title="skills" aria-hidden="true"></span>
-                <span class="nav-icon-name">Skills</span>
-            </a>
-
-            <a href="#graphics-pane" class="nav-home-icon-display">
-                <span class="oi nav-icon" data-glyph="image" title="graphics" aria-hidden="true"></span>
-                <span class="nav-icon-name">Graphics</span>
-            </a>
-
-            <a href="#contact-pane" class="nav-home-icon-display">
-                <span class="oi nav-icon" data-glyph="phone" title="contact" aria-hidden="true"></span>
-                <span class="nav-icon-name">Contact</span>
-            </a>
-
-            <a href="#home-page" class="nav-home-icon-display icon-home">
-                <span class="oi nav-icon nav-icon-home current-icon" data-glyph="home" title="home" aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <!--PROJECTS Navigator-->
-        <div class="navigator-projects-flex-container">
-
-            <a href="#projects-page" class="nav-projects-icon-display">
-                <span class="oi nav-icon" data-glyph="circle-check" title="dotValidator" aria-hidden="true"></span>
-                <span class="nav-icon-name">dotValidator</span>
-            </a>
-
-            <a href="#powerSearch" class="nav-projects-icon-display">
-                <span class="oi nav-icon" data-glyph="pulse" title="Power-Search" aria-hidden="true"></span>
-                <span class="nav-icon-name">Power Search</span>
-            </a>
-
-            <a href="#calculator-display" class="nav-projects-icon-display">
-                <span class="oi nav-icon" data-glyph="calculator" title="calculator" aria-hidden="true"></span>
-                <span class="nav-icon-name">Calculator</span>
-            </a>
-
-            <a href="#home-page" class="nav-projects-icon-display icon-projects-home">
-                <span class="oi nav-icon current-icon" data-glyph="home" title="home" aria-hidden="true"></span>
-            </a>
-        </div>
-        
-        
-        <span class="quote">Unless you try to do something beyond what you have already mastered, you will never grow.<br>- Ralph Waldo Emerson</span>
     </div>
-    
-    <div class="mobile-equals-blackberry">
-        <h4>That's a really small device you have there...</h4>
-        <p>Sorry, but this page doesn't support devices smaller than the iPhone 3.</p>
-        <p>Portrait mode works... kind of.  If you've got excellent eyes.  Also not officially supported.</p>
-        <p>Is that an old Motorola RAZR by any chance?</p>
-        <a href="https://www.amazon.com/dp/B01685JERA/ref=twister_B016A02DW6?_encoding=UTF8&th=1">Maybe consider getting one of these...</a>
-        <p class="mobile-equals-blackberry-cando">If you really need me to build you a site for RAZR, I can do that.  I promise.  Just not this one.  ;)</p>
-    </div>
-    <script type="text/javascript" src="javascript/js-min.js"></script>
+
+  </div>
+
+
+  <!--bootstrap code-->
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+
+
+  <script src="JavaScript/bar-graph.js"></script>
+  <script src="JavaScript/portfolio-utilities.js"></script>
+  <script src="JavaScript/portfolio-nav-switch.js"></script>
+  <script src="JavaScript/graphics-showcase-array.js"></script>
+  <script src="JavaScript/graphics-showcase.js"></script>
+  <script src="JavaScript/dotValid.js"></script>
+  <script src="JavaScript/search.js"></script>
+  <script src="JavaScript/onload.js"></script>
 </body>
 
 </html>
