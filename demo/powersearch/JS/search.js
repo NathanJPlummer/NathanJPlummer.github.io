@@ -1,12 +1,12 @@
 "use strict";
 
-//function sendToWikia(userSearch) {
-  //if (userSearch === "") {
-    //window.open("http://powerrangers.wikia.com/wiki/Ronny_on_Empty");
-  //} else {
-    //window.open("http://powerrangers.wikia.com/wiki/Special:Search?query=" + userSearch, '_blank');
-  //}
-//}
+function sendToWikia(userSearch) {
+  if (userSearch === "") {
+    window.open("http://powerrangers.wikia.com/wiki/Ronny_on_Empty");
+  } else {
+    window.open("http://powerrangers.wikia.com/wiki/Special:Search?query=" + userSearch, '_blank');
+  }
+}
 
   function sendToGoogle(userSearch) {
     window.open("https://www.google.com/search?hl=en&q=" + " Power Rangers " + userSearch, '_blank');
@@ -18,9 +18,9 @@
     let selectBox = document.getElementById('powerSearch-selectbox');
     var searchEngine = selectBox.options[selectBox.selectedIndex].value;
 
-    //if (searchEngine === "Wikia") {
-      //sendToWikia(userSearch);
-    //}
+    if (searchEngine === "Wikia") {
+      sendToWikia(userSearch);
+    }
 
     if (searchEngine === "Google") {
       sendToGoogle(userSearch);
