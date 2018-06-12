@@ -315,7 +315,9 @@ template {
     height: 24px; } }
 body {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh; 
+  overflow: none;
+}
 
 .powerSearch-container {
   display: flex;
