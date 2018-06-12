@@ -208,4 +208,4 @@ function createVKeyboard(inputID, containerID,layout) {
     })
 };
 
-createVKeyboard('#powerSearch-searchbox', "virtualCell-contentPane-Projects-PowerSearch");
+createVKeyboard('#powerSearch-searchbox', "powerSearch-form");
