@@ -4,8 +4,9 @@ var VHChromeFix = function(selectors) {
   var userAgent = navigator.userAgent.toLowerCase();
   var isAndroidChrome = /chrome/.test(userAgent) && /android/.test(userAgent);
   var isIOSChrome = /crios/.test(userAgent);
+  var is_safari = navigator.userAgent.indexOf("Safari") > -1;
 
-  if (isAndroidChrome || isIOSChrome) {
+  if (isAndroidChrome || isIOSChrome  || is_safari) {
 
     //additional height fix for chrome/and keyboard
     var meta = document.createElement('meta');
