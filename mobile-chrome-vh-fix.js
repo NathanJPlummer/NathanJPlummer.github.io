@@ -1,5 +1,3 @@
-
-
 var VHChromeFix = function(selectors) {
 
   var self = this;
@@ -7,17 +5,18 @@ var VHChromeFix = function(selectors) {
   var isAndroidChrome = /chrome/.test(userAgent) && /android/.test(userAgent);
   var isIOSChrome = /crios/.test(userAgent);
   var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-  if (isAndroidChrome || isIOSChrome  || is_safari) {
+  if (isAndroidChrome || isIOSChrome || is_safari) {
 
-    if ((is_safari) && ((window.matchMedia("(orientation: landscape)").matches))) {
+    if ((is_safari) && (!isChrome) && ((window.matchMedia("(orientation: landscape)").matches))) {
       document.getElementsByClassName('virtualCell-container')[0].style.height = "calc(100% - 48px)";
     }
 
     //additional height fix for chrome/and keyboard
     var meta = document.createElement('meta');
     meta.name = 'viewport';
-    meta.content = 'width=device-width,height='+ window.innerHeight +', initial-scale=1.0';
+    meta.content = 'width=device-width,height=' + window.innerHeight + ', initial-scale=1.0';
     document.getElementsByTagName('head')[0].appendChild(meta);
 
     // If we detected Chrome on Android or iOS
@@ -74,9 +73,7 @@ VHChromeFix.prototype.fixAll = function() {
 };
 
 //user options
-var vhFix = new VHChromeFix([
-  {
-    selector: '.vh-for-mobile',
-    vh: 100
-  }
-]);
+var vhFix = new VHChromeFix([{
+  selector: '.vh-for-mobile',
+  vh: 100
+}]);
