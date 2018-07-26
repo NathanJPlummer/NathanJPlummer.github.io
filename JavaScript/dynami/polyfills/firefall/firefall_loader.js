@@ -7,10 +7,10 @@
   /*****Set up virtual keyboard******/
 
   //Keyboard CSS
-  dynamicallyLoadCSS("./virt-keyboard/keyboard.css");
+  dynamicallyLoadCSS("./JavaScript/dynamic/polyfills/firefall/virt-keyboard/keyboard.css");
 
   //CSS code for keyboard preview
-  dynamicallyLoadCSS("./virt-keyboard/keyboard-previewkeyset.css");
+  dynamicallyLoadCSS("./JavaScript/dynamic/polyfills/firefall/virt-keyboard/keyboard-previewkeyset.css");
 
   function LoadLibrary(liburl, callback) {
     var jscript = document.createElement("script");
@@ -35,11 +35,11 @@
 
   LoadLibrary('http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js',
     function() {
-      LoadLibrary('./virt-keyboard/jquery.keyboard.js',
+      LoadLibrary('./JavaScript/dynamic/polyfills/firefall/virt-keyboard/jquery.keyboard.js',
         function() {
           LoadLibrary('http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js',
             function() {
-              dynamicallyLoadScript("Firefall.js");
+              dynamicallyLoadScript("./JavaScript/dynamic/polyfills/firefall/firefall.js");
             }
           );
         }
