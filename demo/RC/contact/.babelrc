@@ -1,0 +1,4 @@
+{
+  "presets": ["@babel/preset-env"],
+  "ignore":["JavaScript/static/concat/tingle/**/*"]
+}
