@@ -1,0 +1,14 @@
+.iframe {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.iframe iframe {
+    height: 1200px;
+}
+
+select{
+    width: 200px;
+    height: 50ps;
+}
