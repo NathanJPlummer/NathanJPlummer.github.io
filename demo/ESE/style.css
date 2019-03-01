@@ -77,6 +77,10 @@ dfn {
 strong {
   font-weight: bolder; }
 
+img {
+  vertical-align: middle;
+  border-style: none; }
+
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -175,13 +179,6 @@ h1, .h1 {
 h5, .h5 {
   font-size: 1.25rem; }
 
-.alert {
-  position: relative;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem; }
-
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0; }
@@ -194,6 +191,9 @@ h5, .h5 {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
+  
+  img {
+    page-break-inside: avoid; }
   @page {
     size: a3; }
   body {
@@ -203,7 +203,8 @@ html {
   width: 100vw;
   display: flex;
   justify-content: center;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  box-sizing: border-box; }
 
 .simple-heading {
   width: 100%;
@@ -222,3 +223,20 @@ select {
 body {
   width: 75%;
   margin-top: 1%; }
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.preview {
+  width: calc(100% - 625px); }
+
+.preview img {
+  max-width: 100%;
+  border: 3.2px ridge #4B9CD3; }
+
+@media all and (max-width: 1279px) {
+  .preview {
+    display: none; } }
