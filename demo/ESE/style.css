@@ -81,6 +81,9 @@ img {
   vertical-align: middle;
   border-style: none; }
 
+svg:not(:root) {
+  overflow: hidden; }
+
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -233,7 +236,13 @@ html {
   height: 75px;
   max-height: 5%;
   background-color: #4B9CD3;
-  border-radius: 4px; }
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 1.75%; }
+
+.logo {
+  height: 80%; }
 
 h1 {
   width: 100%;
