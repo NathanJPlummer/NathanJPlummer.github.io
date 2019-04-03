@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Howard Weinberg. PhD</title>
+	<link rel="stylesheet" href="css/bulma.min.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<script>
+	/* this script allows the hamburger menu to work- let's move it post development*/
+	document.addEventListener('DOMContentLoaded', () => {
+
+		// Get all "navbar-burger" elements
+		const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+		// Check if there are any navbar burgers
+		if ($navbarBurgers.length > 0) {
+
+			// Add a click event on each of them
+			$navbarBurgers.forEach(el => {
+				el.addEventListener('click', () => {
+
+					// Get the target from the "data-target" attribute
+					const target = el.dataset.target;
+					const $target = document.getElementById(target);
+
+					// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+					el.classList.toggle('is-active');
+					$target.classList.toggle('is-active');
+
+				});
+			});
+		}
+
+	});
+</script>
+
+<body>
+	
+	<nav class="navbar" id="navbar" role="navigation" aria-label="main navigation"></nav>
+	<script src="js/navbar.js"></script>
+
+	<div class="navbar-contententseperator"></div>
+	<noscript style="font-size:20px;color:red;padding: 0 6% 0 6%;text-align: center">There's a lot more to this site, but you need JavaScript to see it.  Come visit us again from another browser!</noscript>
+	<div class="home-heading">
+		<h2>Howard Weinberg, PhD</h2>
+		<img src="img/home/weinlab2.jpg" alt="Dr. Howard Weinberg">
+		<span class="seperate-horizontal-4px"></span>
+		<span class="home-heading-location-fontsize">Enviromental Sciences and Engineering</span>
+		<span class="home-heading-location-fontsize">146A Rosenau Hall, CB 7431</span>
+		<span class="home-heading-location-fontsize">The University of North Carolina at Chapel Hill</span>
+		<span class="home-heading-location-fontsize"><strong>Telephone:</strong> (919) 966-3859</span>
+		<span class="home-heading-location-fontsize"><strong>Email: </strong><a href="mailto:Howard_Weinberg@unc.edu">Howard_Weinberg@unc.edu</a></span>
+		<a href="https://sph.unc.edu/files/2018/07/cv_Weinberg-April-2018.pdf" target="_blank"><object type="image/svg+xml" data="img/home/CV_Icon.svg">
+			<img src="img/home/CV_Icon.png" alt="No SVG support" href="https://sph.unc.edu/files/2018/07/cv_Weinberg-April-2018.pdf">
+		</object></a>
+		<a class="CVtext" >Curriculum Vitae</a>
+	</div>
+</body>
+
+</html>
