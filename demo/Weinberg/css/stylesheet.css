@@ -2,6 +2,10 @@ h2 {
     font-size: 1.5rem;;
 }
 
+.margin-top-1pt5rem {
+    margin-top: 1.5rem;
+}
+
 .seperate-horizontal-4px {
     height: 4px;
 }
@@ -63,7 +67,7 @@ scheme makes text hard to read*/
     font-size: 0.95rem;
 }
 
-.home-heading object {
+.home-heading object,  .home-heading object img{
     width: 60px;
     pointer-events: none;
     margin-top: 10px;
@@ -206,4 +210,62 @@ makes things slightly prettier*/
     margin: 12px 0 12px 0;
     border-radius: 2px;
     background-color: lightgray;
+}
+
+.key-publications {
+    padding: 0 5% 0 5%;
+}
+
+.key-publications .vert-text {
+    display: flex;
+    align-items: center;
+}
+
+.key-publications object, .key-publications object img {
+    width: 65px;
+    max-width: 50%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.key-publications h4 {
+    margin-bottom: 40px !important;
+}
+
+.key-publications .short-divider {
+    width: 33.33%;
+    height: 0.5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+    margin: auto;
+    border-top: 1x solid #E1E1E1;
+}
+
+.prospective-students {
+    padding: 0 8% 0 8%;
+}
+
+@media all and (orientation:portrait) {
+    .prospective-students {
+        padding: 0 5% 0 5%;
+    }
+}
+
+.prospective-students .title.is-1 {
+    color: #767676;
+}
+
+.prospective-students .title.is-3 {
+    color: #4B9CD3;
+}
+
+.prospective-students strong {
+    color: #767676;
+    font-weight: 700;
+}
+
+.prospective-students .pstudents-mentoring p {
+    margin-bottom: 0.5rem;
 }

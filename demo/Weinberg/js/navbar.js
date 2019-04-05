@@ -1,4 +1,4 @@
-alert("WHOOPS...this website is current just a demo with a lot of missing content.  To view the current website of Dr. Weinberg please go to:\nhttps://weinberg.sph.unc.edu/");
+//alert("WHOOPS...this website is current just a demo with a lot of missing content.  To view the current website of Dr. Weinberg please go to:\nhttps://weinberg.sph.unc.edu/");
 
 const navbar = document.getElementById('navbar');
 
