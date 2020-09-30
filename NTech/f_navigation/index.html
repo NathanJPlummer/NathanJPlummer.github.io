@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Chapter 2:  Navigating Files and Folders - Nathan's Guide to Technology for Beginners</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../stylesheets/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Chapter 2:  Navigating Files and Folders";
+    var mkdocs_page_input_path = "f_navigation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Nathan's Guide to Technology for Beginners</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../machine/">Chapter 1:  Machine Language</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Chapter 2:  Navigating Files and Folders</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-early-ages-the-command-line">The Early Ages: The Command Line</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introducing-the-gui-file-manager">Introducing the GUI File Manager</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigating-the-macos-file-manager-finder">Navigating the macOS File Manager (Finder)</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Nathan's Guide to Technology for Beginners</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Chapter 2:  Navigating Files and Folders</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="chapter-2-navigating-files-and-folders">Chapter 2: Navigating Files and Folders</h1>
+<h2 id="the-early-ages-the-command-line">The Early Ages: The Command Line</h2>
+<p>Back in the days MS-DOS we navigated our computers using text commands. Imagine if the pioneers of modern technology had decided we should interact with our PCs using only <a href="../machine/">machine readable language</a>! Locating a file might have looked something like this:</p>
+<p><img alt="" src="bad_dos.jpg" /></p>
+<p>Thankfully, cooler heads prevailed and we got something closer to the modern day command prompt.</p>
+<p><img alt="" src="Modern_Command_Line.jpg" /></p>
+<p>At first glance, that image may be no less confusing than the theoretical one right above it. </p>
+<p>Let's Zoom in and look more closely at one of the lines.</p>
+<p><img alt="" src="TerminalCD_Full.jpg" /></p>
+<p>And let's zoom in a little more, to the first highlighted section, and add some labels.</p>
+<p><img alt="Terminal Section 1" src="th1.jpg" /></p>
+<div class="boxee boxee-fyi">
+    <img src="FYI.png" alt="For Your Information">
+    <span>I'm sure throwing a lot of concepts at you, aren't I? You might be wondering if these lessons were a good idea!<br><br>This information will provide much needed context when we discuss navigating folders through the OS X finder. Don't worry, you won't have to use the command line.</span>
+</div>
+
+<p><br></p>
+<p><strong>PS</strong>: This is a Microsoft specific indicator. It stands for "PowerShell"- a modern Microsoft Command line- and indicates a new line in the terminal. You can safely ignore it and never think about it again. :)</p>
+<p><strong>Drive Letter</strong>: While it's not always the case, many systems have multiple hard drives. Here's an image from my PC- I have several!</p>
+<p><img src="wind.jpg" width="300px" alt="Windows Drives"></p>
+<p>In Microsoft operating systems, this letter is used to indicate which drive you're interacting with.</p>
+<p><strong>Directory</strong>: This is the meat of the topic at hand. Directories (often referred to as folders- more on that later) are the human readable structures we use to organize our files. Every file in your system is stored in a directory.</p>
+<p>Lets look at our command again:</p>
+<p><img alt="Terminal Section 1" src="th1.jpg" /></p>
+<p>There are actually 3 directories here, because the drive letter is also a special kind of directory. Let's update the labels to reflect this.</p>
+<p><img alt="Terminal Section 1" src="th1point2.jpg" /></p>
+<p>With this in mind, a couple common vocabulary terms:</p>
+<ul>
+<li><strong>Subdirectory</strong><ul>
+<li>This is a directory inside a directory. The phrase is very contextual as <em>almost</em> all directories are also subdirectories.</li>
+</ul>
+</li>
+<li><strong>Parent</strong><ul>
+<li>The directory above a directory. This is the inverse of <strong>subdirectory</strong> and is also contextual.</li>
+</ul>
+</li>
+<li><strong>Root</strong><ul>
+<li>The directory at the top of the hierarchal structure. The only directory without a parent.</li>
+</ul>
+</li>
+</ul>
+<p>So using our example:</p>
+<p><img src="Ex1.jpg" alt="Example"></p>
+<ul>
+<li><em>C:</em> is the <strong>root</strong> directory</li>
+<li><em>Users</em> is a <strong>subdirectory</strong> of the <strong>root</strong> <em>C:</em> directory</li>
+<li><em>Users</em> is the <strong>parent</strong> of the <em>Driem</em> directory<ul>
+<li>Which is another way of saying that <em>Driem</em> is a subdirectory of <em>Users</em></li>
+</ul>
+</li>
+</ul>
+<div class="boxee boxee-exercise">
+    <h2>Exercise</h2>
+    <img src="tree.png" alt="For Your Information">
+    <span>Directory relationships are sometimes displayed in a horizontal <em>directory tree</em> like the image above.</span>
+    <span>Using the information you learned in this chapter, can you identify:</span>
+    <ol>
+        <li>The root directory?</li>
+        <li>Any one of the subdirectories?</li>
+        <li>The parent to the subdirectory you named in question 2?</li>
+    </ol>
+</div>
+
+<p><br></p>
+<h2 id="introducing-the-gui-file-manager">Introducing the GUI File Manager</h2>
+<p>(Note: <strong>GUI</strong> stands for <em>Graphic User Interface</em>- any user interface that users graphics and does not rely exclusively on text or symbols is a GUI).</p>
+<p>When the switch from text based interfaces to GUI based systems began, it was quickly recognized that users would need a visual representation of the directory structure. After all, what's the point of these fancy graphics if you still require users to type "C:\Windows\System32\Pictures\Mypic.jpg" into a terminal?</p>
+<p>As computers were mostly used in business environments, it was theorized that a file cabinet with folders would be an intuitive metaphor, and the "Desktop" was born. While the folder originates with Xerox, the system was popularized with the release of Windows 3.1. The system was so successful it remains in use in every mainstream operating system today.</p>
+<p><img src="win31fm.jpg" alt="Windows 3.1 File Manager">
+<span class="caption">Windows 3.1 File Manager- 1992</span></p>
+<p><img src="macOSfm2020.jpg" width="600px" alt="macOS Finder">
+<span class="caption">macOS Catalina Finder- 2020</span></p>
+<h2 id="navigating-the-macos-file-manager-finder">Navigating the macOS File Manager (Finder)</h2>
+<p>"Great, Nathan! There are GUIs everywhere! Why did we just spend a whole chapter on the command line?!"</p>
+<p><img src="cthink.jpeg" width="650px" alt="Hmmmmm?">
+<span class="caption">I better keep an eye on this so called "Nathan".<br>He really seems to like referring to himself in the third person.</span></p>
+<p>Have you ever saved a file and you KNEW for sure you saved it, but then couldn't find WHERE you saved it?</p>
+<p>That's because you forgot- or did not know how to find- the file's location! (And do experienced techs still do this? Yes, all the time!)</p>
+<p>In macOS, a typical save dialogue looks like this:</p>
+<p><img src="saveInMac.jpg" alt="macOS Save Dialouge"></p>
+<p>Look at the area I highlighted. That's a directory folder.</p>
+<p>Apple tries to abstract the complete directory structure in an effort to simplify things, but in my opinion, this makes things more confusing in the long run. Watch what happens if I click on the down arrow to the right of the "Documents" folder.</p>
+<p><img src="FinderPAthArrows.jpg" alt="macOs Finder"></p>
+<p>Depending on your screen size, that may be hard to see. Let's zoom in on the areas the arrows are pointing at:</p>
+<p><img src="FinderPAthArrowsZoom.jpg" alt="macOs Finder"></p>
+<p>By following the folder structure, you can see that the location we are about to save the 'BlueDoc" document at is "Documents/Pictures/Things That Are_/Blue/BlueDoc.docx"</p>
+<ul>
+<li>
+<p>There's a technical term for the directory structure of a specific location- <strong>path</strong></p>
+<ul>
+<li>"Documents/Pictures/Things That Are_/Blue/" is a <strong>path</strong>.</li>
+</ul>
+</li>
+<li>
+<p>If the path includes a file, this is a <strong>file path</strong>.</p>
+<ul>
+<li>"Documents/Pictures/Things That Are_/Blue/BlueDoc.docx"</li>
+</ul>
+</li>
+</ul>
+<p>We can find a file by clicking and following its file path in the operating system's file manager. In the case of OS X this means Finder.</p>
+<p><img src="finder.jpg" alt="Finder Icon">
+<img src="fmclick1.jpg" alt="Folder 1">
+<img src="fmclick2.jpg" alt="Folder 2">
+<img src="fmclick3.jpg" alt="Folder 3">
+<img src="fmhorray.jpg" alt="File Located"></p>
+<hr />
+<p>To review, this...</p>
+<p><img src="fmhorray.jpg" alt="File Located"></p>
+<p>Is the same as this:</p>
+<p>"Documents/Pictures/Things That Are_/Blue/BlueDoc.docx"</p>
+<div class="boxee boxee-fyi">
+    <img src="FYI.png" alt="For Your Information">
+    <span>I had intended to post a screenshot of the file path for "Documents/Pictures/Things That Are_/Blue/BlueDoc.docx" inside the macOS version of the command line, but it turns out once entered macOS Terminal also abstracts the full file path. D'oh! </span>
+</div>
+
+<p><br></p>
+<hr />
+<p>Let's do one more example, from Windows- as they tend to make the file path a bit more transparent.</p>
+<p>This:</p>
+<p><img src="winpath_gui.jpg" alt="Windows Path GUI"></p>
+<p>Is the same as this:</p>
+<p><img src="winpath_term.jpg" alt="Windows Path Terminal"></p>
+<div class="boxee boxee-exercise">
+    <h2>Exercise</h2>
+    <img src="newFolder.jpg" alt="Exercise 2">
+    <span>As displayed in the image above, you can create a new folder in macOS by touching two fingers on your touchpad (or right click with a two-button mouse) and selecting New Folder.</span>
+    <span>Try to reproduce the following steps</span>
+    <ol>
+        <li>Open macOS finder and add a folder named "My New Folder" to your Documents folder</li>
+        <li>Open up your favorite text editor and save the file "My New Text" in the "My New Folder" you just created </li>
+        <li>Locate your new text file using Finder and open it</li>
+    </ol>
+</div>
+
+<p><br></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../machine/" class="btn btn-neutral" title="Chapter 1:  Machine Language"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../machine/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
