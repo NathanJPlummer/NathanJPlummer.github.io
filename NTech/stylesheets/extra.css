@@ -1,0 +1,86 @@
+/*
+
+Sand Tan: #e1b382
+
+Sand Tan Shadow: #c89666
+
+Night Blue: #2d545e
+
+Night Blue Shadow: #12343b
+
+*/
+
+.wy-side-nav-search {
+    background-color: #c89666;
+}
+
+.wy-nav-top {
+    background-color: #c89666;
+}
+
+.wy-nav-side {
+    background-color: #2d545e;
+}
+
+.rst-versions .rst-current-version {
+    background-color:  #12343b;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-color: #2d545e;
+}
+
+img {
+    box-shadow: 10px 10px 5px #c8956660;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+}
+
+.boxee {
+    display: flex;
+    border: 2px solid gray;
+}
+
+.boxee-fyi {
+    background-color: rgba(255, 255, 0, 0.144);
+}
+
+.boxee-exercise {
+    background-color: rgba(100, 148, 237, 0.336);
+    flex-direction: column;
+}
+
+.boxee-exercise ol {
+    margin-left: 5%;
+    font-weight: 600;
+}
+
+.boxee-exercise img {
+    max-width: 75%;
+}
+
+.boxee-exercise h2 {
+    text-align: center;
+}
+
+.boxee span {
+    padding: 3% 5% 3% 5%;
+}
+
+.boxee-fyi img {
+    box-shadow: none;
+    max-height: 100%;
+    max-width: 30%;
+    margin: 2% 2% 2% 2%;
+    object-fit: contain;
+}
+
+.caption {
+    display: block;
+        margin-top: -3%;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 600;
+}
