@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Using Gimp to Understand Image Layers and Transparency - Nathan's Guide to Technology for Beginners</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../stylesheets/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using Gimp to Understand Image Layers and Transparency";
+    var mkdocs_page_input_path = "Learn With Gimp.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Nathan's Guide to Technology for Beginners</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../machine/">Chapter 1:  Machine Language</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../f_navigation/">Chapter 2:  Navigating Files and Folders</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../chapter_3_mouse/">Chapter 3:  Using the Mouse to Interact with Files and Folders in MacOS</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Nathan's Guide to Technology for Beginners</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Using Gimp to Understand Image Layers and Transparency</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-gimp-to-understand-image-layers-and-transparency">Using Gimp to Understand Image Layers and Transparency</h1>
+<h2 id="what-is-gimp">What is GIMP?</h2>
+<p>Gimp is an image editor, similar to Adobe Photoshop or Affinity Photo.  In contrast to Photoshop, GIMP is open-source, free, and available for all three major platforms- Windows, macOS, and Linux.</p>
+<h2 id="where-do-i-get-gimp">Where do I get GIMP?</h2>
+<p>Follow the below link to get the macOS version of GIMP.</p>
+<p><a href="https://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.14-x86_64-1.dmg">https://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.14-x86_64-1.dmg</a></p>
+<h2 id="gimp-sounds-kind-of-advanced-are-you-sure-we-shouldnt-use-something-similar">Gimp sounds kind of advanced. Are you sure  we shouldn't use something similar?</h2>
+<p>You're right, it is! But don't fret: it's perfectly fine if you never use 99.99% of the features of GIMP. In fact, you may never use GIMP at all after this lesson.</p>
+<p>However, the concepts we'll go over in this tutorial- transparency and layers- will be invaluable when you need to make even simple graphics modifications in other programs. For example, if you're making a power point, it's common to have to "stack" images. If you understand how layers work, you'll save yourself hours of frustration.</p>
+<p>Furthermore, you may find yourself having to crop and scale images. Even if you ignore all of GIMP's other functions, it's a great FREE tool for this.</p>
+<h2 id="an-introduction-to-image-transparency">An Introduction to Image Transparency</h2>
+<p>All raster images are rectangles.  If an images has an irregular (i.e. non-rectangle) shape, what you're actually looking at is a rectangle with a transparency- <strong>a see through area</strong>- to create the illusion of that shape.</p>
+<p>For example, here's an image of a shark.</p>
+<p><img alt="Shark" src="\Learn With Gimp\img\Shark.png" /></p>
+<p>And here's what that image looks like in GIMP.</p>
+<p><img alt="Shark Transparency Revealed" src="\Learn With Gimp\img\Shark_reveal_transparency.jpg" /></p>
+<p>GIMP represents transparency with the gray checkerboard pattern.  Notice how when you include the checkboard area the image is a rectangle?  As far as your browser is concerned, this is true, but the transparent area is invisible to the user.</p>
+<h2 id="an-introduction-to-layers">An Introduction to Layers</h2>
+<p>Let's take a look at this image of a clown. </p>
+<p><img alt="Clown without Nose" src="img/Noseless_Clown.png" /></p>
+<p>Now let's take a look at the same image inside of GIMP.  Take note of the transparency around him, and especially in the center where his nose should be.</p>
+<p><img alt="Clown inside GIMP" src="img/gimp_screenshot.jpg" /></p>
+<p>Note the missing nose- and the transparency that replaces it. Here's what the niose looks like on its own.</p>
+<p><img alt="Nose" src="D:\MyGimpTutorial\Modern-GIMP\img\red_nose.png" /></p>
+<p>Now I'll import it into Gimp, and use the move tool to place it in the correct location.</p>
+<p><img alt="The nose is added but some parts are underneath the clown and not visible" src="D:\MyGimpTutorial\Modern-GIMP\img\gimp_clown_nose_on_bottom.jpg" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
